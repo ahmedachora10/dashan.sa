@@ -1,0 +1,83 @@
+<?php
+
+use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\CorpController;
+use App\Http\Controllers\Admin\ExportController;
+use App\Http\Controllers\Admin\HeadlineController;
+use App\Http\Controllers\Admin\HeadlineTranslationController;
+use App\Http\Controllers\Admin\JobCityController;
+use App\Http\Controllers\Admin\JobPostController;
+use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\MonthlyQuarterlyUpdateController;
+use App\Http\Controllers\Admin\OurClientController;
+use App\Http\Controllers\Admin\OurServiceController;
+use App\Http\Controllers\Admin\OurWorkController;
+use App\Http\Controllers\Admin\PackageController;
+use App\Http\Controllers\Admin\RegistryController;
+use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\Admin\SupportController;
+use App\Http\Controllers\ProfileController;
+use App\Livewire\Dashboard\Branch\StoreCertificate;
+use App\Livewire\Dashboard\Branch\StoreCivilDefenseCertificate;
+use App\Livewire\Dashboard\Branch\StoreEmployee;
+use App\Livewire\Dashboard\Branch\StoreMonthlyQuarterlyUpdate;
+use App\Livewire\Dashboard\Branch\StoreRecord;
+use App\Livewire\Dashboard\Branch\StoreRegistry;
+use App\Livewire\Dashboard\Branch\StoreSubscription;
+use App\Livewire\Dashboard\Container\BranchRegistriesContainer;
+use App\Livewire\Dashboard\Container\ContactUsContainer;
+use App\Livewire\Dashboard\Container\EmployeesContainer;
+use App\Livewire\Dashboard\Container\JobRequestsContainer;
+use App\Livewire\Dashboard\Container\NotificationsContainer;
+use App\Livewire\Dashboard\Container\ServiceRequestsContainer;
+use App\Livewire\Dashboard\Container\SubscribersContainer;
+use Illuminate\Support\Facades\Route;
+
+
+
+Route::middleware(['auth'])->group(function ()
+{
+    Route::controller(SettingController::class)
+    ->prefix('settings')->name('settings.')
+    ->group(function ()
+    {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('store');
+    });
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->middleware('verified')->name('dashboard');
+
+    Route::resource('users', UserController::class);
+
+    Route::resource('roles', RoleController::class)->only('index', 'destroy');
+
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::resource('sliders', SliderController::class);
+    Route::resource('our-services', OurServiceController::class);
+    Route::resource('our-clients', OurClientController::class);
+    Route::get('subscribers', SubscribersContainer::class)->name('subscribers.index');
+    Route::get('contact-us', ContactUsContainer::class)->name('contact-us.index');
+    Route::resource('statistics', StatisticController::class);
+    Route::resource('services', ServiceController::class);
+    Route::resource('our-works', OurWorkController::class);
+
+    Route::get('job-requests', JobRequestsContainer::class)->name('job-requests.index');
+    Route::resource('requests/jobs', JobPostController::class);//->parameter('translation', 'headlineTranslation');
+    Route::resource('job-cities', JobCityController::class);
+    Route::resource('support', SupportController::class);
+    Route::resource('headlines', HeadlineController::class)->only(['index', 'update']);
+    Route::get('service-requests', ServiceRequestsContainer::class)->name('services.requests');
+
+});
