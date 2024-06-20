@@ -1,4 +1,4 @@
-@props(['sliders' = []])
+@props(['sliders' => []])
 <div id="showcase-slider-wrappper" class="showcase-slider-wrappper">
 
     <div class="port-showcase-slider-spaces p-relative">
