@@ -1,5 +1,6 @@
 <x-front-layout>
-    @if (count($sliders) > 0)
+    <x-hero-section />
+    {{-- @if (count($sliders) > 0)
         <x-hero-section>
             <div class="hero-img">
                 <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" style="height: 100%"
@@ -16,28 +17,24 @@
                 </div>
             </div>
         </x-hero-section>
-    @endif
+    @endif --}}
 
 
-    <section class="site-section about-us-section" id="about-us-section">
+    {{-- <section class="site-section about-us-section" id="about-us-section">
         <div class="container">
             @if (setting('about_title'))
                 <div class="row mb-5 pt-0 site-section">
                     <div class="col-md-6 align-self-center">
                         <h3 class="section-title-sub text-primary fs-5">عنا</h3>
-                        {{-- <x-title key="about us" /> --}}
+
                         <h2 class="section-title mb-4">{{ setting('about_title') }}</h2>
                         <div>{!! setting('about_content') !!}</div>
-                        {{-- <p class="mt-4"><a href="#" class="spepcial_link">Read more about us</a></p> --}}
                     </div>
 
                     <div class="col-md-5 ml-auto img-overlap">
                         <div class="img-1"><img src="{{ asset(setting('about_img')) }}" alt="Image"
                                 class="img-fluid img-shadow">
                         </div>
-                        {{-- <div class="img-2"><img src="{{ asset(setting('about_img')) }}" alt="Image"
-                            class="img-fluid img-shadow">
-                        </div> --}}
                     </div>
                 </div>
             @endif
@@ -59,9 +56,9 @@
                 </div>
             @endif
         </div>
-    </section>
+    </section> --}}
 
-    <section class="site-section services-section bg-light block__62849" id="services-section">
+    {{-- <section class="site-section services-section bg-light block__62849" id="services-section">
         <div class="container">
             <x-title key="our services" />
 
@@ -73,9 +70,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="site-section block__62272" id="works-section">
+    {{-- <section class="site-section block__62272" id="works-section">
         <div class="container">
             <x-title key="our work" />
 
@@ -86,9 +83,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    @if (count($clients) > 0)
+    {{-- @if (count($clients) > 0)
         <section id="our-clients" class="section-py landing-reviews site-section">
             <div class="container">
                 <x-title key="our clients" />
@@ -113,7 +110,7 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     {{-- <section class="site-section" id="next-section">
         <div class="container">
@@ -208,7 +205,7 @@
         </div>
     </section> --}}
 
-    @push('scripts')
+    {{-- @push('scripts')
         <script defer>
             var heroSwiper = new Swiper('#slider', {
                 // Optional parameters
@@ -250,5 +247,47 @@
 
             });
         </script>
-    @endpush
+    @enpush('scripts')
+        <script defer>
+            var heroSwiper = new Swiper('#slider', {
+                // Optional parameters
+                // direction: 'vertical',
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: true,
+                },
+
+            });
+
+            var clientLogosSwiper = new Swiper('#swiper-clients-logos', {
+                // Optional parameters
+                // direction: 'vertical',
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 15,
+
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+
+            });
+        </script>
+    @endpush --}}
 </x-front-layout>

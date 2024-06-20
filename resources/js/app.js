@@ -13,8 +13,6 @@ Alpine.start();
 
 const phoneNumber = $('.phone-number');
 
-console.log('Hi word test');
-
 if (phoneNumber.length) {
     $cleave = new Cleave(document.querySelector('.phone-number'), {
         phone: true,
