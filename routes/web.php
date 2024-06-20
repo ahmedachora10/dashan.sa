@@ -6,6 +6,7 @@ use App\Models\Corp;
 use App\Models\OurService;
 use App\Models\Service;
 use App\Models\Support;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
  */
+
+Route::get('test', function () {
+    return User::all();
+});
 
 Route::get('/template', function () {
     return view('welcome');
