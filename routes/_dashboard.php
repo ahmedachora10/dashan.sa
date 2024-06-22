@@ -48,7 +48,7 @@ Route::middleware(['auth'])->group(function ()
     ->prefix('settings')->name('settings.')
     ->group(function ()
     {
-        Route::get('/', 'index')->name('index');
+        Route::get('/{type?}', 'index')->name('index');
         Route::post('/', 'store')->name('store');
     });
 

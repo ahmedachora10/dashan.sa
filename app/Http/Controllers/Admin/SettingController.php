@@ -12,9 +12,18 @@ class SettingController extends Controller
 {
     public function __construct(protected UploadFileService $uploadFileService) {}
 
-    public function index()
+    public function index(string $type = '')
     {
-        return view('admin.common.settings.index');
+        $settings = config('setting_fields', []);
+
+        $count = count($settings);
+
+        $type = str($type)->replace('-', ' ')->value();
+
+        if ($count < 1 || $type == '' || !isset($settings[$type]))
+            return redirect()->route('dashboard');
+
+        return view('admin.common.settings.index', ['settings' => $settings[$type]]);
     }
 
     public function store(Request $request)
