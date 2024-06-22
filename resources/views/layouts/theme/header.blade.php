@@ -219,14 +219,14 @@
                 <div class="col-lg-3 col-md-9 col-6">
                     <div class="tp-header-main-right d-flex align-items-center justify-content-end">
                         <div class="tp-header-contact d-xl-flex align-items-center">
-                            <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
+                            {{-- <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
                                 <span><i class="fa-sharp fa-regular fa-magnifying-glass"></i></span>
                             </div>
                             <div class="tp-header-contact-icon d-none d-xxl-block">
                                 <button class="cartmini-open-btn"><i
                                         class="fa-sharp fa-light fa-cart-shopping"></i></button>
-                            </div>
-                            <div class="tp-header-btn d-none d-xl-block">
+                            </div> --}}
+                            {{-- <div class="tp-header-btn d-none d-xl-block">
                                 <a class="tp-btn tp-icon-style d-none d-xl-block" href="contact.html">Get a Quote
                                     <span>
                                         <svg class="qodef-svg--custom-arrow qodef-m-arrow"
@@ -242,7 +242,7 @@
                                             </g>
                                         </svg>
                                     </span></a>
-                            </div>
+                            </div> --}}
                             <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
                                 <button class="hamburger-btn">
                                     <span></span>
@@ -450,14 +450,14 @@
                 <div class="col-lg-3 col-md-9 col-6">
                     <div class="tp-header-main-right d-flex align-items-center justify-content-end">
                         <div class="tp-header-contact d-xl-flex align-items-center">
-                            <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
+                            {{-- <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
                                 <span><i class="fa-sharp fa-regular fa-magnifying-glass"></i></span>
                             </div>
                             <div class="tp-header-contact-icon d-none d-xxl-block">
                                 <button class="cartmini-open-btn"><i
                                         class="fa-sharp fa-light fa-cart-shopping"></i></button>
-                            </div>
-                            <div class="tp-header-btn d-none d-xl-block">
+                            </div> --}}
+                            {{-- <div class="tp-header-btn d-none d-xl-block">
                                 <a class="tp-btn tp-icon-style d-none d-xl-block" href="contact.html">Get a Quote
                                     <span>
                                         <svg class="qodef-svg--custom-arrow qodef-m-arrow"
@@ -474,7 +474,7 @@
                                         </svg>
                                     </span>
                                 </a>
-                            </div>
+                            </div> --}}
                             <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
                                 <button class="hamburger-btn">
                                     <span></span>

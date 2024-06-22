@@ -19,7 +19,7 @@
                                     <div class="tp-hero-content p-relative">
                                         <div class="tp-hero-title-wrapper">
                                             <div class="tp-hero-title-pre">
-                                                <div><span>trusted construction company</span></div>
+                                                {{-- <div><span>trusted construction company</span></div> --}}
                                             </div>
                                             <div class="tp-hero-title">
                                                 {{-- <div><span>We Build</span></div>
@@ -80,11 +80,10 @@
     <!-- canvas slider -->
     <div id="canvas-slider" class="canvas-slider">
         @foreach ($sliders as $slider)
-        <div class="slider-img" data-slide="0"><img class="slide-img" src="{{asset($slider->thumbnail)}}" alt=""></div>
-
+        <div class="slider-img" data-slide="{{$loop->iteration}}"><img class="slide-img" src="{{asset($slider->thumbnail)}}" alt=""></div>
         @endforeach
-        {{-- <div class="slider-img" data-slide="1"><img class="slide-img" src="assets/img/hero/hero-bg-2.jpg" alt=""></div>
-        <div class="slider-img" data-slide="2"><img class="slide-img" src="assets/img/hero/hero-bg-3.jpg" alt=""></div> --}}
+        {{-- <div class="slider-img" data-slide="1"><img class="slide-img" src="assets/img/hero/hero-bg-2.jpg" alt=""></div> --}}
+        {{-- <div class="slider-img" data-slide="2"><img class="slide-img" src="assets/img/hero/hero-bg-3.jpg" alt=""></div> --}}
     </div>
     <!--/canvas slider -->
 

@@ -1,5 +1,5 @@
 <x-front-layout>
-    <x-hero-section />
+    <x-hero-section :sliders="$sliders" />
     {{-- @if (count($sliders) > 0)
         <x-hero-section>
             <div class="hero-img">

@@ -9,20 +9,6 @@ use App\Models\Support;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
- */
-
-Route::get('test', function () {
-    return User::all();
-});
 
 Route::get('/template', function () {
     return view('welcome');
@@ -40,9 +26,9 @@ Route::get('switch-theme', function () {
     return redirect()->back();
 })->name('switch.theme');
 
-Route::get('mail', function () {
-    return view('mails.send-reminder', ['title' => '', 'corp' => Corp::first(), 'target' => '']);
-});
+// Route::get('mail', function () {
+//     return view('mails.send-reminder', ['title' => '', 'corp' => Corp::first(), 'target' => '']);
+// });
 
 Route::controller(HomeController::class)
     ->group(function () {
