@@ -1,5 +1,5 @@
 <header class="tp-header-area p-relative">
-    <div class="tp-header-top d-none d-xl-block fix">
+    {{-- <div class="tp-header-top d-none d-xl-block fix">
         <div class="container container-large">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="tp-header-main-sticky tp-header-main p-relative">
         <div class="container container-large">
             <div class="row align-items-center">
