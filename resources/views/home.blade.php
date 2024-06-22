@@ -1,24 +1,6 @@
 <x-front-layout>
-    <x-hero-section :sliders="$sliders" />
-    {{-- @if (count($sliders) > 0)
-        <x-hero-section>
-            <div class="hero-img">
-                <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden" style="height: 100%"
-                    id="slider">
-                    <div class="swiper-wrapper">
-                        @foreach ($sliders as $item)
-                            <div class="swiper-slide swiper-slide-active" role="group">
-                                <div class="hero-img" style="background-image: url({{ asset($item->thumbnail) }})">
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                </div>
-            </div>
-        </x-hero-section>
-    @endif --}}
-
+    <x-theme.sections.hero-section :sliders="$sliders" />
+    <x-theme.sections.our-blog />
 
     {{-- <section class="site-section about-us-section" id="about-us-section">
         <div class="container">
