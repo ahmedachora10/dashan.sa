@@ -1,6 +1,7 @@
 <x-front-layout>
     <x-theme.sections.hero-section :sliders="$sliders" />
-    <x-theme.sections.our-blog />
+    <x-theme.sections.our-blog :visions="$visions" />
+    <x-theme.sections.about />
 
     {{-- <section class="site-section about-us-section" id="about-us-section">
         <div class="container">

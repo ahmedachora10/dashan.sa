@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Admin\SupportController;
+use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Dashboard\Branch\StoreCertificate;
 use App\Livewire\Dashboard\Branch\StoreCivilDefenseCertificate;
@@ -57,6 +58,8 @@ Route::middleware(['auth'])->group(function ()
     })->middleware('verified')->name('dashboard');
 
     Route::resource('users', UserController::class);
+
+    Route::resource('visions', VisionController::class);
 
     Route::resource('roles', RoleController::class)->only('index', 'destroy');
 

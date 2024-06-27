@@ -7,6 +7,7 @@ use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Slider;
 use App\Models\Statistic;
+use App\Models\Vision;
 
 class HomeController extends Controller
 {
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $sliders = Slider::all();
         $statistics = Statistic::all();
         $clients = OurClient::all();
+        $visions = Vision::all();
 
-        return view('home', compact('sliders', 'clients', 'statistics'));
+        return view('home', compact('sliders', 'clients', 'statistics', 'visions'));
     }
 }

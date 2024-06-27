@@ -4,17 +4,14 @@ namespace App\View\Components\Theme\Sections;
 
 use Closure;
 use Illuminate\Contracts\View\View;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
-class OurBlog extends Component
+class About extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public Collection $visions
-    )
+    public function __construct()
     {
         //
     }
@@ -24,6 +21,6 @@ class OurBlog extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.theme.sections.our-blog');
+        return view('components.theme.sections.about');
     }
 }
