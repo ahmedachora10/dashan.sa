@@ -1,34 +1,26 @@
 <x-app-layout>
 
-    <form action="{{ route('sliders.update', $slider) }}" method="post" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
-        <x-dashboard.cards.sample column="col-12">
+    <x-theme.tab-list :route="route('sliders.update', $slider)">
+        <x-slot:arForm>
+            @method('PUT')
+            <div class="col-md-6 col-12 mb-3">
 
-            <div class="row align-items-end">
-
-                <div class="col-md-6 col-12 mb-3">
-
-                    <div class="mb-3">
-                        <img src="{{ asset($slider->thumbnail) }}" alt="image" width="60" height="60"
-                            class="img-thumbnail">
-                    </div>
-
-                    <x-dashboard.input-group type="file" name="image" :title="trans('table.columns.image')" />
-                    <x-size-notice key="slider" />
+                <div class="mb-3">
+                    <img src="{{ asset($slider->thumbnail) }}" alt="image" width="60" height="60" class="img-thumbnail">
                 </div>
 
-                <div class="col-md-6 col-12 mb-3">
-                    <x-dashboard.input-group type="text" :value="$slider->title" name="title" :title="trans('table.columns.title')" />
-                </div>
-
-                <div class="col-12">
-                    <x-dashboard.button type="submit" name="Save" class="btn-primary mt-3" />
-                </div>
+                <x-dashboard.input-group type="file" name="image" :title="trans('table.columns.image')" />
+                <x-size-notice key="slider" />
             </div>
 
-        </x-dashboard.cards.sample>
-
-    </form>
-
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" :value="$slider->title_ar" name="title_ar" :title="trans('table.columns.title')" />
+            </div>
+        </x-slot:arForm>
+        <x-slot:enForm>
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" :value="$slider->title_en" name="title_en" :title="trans('table.columns.title')" />
+            </div>
+        </x-slot:enForm>
+    </x-theme.tab-list>
 </x-app-layout>
