@@ -12,10 +12,10 @@ class Service extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $title = '',
-        public string $description = '',
-        public string $image = '',
-        public string $link = '',
+        public ?string $title = '',
+        public ?string $description = '',
+        public ?string $image = '',
+        public ?string $link = '',
     )
     {
         //
