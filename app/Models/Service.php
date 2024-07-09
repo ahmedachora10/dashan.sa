@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\HasTranslation;
 use App\Traits\ThumbnailModelAttribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory, ThumbnailModelAttribute;
+    use HasFactory, ThumbnailModelAttribute, HasTranslation;
 
     protected $fillable = [
         'image',
@@ -17,11 +18,10 @@ class Service extends Model
         'description',
     ];
 
-    public function getGetNameAttribute() {
-        return app()->getLocale() === 'en' ? $this->name_en : $this->name;
-    }
+    protected static function boot()
+    {
+        parent::boot();
 
-    public function getGetDescriptionAttribute() {
-        return app()->getLocale() === 'en' ? $this->description_en : $this->description;
+        static::retrieved(fn(Service $service) => self::translation($service));
     }
 }

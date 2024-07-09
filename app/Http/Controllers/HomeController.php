@@ -18,7 +18,8 @@ class HomeController extends Controller
         $statistics = Statistic::all();
         $clients = OurClient::all();
         $visions = Vision::all();
+        $ourServices = OurService::all();
 
-        return view('home', compact('sliders', 'clients', 'statistics', 'visions'));
+        return view('home', compact('sliders', 'clients', 'statistics', 'visions', 'ourServices'));
     }
 }

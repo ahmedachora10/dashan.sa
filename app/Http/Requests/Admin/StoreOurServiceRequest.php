@@ -14,8 +14,10 @@ class StoreOurServiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
-            'description' => 'nullable|string',
+            'title_ar' => 'required|string',
+            'title_en' => 'nullable|string',
+            'description_ar' => 'required|string',
+            'description_en' => 'nullable|string',
             'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
         ];
     }

@@ -14,7 +14,8 @@ class StoreSliderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['nullable', 'string'],
+            'title_ar' => ['nullable', 'string'],
+            'title_en' => ['nullable', 'string'],
             'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
         ];
     }

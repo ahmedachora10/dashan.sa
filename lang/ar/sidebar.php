@@ -9,10 +9,6 @@ return [
     'images' => 'الصور',
     'notifications' => 'الإشعارات',
     'roles' => 'الصلاحيات',
-    'corps' => 'ادارة المنشآت',
-    'branches' => 'الفروع',
-    'monthly quarterly updates' => 'التحديثات الشهرية والربع السنوية',
-    'registries' => 'التراخيص',
     'all settings' => 'الإعدادت العامة',
     'sliders' => 'سلايدر',
     'our services' => 'خدماتنا',
@@ -31,4 +27,5 @@ return [
     'our works' => 'انجازاتنا',
     'support' => 'الدعم الفني',
     'service requests' => 'طلبات الخدمات',
+    'visions' => 'الرؤية والرسالة'
 ];

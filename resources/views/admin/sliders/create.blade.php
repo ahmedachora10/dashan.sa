@@ -1,10 +1,7 @@
 <x-app-layout>
 
-    <form action="{{ route('sliders.store') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <x-dashboard.cards.sample column="col-12">
-
-            <div class="row">
+    <x-theme.tab-list :route="route('sliders.store')">
+        <x-slot:arForm>
 
                 <div class="col-md-6 col-12 mb-3">
                     <x-dashboard.input-group type="file" name="image" :title="trans('table.columns.image')" />
@@ -12,16 +9,14 @@
                 </div>
 
                 <div class="col-md-6 col-12 mb-3">
-                    <x-dashboard.input-group type="text" name="title" :title="trans('table.columns.title')" />
+                    <x-dashboard.input-group type="text" name="title_ar" :title="trans('table.columns.title')" />
                 </div>
-
-                <div class="col-12">
-                    <x-dashboard.button type="submit" name="Save" class="btn-primary mt-3" />
-                </div>
+        </x-slot:arForm>
+        <x-slot:enForm>
+            <div class="col-12 mb-3">
+                <x-dashboard.input-group type="text" name="title_en" :title="trans('table.columns.title')" />
             </div>
-
-        </x-dashboard.cards.sample>
-
-    </form>
+        </x-slot:enForm>
+    </x-theme.tab-list>
 
 </x-app-layout>

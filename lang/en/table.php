@@ -43,6 +43,10 @@ return [
         'company' => 'Company',
         'policy' => 'Policy',
         'ministry' => 'ministry',
+
+        'title' => 'Title',
+        'link' => 'Link',
+        'statistic' => 'Statistic',
     ],
     'empty' => 'No Records'
 ];

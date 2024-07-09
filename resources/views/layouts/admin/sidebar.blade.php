@@ -32,7 +32,7 @@
     <ul class="menu-inner py-1 ps ps--active-y">
 
         {{-- @hasPermission('dashboard.show') --}}
-        <x-dashboard.sidebar.link :title="trans('sidebar.home')" icon="home-circle" :link="route('dashboard')" />
+        <x-dashboard.sidebar.link :title="trans('sidebar.dashboard')" icon="home-circle" :link="route('dashboard')" />
         {{-- @endhasPermission --}}
 
         {{-- @hasPermission('user.show|setting.show') --}}
@@ -57,19 +57,19 @@
         </x-dashboard.sidebar.link>
 
 
-        <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" icon="server" link="#" :hasSubMenu="true"
-            :notification="$jobsRequestsCount">
-            <x-dashboard.sidebar.link :title="trans('sidebar.job requests')" :link="route('job-requests.index')" :notification="$jobsRequestsCount" />
-            <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" :link="route('jobs.index')" />
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" icon="server" link="#" :hasSubMenu="true"
+            :notification="$jobsRequestsCount"> --}}
+            {{-- <x-dashboard.sidebar.link :title="trans('sidebar.job requests')" :link="route('job-requests.index')" :notification="$jobsRequestsCount" /> --}}
+            {{-- <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" :link="route('jobs.index')" /> --}}
             <x-dashboard.sidebar.link :title="trans('sidebar.cities')" :link="route('job-cities.index')" />
-        </x-dashboard.sidebar.link>
+        {{-- </x-dashboard.sidebar.link> --}}
 
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.subscribers')" icon="user" :link="route('subscribers.index')" /> --}}
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="server" :link="route('services.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="category" :link="route('our-services.index')" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.service requests')" icon="git-pull-request" :link="route('services.requests')" :notification="$servicesRequestsCount" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.our works')" icon="briefcase" :link="route('our-works.index')" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.support')" icon="paper-plane" :link="route('support.index')" />
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.service requests')" icon="git-pull-request" :link="route('services.requests')" :notification="$servicesRequestsCount" /> --}}
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.our works')" icon="briefcase" :link="route('our-works.index')" /> --}}
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.support')" icon="paper-plane" :link="route('support.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.contact us')" icon="user-pin" :link="route('contact-us.index')" :notification="$contactsCount" />
         <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />
 

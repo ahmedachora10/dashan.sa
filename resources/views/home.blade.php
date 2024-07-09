@@ -2,6 +2,7 @@
     <x-theme.sections.hero-section :sliders="$sliders" />
     <x-theme.sections.our-blog :visions="$visions" />
     <x-theme.sections.about />
+    <x-theme.sections.services :services="$ourServices" />
 
     {{-- @push('scripts')
         <script defer>
