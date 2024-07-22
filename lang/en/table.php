@@ -14,39 +14,41 @@ return [
         'password' => 'Password',
         'password confirmation' => 'Confirme Password',
 
-        'has branches' => 'Has Branches?',
+        'phone' => 'Phone',
+
         'start date' => 'Start Date',
         'end date' => 'End Date',
         'administrator name' => 'Administrator Name',
         'commercial registration number' => 'Commercial Registration Number',
-
-        'registration number' => 'Registration Number',
-        'license number' => 'license number',
         'address' => 'Address',
         'employee' => 'Employee',
         'mission' => 'Mission',
-        'entity name' => 'Entity Name',
-
         'type' => 'Type',
-        'corp name' => 'Corp Name',
-
-        'medical insurance' => 'Medical Insurance',
-        'health card' => 'Health Card',
-
-        'employee name' => 'Employee Name',
-        'resident number' => 'Resident Number',
-        'business card start date' => 'Business Card Start Date',
-        'business card end date' => 'Business Card End Date',
-        'contract start date' => 'Contract Start Date',
-        'contract end date' => 'Contract Start Date',
 
         'company' => 'Company',
         'policy' => 'Policy',
         'ministry' => 'ministry',
 
         'title' => 'Title',
+        'subtitle' => 'Subtitle',
         'link' => 'Link',
         'statistic' => 'Statistic',
+        'question' => 'Question',
+        'answer' => 'Answer',
+        'job name' => 'Job Name',
+        'social media' => 'Social Media Account',
+
+        'age' => 'Age',
+        'specialization' => 'Specialization',
+        'years of experience' => 'Year Of Experience',
+        'excerpt' => 'Excerpt',
+        'job' => 'Job',
+        'job city' => 'Job City',
+        'cv' => 'CV',
+        'attachments' => 'Attachments',
+        'message' => 'Message',
+        'subject' => 'Subject',
+
     ],
     'empty' => 'No Records'
 ];

@@ -31,8 +31,7 @@ return [
     'click here' => 'اضغط هنا',
     'reviews' => 'التقييمات',
     'new review' => 'تقييم جديد',
-    'our work' => '',
     'our services' => 'خدماتنا',
-    'our work' => 'انجازاتنا',
-    'about us' => 'من نحن',
+    'our works' => 'أعمالنا',
+    'job request' => 'طلب وظيفة'
 ];

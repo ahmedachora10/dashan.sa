@@ -12,7 +12,7 @@
         @forelse ($jobs as $item)
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
-                <td>{{ $item->get_title }}</td>
+                <td>{{ $item->title }}</td>
 
                 <td>
                     <x-dashboard.actions.container>

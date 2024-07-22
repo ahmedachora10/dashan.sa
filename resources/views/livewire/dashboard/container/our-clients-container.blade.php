@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.our clients')" />
 
-    <x-dashboard.tables.table1 :createAction="route('our-clients.create')" :columns="['image', 'name', 'link']">
+    <x-dashboard.tables.table1 :createAction="route('our-clients.create')" :columns="['image', 'link']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -14,7 +14,7 @@
                 <td>{{ $item->id }}</td>
                 <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
                         class="rounded-circle"></td>
-                <td>{{ $item->name }}</td>
+                {{-- <td>{{ $item->name }}</td> --}}
                 <td><x-dashboard.badge color="primary">{{ $item->link }}</x-dashboard.badge></td>
                 <td>
                     <x-dashboard.actions.container>

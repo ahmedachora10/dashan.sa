@@ -6,16 +6,16 @@
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <a href="#" class="nav-link active" data-bs-toggle="tab"
-                    data-bs-target="#headline-content-ar" role="tab" aria-selected="true">{{
+                    data-bs-target="#{{$key}}-ar" role="tab" aria-selected="true">{{
                     trans('arabic') }}</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#headline-content-en"
+                <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#{{$key}}-en"
                     role="tab" aria-selected="false" tabindex="-1">{{ trans('english') }}</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane fade active show" id="headline-content-ar" role="tabpanel">
+            <div class="tab-pane fade active show" id="{{$key}}-ar" role="tabpanel">
                 <div class="row g-3">
                     {{$arForm}}
                 </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="tab-pane" id="headline-content-en" role="tabpanel">
+            <div class="tab-pane" id="{{$key}}-en" role="tabpanel">
                 <div class="row g-3">
                     {{$enForm}}
                 </div>

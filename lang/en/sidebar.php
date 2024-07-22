@@ -17,4 +17,6 @@ return [
     'our clients' => 'Our Clients',
     'statistics' => 'Statistics',
     'our services' => 'Our Services',
+    'faq' => 'Faq',
+    'team' => 'Team',
 ];

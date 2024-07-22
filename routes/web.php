@@ -37,6 +37,8 @@ Route::controller(HomeController::class)
 
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
+    $locale = app()->getLocale() === 'ar' ? 'en' : 'ar';
+
     session()->put('locale', $locale);
 
     app()->setLocale($locale);
@@ -44,9 +46,9 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
     return back();
 })->name('switch-language');
 
-Route::get('clients/reviews', function () {
-    return view('reviews');
-})->name('clients.reviews');
+// Route::get('clients/reviews', function () {
+//     return view('reviews');
+// })->name('clients.reviews');
 
 Route::get('/jobs', function () {
     return view('job');

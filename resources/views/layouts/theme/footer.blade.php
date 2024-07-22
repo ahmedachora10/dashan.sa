@@ -11,16 +11,21 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                         <div class="tp-footer-widget tp-footer-col-1 mb-50">
                             <div class="tp-footer-logo mb-40">
-                                <a href="index.html"> <img src="assets/img/footer/white-logo.png" alt=""></a>
+                                <a href="{{route('home')}}"> <img width="40" src="{{asset(setting('logo'))}}" alt=""></a>
                             </div>
                             <div class="tp-footer-widget-content">
-                                <p>Bouvet Island Jeanetteside , Sausi frank <br> 53 Brannon Falls Suite. 22 avenue <br>
-                                    NY, USA</p>
+                                <p>{{setting('app_description')}}</p>
                                 <div class="tp-footer-widget-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    @foreach ([
+                                        'facebook' => 'fab fa-facebook-f',
+                                        'instagram' => 'fa-brands fa-instagram',
+                                        'linkedin' => 'fa-brands fa-linkedin',
+                                        'twitter' => 'fab fa-twitter'
+                                    ] as $media => $icon)
+                                        @continue(empty(setting($media)))
+
+                                        <a href="{{setting($media)}}"><i class="{{$icon}}"></i></a>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -30,26 +35,78 @@
                             <h3 class="tp-footer-widget-title">Navigation</h3>
                             <div class="tp-footer-widget-content">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Our Package</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">News</a></li>
+                                    @include('layouts.theme.menu')
+                                    <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-3 mb-50">
-                            <h3 class="tp-footer-widget-title">Services</h3>
+                        <div class="tp-footer-widget tp-footer-7-col-3 mb-50">
+                            <h3 class="tp-footer-widget-title">Instagram</h3>
                             <div class="tp-footer-widget-content">
-                                <ul>
-                                    <li><a href="#">Chemical engineerign</a></li>
-                                    <li><a href="#">Mining engineering</a></li>
-                                    <li><a href="#">Welding engineering</a></li>
-                                    <li><a href="#">Space program xyz</a></li>
-                                    <li><a href="#">Reconstruction</a></li>
-                                </ul>
+                                <div class="tp-footer-widget-gallery-all">
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-1.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-2.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-3.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-4.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-5.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tp-footer-widget-gallery-single-item">
+                                        <a href="#" class="tp-footer-widget-gallery-item">
+                                            <div class="tp-footer-widget-gallery-thumb">
+                                                <img src="{{asset('theme/img/footer/footer-7-6.jpg')}}" alt="">
+                                                <div class="tp-footer-widget-gallery-social">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

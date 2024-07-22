@@ -2,19 +2,22 @@
 
 namespace App\Models;
 
+use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class JobPost extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTranslation;
 
-    public $fillable = ['title', 'title_en'];
+    public $fillable = ['title_ar', 'title_en'];
 
-    public function getGetTitleAttribute()
+    protected static function boot()
     {
-        return app()->getLocale() == 'en' ? $this->title_en : $this->title;
+        parent::boot();
+
+        static::retrieved(fn(JobPost $jobPost) => static::translation($jobPost));
     }
 
     public function jobs() : HasMany {

@@ -9,7 +9,7 @@ use App\Services\UploadFileService;
 
 class StatisticController extends Controller
 {
-    public function __construct(protected UploadFileService $uploadFileService) {}
+    // public function __construct(protected UploadFileService $uploadFileService) {}
 
     /**
      * Display a listing of the resource.
@@ -32,9 +32,8 @@ class StatisticController extends Controller
      */
     public function store(StoreStatisticRequest $request)
     {
-        $request->validated();
-
-        Statistic::create($request->safe()->except('image') + ['image' => $this->uploadFileService->store($request->image, 'images/statistics')]);
+        //  + ['image' => $this->uploadFileService->store($request->image, 'images/statistics')]
+        Statistic::create($request->validated());
         return redirect()->route('statistics.index')->with('success', trans('message.create'));
     }
 
@@ -61,7 +60,8 @@ class StatisticController extends Controller
     {
         $request->validated();
 
-        $statistic->update($request->safe()->except('image') + ['image' => $this->uploadFileService->update($request->image, $statistic->image, 'images/statistics')]);
+        // safe()->except('image') + ['image' => $this->uploadFileService->update($request->image, $statistic->image, 'images/statistics')]
+        $statistic->update($request->validated());
 
         return redirect()->route('statistics.index')->with('success', trans('message.update'));
     }
@@ -71,7 +71,6 @@ class StatisticController extends Controller
      */
     public function destroy(Statistic $statistic)
     {
-        $this->uploadFileService->delete($statistic->image);
         $statistic->delete();
 
         return redirect()->route('statistics.index')->with('success', trans('message.delete'));

@@ -14,8 +14,8 @@ class StoreJobPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
-            // 'title_en' => 'nullable|string',
+            'title_ar' => 'nullable|string',
+            'title_en' => 'nullable|string',
         ];
     }
 }

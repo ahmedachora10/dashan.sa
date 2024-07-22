@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.cities')" />
 
-    <x-dashboard.tables.table1 :createAction="route('job-cities.create')" :columns="['title']">
+    <x-dashboard.tables.table1 :createAction="route('job-cities.create')" :columns="['name']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -12,7 +12,7 @@
         @forelse ($jobCities as $item)
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
-                <td>{{ $item->get_title }}</td>
+                <td>{{ $item->name }}</td>
 
                 <td>
                     <x-dashboard.actions.container>

@@ -15,6 +15,7 @@ class TabList extends Component
         public string $route,
         public string $arForm = '',
         public string $enForm = '',
+        public string $key = 'headline-content',
     )
     {
         //

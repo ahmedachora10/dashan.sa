@@ -26,11 +26,11 @@ class ContactUsForm extends Component
     public string $message;
 
     public function save() {
-        ContactUs::create($this->validate());
+        $contact = ContactUs::create($this->validate());
         session()->flash('success', trans('message.create'));
         User::first()->notify(new UserActionNotification([
-            'title' => '',
-            'message' => '',
+            'title' => trans('new message'),
+            'message' => $contact->name . ' - ' . $contact->subject,
             'type' => ContactUs::class,
         ]));
         $this->reset();

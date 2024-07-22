@@ -30,8 +30,8 @@
                 <td>{{ $item->specialization }}</td>
                 <td>{{ $item->years_of_experience }}</td>
                 <td>{{ $item->excerpt }}</td>
-                <td>{{ $item->jobPost?->get_title ?? '-' }}</td>
-                <td>{{ $item->jobCity?->get_title ?? '-' }}</td>
+                <td>{{ $item->jobPost?->title ?? '-' }}</td>
+                <td>{{ $item->jobCity?->name ?? '-' }}</td>
 
                 <td>
                     <a href="{{ asset('storage/' . $item->cv) }}" class="btn btn-sm btn-primary" target="_blank">
@@ -43,7 +43,7 @@
                 <td>
                     <x-dashboard.actions.container>
                         <a href="#" wire:click="getAttachments({{ $item }})" class="dropdown-item"> <i
-                                class="bx bx-show me-1"></i> {{ trans('common.show') }} </a>
+                                class="bx bx-show me-1"></i> {{ trans('show') }} </a>
                         <x-dashboard.actions.delete wire:click="delete({{ $item }})" :livewire="true" />
                     </x-dashboard.actions.container>
                 </td>
@@ -78,9 +78,9 @@
                 <div class="col-sm-5 col-12">
                     <p class="text-nowrap"><i class="bx bx-paragraph bx-sm me-2"></i>{{ $jobRequest?->excerpt }}</p>
                     <p class="text-nowrap"><i
-                            class="bx bx-category bx-sm me-2"></i>{{ $jobRequest?->jobPost?->get_title ?? '-' }}
+                            class="bx bx-category bx-sm me-2"></i>{{ $jobRequest?->jobPost?->title ?? '-' }}
                     </p>
-                    <p class="text-nowrap"><i class="bx bx-map bx-sm me-2"></i>{{ $jobRequest?->jobCity?->get_title }}
+                    <p class="text-nowrap"><i class="bx bx-map bx-sm me-2"></i>{{ $jobRequest?->jobCity?->name }}
                     </p>
                 </div>
             </div>

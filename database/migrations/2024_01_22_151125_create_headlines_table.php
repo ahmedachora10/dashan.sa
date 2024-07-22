@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('headlines', function (Blueprint $table) {
             $table->id();
             $table->string('section')->unique();
-            $table->string('title')->nullable();
-            $table->string('subtitle')->nullable();
+            $table->string('title_ar')->nullable();
+            $table->string('title_en')->nullable();
+            $table->string('subtitle_ar')->nullable();
+            $table->string('subtitle_en')->nullable();
             $table->timestamps();
         });
     }

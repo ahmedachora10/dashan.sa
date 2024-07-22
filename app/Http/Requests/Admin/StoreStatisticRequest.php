@@ -14,9 +14,10 @@ class StoreStatisticRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
-            'statistic' => 'required|string',
-            'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'title_ar' => 'required|string',
+            'title_en' => 'required|string',
+            'count' => 'required|integer',
+            // 'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
         ];
     }
 }

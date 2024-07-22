@@ -1,5 +1,6 @@
 <?php
 
+use App\DTO\ReadHeadlineDTO;
 use App\Models\Headline;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Cache;
@@ -69,6 +70,11 @@ if(!function_exists('headline')) {
             return Headline::all();
         });
 
-        return collect($headlines)->firstWhere('section', $key);
+        $headline = collect($headlines)->firstWhere('section', $key);
+
+        return new ReadHeadlineDTO(
+            title: $headline?->title,
+            subTitle: $headline?->subtitle,
+        );
     }
 }

@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.statistics')" />
 
-    <x-dashboard.tables.table1 :createAction="route('statistics.create')" :columns="['image', 'title', 'statistic']">
+    <x-dashboard.tables.table1 :createAction="route('statistics.create')" :columns="['title', 'statistic']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -12,10 +12,10 @@
         @forelse ($statistics as $item)
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
-                <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
-                        class="rounded-circle"></td>
+                {{-- <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
+                        class="rounded-circle"></td> --}}
                 <td>{{ $item->title }}</td>
-                <td>{{ $item->statistic }}</td>
+                <td>{{ $item->count }}</td>
                 <td>
                     <x-dashboard.actions.container>
                         <x-dashboard.actions.edit

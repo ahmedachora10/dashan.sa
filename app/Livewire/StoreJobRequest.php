@@ -51,8 +51,8 @@ class StoreJobRequest extends Component
             }
 
             User::first()->notify(new UserActionNotification([
-                'title' => '',
-                'message' => '',
+                'title' => trans('new job request'),
+                'message' =>  '"'.$jobRequest?->jobPost?->title.'"',
                 'type' => JobRequest::class,
             ]));
 

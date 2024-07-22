@@ -18,7 +18,7 @@
                 <td>{{ $item->subject }}</td>
                 <td><a href="#" class="btn btn-sm btn-primary" wire:click="readMore({{ $item }})">
                         <i class="bx bx-show me-1"></i>
-                        {{ trans('common.show') }}</a></td>
+                        {{ trans('show') }}</a></td>
                 <td>
                     <x-dashboard.actions.container>
                         <x-dashboard.actions.delete wire:click="delete({{ $item }})" :livewire="true" />

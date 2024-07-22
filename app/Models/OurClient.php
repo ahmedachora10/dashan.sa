@@ -12,9 +12,4 @@ class OurClient extends Model
 
     protected $fillable = ['company_name', 'image', 'link'];
 
-    public function getNameAttribute()
-    {
-        return $this->company_name;
-    }
-
 }

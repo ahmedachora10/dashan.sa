@@ -21,12 +21,12 @@
                 <td><a href="{{ asset($item->thumbnail) }}" target="_blank"
                         class="btn text-danger btn-outline-danger btn-xs fw-bold">
                         <i class="bx bx-image me-1"></i>
-                        {{ trans('common.show') }}</a></td>
+                        {{ trans('show') }}</a></td>
 
                 <td><a href="#" class="btn text-primary btn-outline-primary btn-xs fw-bold"
                         wire:click="readMore({{ $item }})">
                         <i class="bx bx-show me-1"></i>
-                        {{ trans('common.show') }}</a></td>
+                        {{ trans('show') }}</a></td>
                 <td>
                     {{-- <x-dashboard.actions.container> --}}
                     <x-dashboard.actions.delete wire:click="delete({{ $item }})" text=""

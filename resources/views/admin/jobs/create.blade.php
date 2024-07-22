@@ -1,26 +1,16 @@
 <x-app-layout>
+    <x-theme.tab-list :route="route('jobs.store')">
+        <x-slot:arForm>
+            <div class="col-12 mb-3">
+                <x-dashboard.input-group type="text" name="title_ar" :title="trans('table.columns.title')" />
+            </div>
+        </x-slot:arForm>
 
-    <form action="{{ route('jobs.store') }}" method="post" enctype="multipart/form-data">
-        @csrf
-        <x-dashboard.cards.sample column="col-12">
-
-            <div class="row">
-
-                <div class="col-12 mb-3">
-                    <x-dashboard.input-group type="text" name="title" :title="trans('table.columns.title')" />
-                </div>
-
-                {{-- <div class="col-md-6 col-12 mb-3">
-                    <x-dashboard.input-group type="text" name="title_en" :title="trans('table.columns.title_en')" />
-                </div> --}}
-
-                <div class="col-12">
-                    <x-dashboard.button type="submit" name="Save" class="btn-primary mt-3" />
-                </div>
+        <x-slot:enForm>
+            <div class="col-12 mb-3">
+                <x-dashboard.input-group type="text" name="title_en" :title="trans('table.columns.title')" />
             </div>
 
-        </x-dashboard.cards.sample>
-
-    </form>
-
+        </x-slot:enForm>
+    </x-theme.tab-list>
 </x-app-layout>

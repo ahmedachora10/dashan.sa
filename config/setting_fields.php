@@ -10,7 +10,7 @@ return [
             [
                 'type' => 'text', // input fields type
                 'data' => 'string', // data type, string, int, boolean
-                'name' => 'app_name', // unique name for field
+                'name' => 'app_name_ar', // unique name for field
                 'label' => 'Name', // you know what label it is
                 'rules' => 'required|min:2|max:50', // validation rule of laravel
                 'class' => '', // any class for input
@@ -19,8 +19,26 @@ return [
             [
                 'type' => 'text', // input fields type
                 'data' => 'string', // data type, string, int, boolean
-                'name' => 'app_description', // unique name for field
+                'name' => 'app_name_en', // unique name for field
+                'label' => 'English Name', // you know what label it is
+                'rules' => 'required|min:2|max:50', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => config('app.name') // default value if you want
+            ],
+            [
+                'type' => 'text', // input fields type
+                'data' => 'string', // data type, string, int, boolean
+                'name' => 'app_description_ar', // unique name for field
                 'label' => 'Description', // you know what label it is
+                'rules' => 'nullable|min:2|max:250', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '' // default value if you want
+            ],
+            [
+                'type' => 'text', // input fields type
+                'data' => 'string', // data type, string, int, boolean
+                'name' => 'app_description_en', // unique name for field
+                'label' => 'English Description', // you know what label it is
                 'rules' => 'nullable|min:2|max:250', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '' // default value if you want
@@ -190,44 +208,103 @@ return [
         ]
     ],
 
-    'about' => [
+    // 'about' => [
 
-        'title' => 'About',
+    //     'title' => 'About',
+    //     'desc' => '',
+    //     'icon' => 'menu-icon tf-icons bx bx-user-pin',
+
+    //     'elements' => [
+    //         [
+    //             'type' => 'file',
+    //             'data' => 'file',
+    //             'name' => 'about_img',
+    //             'label' => 'Image',
+    //             'rules' => 'nullable|image',
+    //             'class' => '',
+    //             'value' => '',
+    //             'dimension' => 'contact_image',
+
+    //         ],
+    //         [
+    //             'type' => 'text',
+    //             'data' => 'string',
+    //             'name' => 'about_title',
+    //             'label' => 'title',
+    //             'rules' => 'nullable|string',
+    //             'class' => '',
+    //             'value' => '',
+    //             'dimension' => 'logo',
+
+    //         ],
+    //         [
+    //             'type' => 'textarea',
+    //             'data' => 'string',
+    //             'name' => 'about_content',
+    //             'label' => 'Content',
+    //             'rules' => 'nullable|string',
+    //             'class' => '',
+    //             'value' => '',
+    //             'column' => 'col-12',
+
+    //         ],
+    //     ]
+    // ],
+
+    'footer' => [
+
+        'title' => 'Footer',
         'desc' => '',
         'icon' => 'menu-icon tf-icons bx bx-user-pin',
 
         'elements' => [
             [
-                'type' => 'file',
-                'data' => 'file',
-                'name' => 'about_img',
-                'label' => 'Image',
-                'rules' => 'nullable|image',
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'footer_ar',
+                'label' => 'Footer',
+                'rules' => 'nullable|string',
                 'class' => '',
-                'value' => '',
-                'dimension' => 'contact_image',
+                'value' => ''
 
             ],
             [
                 'type' => 'text',
                 'data' => 'string',
-                'name' => 'about_title',
-                'label' => 'title',
+                'name' => 'footer_en',
+                'label' => 'English Footer',
                 'rules' => 'nullable|string',
                 'class' => '',
-                'value' => '',
-                'dimension' => 'logo',
+                'value' => ''
+
+            ]
+        ]
+    ],
+    'profile' => [
+
+        'title' => 'Profile',
+        'desc' => '',
+        'icon' => 'menu-icon tf-icons bx bx-file',
+
+        'elements' => [
+            [
+                'type' => 'file',
+                'data' => 'file',
+                'name' => 'profile_file_ar',
+                'label' => 'Profile',
+                'rules' => 'nullable|file|mimes:pdf',
+                'class' => '',
+                'value' => ''
 
             ],
             [
-                'type' => 'textarea',
-                'data' => 'string',
-                'name' => 'about_content',
-                'label' => 'Content',
-                'rules' => 'nullable|string',
+                'type' => 'file',
+                'data' => 'file',
+                'name' => 'profile_file_en',
+                'label' => 'Profile en',
+                'rules' => 'nullable|file|mimes:pdf',
                 'class' => '',
-                'value' => '',
-                'column' => 'col-12',
+                'value' => ''
 
             ],
         ]

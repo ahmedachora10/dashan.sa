@@ -14,8 +14,10 @@ class StoreHeadlineRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'sometimes|nullable|string',
-            'subtitle' => 'sometimes|nullable|string',
+            'title_ar' => 'sometimes|nullable|string',
+            'title_en' => 'sometimes|nullable|string',
+            'subtitle_ar' => 'sometimes|nullable|string',
+            'subtitle_en' => 'sometimes|nullable|string',
         ];
     }
 }

@@ -6,27 +6,32 @@
             </div>
         @endif
         <div class="col-md-6">
-            <x-dashboard.input-group type="text" wire:model.defer="name" name="name" :title="trans('table.columns.name')" />
+            <x-theme.form.input-group type="text" wire:model.defer="name" name="name" :placeholder="trans('table.columns.name')" />
         </div>
         <div class="col-md-6">
-            <x-dashboard.input-group type="text" wire:model.defer="email" name="email" :title="trans('table.columns.email')" />
-        </div>
-
-        <div class="col-md-6">
-            <x-dashboard.input-group type="text" wire:model.defer="phone" name="phone" :title="trans('table.columns.phone')" />
+            <x-theme.form.input-group type="text" wire:model.defer="email" name="email" :placeholder="trans('table.columns.email')" />
         </div>
 
         <div class="col-md-6">
-            <x-dashboard.input-group type="text" wire:model.defer="subject" name="subject" :title="trans('table.columns.subject')" />
+            <x-theme.form.input-group type="text" wire:model.defer="phone" name="phone" :placeholder="trans('table.columns.phone')" />
+        </div>
+
+        <div class="col-md-6">
+            <x-theme.form.input-group type="text" wire:model.defer="subject" name="subject" :placeholder="trans('table.columns.subject')" />
         </div>
 
         <div class="col-12">
-            <label class="form-label" for="contact-form-message">{{ trans('table.columns.message') }}</label>
-            <textarea id="contact-form-message" class="form-control" rows="9" wire:model.defer="message" name="message"></textarea>
-            <x-dashboard.error field="message" />
+            <x-theme.form.text-area wire:model.defer="message" :placeholder="trans('table.columns.message')"
+                name="message" cols="10" rows="6">
+                <x-dashboard.error field="message" />
+            </x-theme.form.text-area>
         </div>
+
         <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-md text-white">{{ trans('common.send') }}</button>
+            <div class="tp-contact-btn">
+                <button class="tp-btn" type="button" wire:click="save">{{ trans('send') }}</button>
+                <p class="ajax-response"></p>
+            </div>
         </div>
     </div>
 </form>

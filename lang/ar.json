@@ -1,4 +1,11 @@
 {
     "arabic": "العربية",
-    "english": "الانجليزية"
+    "english": "الانجليزية",
+    "linkedin": "الينكدان",
+    "twitter": "تويتر",
+    "send": "ارسال",
+    "show": "عرض",
+    "contact us": "تواصل معنا",
+    "new job request": "طلب وظيفة جديد",
+    "new message" : "رسالة جديدة"
 }

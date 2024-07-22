@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('statistics', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('title');
-            $table->string('statistic');
+            // $table->string('image');
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->string('count')->default(0);
             $table->timestamps();
         });
     }

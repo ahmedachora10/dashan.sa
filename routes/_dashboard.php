@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\CorpController;
 use App\Http\Controllers\Admin\ExportController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeadlineController;
 use App\Http\Controllers\Admin\HeadlineTranslationController;
 use App\Http\Controllers\Admin\JobCityController;
@@ -23,6 +24,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Admin\SupportController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Dashboard\Branch\StoreCertificate;
@@ -49,7 +51,7 @@ Route::middleware(['auth'])->group(function ()
     ->prefix('settings')->name('settings.')
     ->group(function ()
     {
-        Route::get('/{type?}', 'index')->name('index');
+        Route::get('/', 'index')->name('index');
         Route::post('/', 'store')->name('store');
     });
 
@@ -82,5 +84,7 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('support', SupportController::class);
     Route::resource('headlines', HeadlineController::class)->only(['index', 'update']);
     Route::get('service-requests', ServiceRequestsContainer::class)->name('services.requests');
+    Route::resource('faq', FaqController::class);
+    Route::resource('team', TeamController::class);
 
 });

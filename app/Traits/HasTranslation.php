@@ -3,13 +3,14 @@
 namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Schema;
 
 trait HasTranslation {
     public static function translation(Model $model)
     {
         if (strtolower(request()->method()) !== 'put') {
-            $translationColumns = collect(Schema::getColumnListing($model->getTable()))
+            $translationColumns = collect(Cache::remember($model->getTable(), now()->week(), fn() => Schema::getColumnListing($model->getTable())))
                 ->filter(fn($item) => str($item)->endsWith('_ar'))
                 ->map(fn($item) => str($item)->replaceEnd('_ar', ''))
                 ->toArray();

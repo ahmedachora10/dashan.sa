@@ -1,20 +1,20 @@
 <section class="tp-about-area p-relative pt-120 pb-120">
     <div class="tp-about-shape">
-        <img src="assets/img/about/about-1-5.png" alt="">
+        <img src="{{asset('theme/img/about/about-1-5.png')}}" alt="">
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="tp-about-thumb-wrapper">
                     <div class="tp-about-thumb">
-                        <img class="shape-1" src="assets/img/about/about-1-3.jpg" alt="">
-                        <img class="shape-2" src="assets/img/about/about-1-4.png" alt="">
+                        <img class="shape-1" src="{{asset('theme/img/about/about-1-3.jpg')}}" alt="">
+                        <img class="shape-2" src="{{asset('theme/img/about/about-1-4.png')}}" alt="">
                         <p>20</p>
                         <div class="tp-hover-distort-wrapper top">
                             <div class="canvas"></div>
-                            <div class="tp-hover-distort" data-displacementImage="assets/img/webgl/1.jpg">
-                                <img class="tp-hover-distort-img front" src="assets/img/about/about-1-1.jpg" alt="">
-                                <img class="tp-hover-distort-img back" src="assets/img/about/about-1-1.jpg" alt="">
+                            <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
+                                <img class="tp-hover-distort-img front" src="{{asset('theme/img/about/about-1-1.jpg')}}" alt="">
+                                <img class="tp-hover-distort-img back" src="{{asset('theme/img/about/about-1-1.jpg')}}" alt="">
                             </div>
                         </div>
                         <div class="tp-hover-distort-wrapper main">
@@ -30,8 +30,8 @@
             <div class="col-lg-7">
                 <div class="tp-about-wrapper p-relative wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="tp-about-title-wrapper">
-                        <span class="tp-section-title-pre">WE ARE CONSTRUCTION COMPANY</span>
-                        <h3 class="tp-section-title">Making your vision <br> come true at the basics.</h3>
+                        <span class="tp-section-title-pre">{{headline('about us')->subTitle}}</span>
+                        <h3 class="tp-section-title">{{headline('about us')->title}}</h3>
                         <p>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad
                             minim veniam, quisq wiusmod ut tempor incididunt ut labore et dolore sed do magna aliqua.
                         </p>

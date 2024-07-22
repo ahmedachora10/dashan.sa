@@ -14,7 +14,7 @@ class StoreOurClientRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'company_name' => 'required|string',
+            // 'company_name' => 'required|string',
             'link' => 'nullable|string',
             'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
         ];

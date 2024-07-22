@@ -1,13 +1,24 @@
 <x-front-layout>
-    <div class="py-4"></div>
-    <section class="site-section">
+    <x-theme.sections.breadcrumb image="theme/img/breadcrumb/bradcrumb-14.jpg" title="front.job request" />
+
+    <section class="tp-contact-area ">
         <div class="container">
-            <div class="col-md-10 col-11 mx-auto shadow-sm">
-                <h4 class="mb-3 p-4 border-bottom text-primary">طلب الوظيفة</h4>
-                <div class="p-4">
-                    <livewire:store-job-request />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tp-contact-wrapper mb-120">
+                        <h3 class="tp-contact-title">{{ ucwords(trans('new job request'))}}</h3>
+                        <div class="tp-contact-input-form">
+                            <div class="row">
+                                <livewire:store-job-request />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    @push('component-styles')
+        <link rel="stylesheet" href="{{asset('theme/css/nice-select.css')}}">
+    @endpush
 </x-front-layout>
