@@ -166,7 +166,7 @@
                 <div class="row">
                     <div class="col-md-7 col-12">
                         <div class="tp-footer-copyright-inner">
-                            <p>© {{date('Y')}} {!! setting('footer_'.app()->getLocale()) !!}</p>
+                            <p> {!! setting('footer_'.app()->getLocale()) !!} © {{date('Y')}}</p>
                         </div>
                     </div>
                     <div class="col-md-5 col-12">
