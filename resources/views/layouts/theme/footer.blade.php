@@ -15,7 +15,7 @@
                             </div>
                             <div class="tp-footer-widget-content">
                                 <p>{{setting('app_description_'.app()->getLocale())}}</p>
-                                <div class="tp-footer-widget-social">
+                                <div class="tp-footer-widget-social mb-4">
                                     @foreach ([
                                         'facebook' => 'fab fa-facebook-f',
                                         'instagram' => 'fa-brands fa-instagram',
@@ -29,7 +29,7 @@
                                     @endforeach
                                 </div>
                                 @if(!empty(setting('email')))
-                                <div class="offcanvas__contact-content d-flex mt-3">
+                                <div class="offcanvas__contact-content d-flex">
                                     <div class="offcanvas__contact-content-icon mx-2">
                                         <i class="fa-solid fa-envelope text-white"></i>
                                     </div>
