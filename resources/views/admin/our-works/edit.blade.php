@@ -14,7 +14,7 @@
                         </div>
                     @endforeach
                 </div>
-                <x-dashboard.input-group type="file" name="images" multiple :title="trans('table.columns.image')" />
+                <x-dashboard.input-group type="file" name="images[]" multiple :title="trans('table.columns.image')" />
                 <x-size-notice key="our_special" />
             </div>
 

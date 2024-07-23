@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="tp-blog-3-title-wrapper text-center mb-65">
-                    <span class="tp-section-title-pre">OUR LATEST BLOG</span>
-                    <h3 class="tp-section-title">Read our blog & post</h3>
+                    <span class="tp-section-title-pre">{{ headline('vision')->title }}</span>
+                    <h3 class="tp-section-title">{{headline('vision')->subTitle}}</h3>
                 </div>
             </div>
         </div>

@@ -13,13 +13,8 @@ class WorkSection extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public int $pagination = 0)
+    public function __construct(public OurWork $item)
     {
-        if($pagination > 0) {
-            $this->works = OurWork::paginate($pagination);
-        } else {
-            $this->works = OurWork::all();
-        }
     }
 
     /**

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Models\Corp;
 use App\Models\OurService;
+use App\Models\OurWork;
 use App\Models\Service;
 use App\Models\Support;
 use App\Models\User;
@@ -59,9 +60,9 @@ Route::get('contact', function () {
     return view('contact', compact('supports'));
 })->name('contact');
 
-Route::get('works', function () {
-    return view('works');
-})->name('works');
+Route::get('works/{work}/details', function (OurWork $work) {
+    return view('work-details', compact('work'));
+})->name('works.show');
 
 Route::get('services/all', function () {
     return view('services');

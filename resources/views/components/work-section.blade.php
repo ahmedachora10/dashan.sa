@@ -1,38 +1,61 @@
+@php
+    $images = $item->getMedia('works');
+@endphp
 <section class="tp-portfolio-details-area pt-120 pb-90">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="tp-portfolio-details-wrapper">
-                    <h3 class="tp-portfolio-details-title">You can dream, create, build <br> the most wonderful place in
-                        the world.</h3>
-                    <p class="text-1">Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
-                        dolorem ipsum quia quaed <br> inventore veritatis et quasi architecto beatae lorem ipsum </p>
+                    {{-- <h3 class="tp-portfolio-details-title">You can dream, create, build <br> the most wonderful place in
+                        the world.</h3> --}}
+                    <p class="text-1">{{ $item->description }}</p>
                     <div class="tp-portfolio-details-wrap">
                         <ul>
-                            <li class="mb-20"><span>Clients name:</span>Liza Olivares</li>
-                            <li class="mb-20"><span>Awards:</span>Wining first place</li>
-                            <li class="mb-20"><span>Catagory:</span>Indoor lighting</li>
-                            <li class="mb-20"><span>Budget:</span>$ 7894.00</li>
-                            <li class="mb-20"><span>Location:</span>San Fransisco 12. USA</li>
-                            <li class="mb-20"><span>Website:</span>ishpat@gmail.com</li>
+                            <li class="mb-20"><span>{{trans('table.columns.client name')}}:</span>{{ $item->client_name }}</li>
+                            <li class="mb-20"><span>{{trans('table.columns.start date')}}:</span>{{ $item->transaction_start_date }}</li>
+                            <li class="mb-20"><span>{{trans('table.columns.end date')}}:</span>{{ $item->transaction_end_date }}</li>
+                            <li class="mb-20"><span>{{trans('table.columns.duration of work')}}:</span>{{ $item->duration_of_work }}</li>
                         </ul>
                     </div>
                     <div class="tp-portfolio-details-thumb">
-                        <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                        {{-- <div class="tp-portfolio-slider tp-cursor-point-area">
+                            <div class="tp-portfolio-active swiper slider-drag">
+                                <div class="swiper-wrapper">
+                                    @foreach ($item->getMedia('works') as $img)
+                                        <div class="swiper-slide">
+                                            <img height="100%" width="100%" src="{{$img->getUrl()}}" alt="">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div> --}}
+
+                        <div class="product__details-thumb-tab mr-70">
+                            <div class="product__details-thumb-content w-img">
+                                <div class="tab-content" id="nav-tabContent">
+                                    @foreach ($images as $img)
+                                    <div @class(['tab-pane fade', 'show active' => $loop->last]) id="nav-{{$loop->iteration}}" role="tabpanel" aria-labelledby="nav-{{$loop->iteration}}-tab">
+                                        <img src="{{$img->getUrl()}}" alt="" style="height: 500px !important">
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="product__details-thumb-nav tp-tab">
+                                <nav>
+                                    <div class="nav nav-tabs justify-content-sm-between" id="nav-tab" role="tablist">
+                                        @foreach ($images as $img)
+                                        <button @class(['nav-link', 'active' => $loop->first]) id="nav-{{$loop->iteration}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{$loop->iteration}}"
+                                            type="button" role="tab" aria-controls="nav-{{$loop->iteration}}" aria-selected="true">
+                                            <img src="{{$img->getUrl()}}" alt="">
+                                        </button>
+                                        @endforeach
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-2">Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
-                        dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt
-                        explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus
-                        eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the ndustry standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-                        Lorem Ipsum is simply dummy text of the new design printng and type setting Ipsum Take a look at
-                        our round up of the best shows coming soon to your telly box has been the is industrys. When an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries, but also the leap into electronic typesetting, remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                        containing.</p>
-                    <h4 class="tp-portfolio-details-title-2">The challenge of project</h4>
+                    <p class="text-2">{!! $item->content !!}</p>
+                    {{-- <h4 class="tp-portfolio-details-title-2">The challenge of project</h4>
                     <p class="text-3">Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi
                         architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur
                         turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing</p>
@@ -84,77 +107,7 @@
                                 <h5 class="tp-portfolio-details-prev-title">France villa repairing</h5>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="tp-portfolio-title-details mb-50">
-                    <h3 class="tp-portfolio-details-title-2">Our related projects</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-project-item p-relative fix mb-30">
-                            <div class="tp-project-thumb p-relative fix">
-                                <a href="project-detail.html">
-                                    <img src="assets/img/project/project-2-1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="tp-project-item-content p-relative">
-                                <span>Building</span>
-                                <h4 class="tp-project-item-title"><a href="project-details.html">Museum architecture</a>
-                                </h4>
-                                <div class="tp-project-item-btn">
-                                    <a href="project-details.html">
-                                        <span>
-                                            <i class="fa-regular fa-plus"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-project-item p-relative fix mb-30">
-                            <div class="tp-project-thumb p-relative fix">
-                                <a href="project-detail.html">
-                                    <img src="assets/img/project/project-2-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="tp-project-item-content p-relative">
-                                <span>Building</span>
-                                <h4 class="tp-project-item-title"><a href="project-details.html">Museum architecture</a>
-                                </h4>
-                                <div class="tp-project-item-btn">
-                                    <a href="project-details.html">
-                                        <span>
-                                            <i class="fa-regular fa-plus"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tp-project-item p-relative fix mb-30">
-                            <div class="tp-project-thumb p-relative fix">
-                                <a href="project-detail.html">
-                                    <img src="assets/img/project/project-2-3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="tp-project-item-content p-relative">
-                                <span>Building</span>
-                                <h4 class="tp-project-item-title"><a href="project-details.html">Museum architecture</a>
-                                </h4>
-                                <div class="tp-project-item-btn">
-                                    <a href="project-details.html">
-                                        <span>
-                                            <i class="fa-regular fa-plus"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

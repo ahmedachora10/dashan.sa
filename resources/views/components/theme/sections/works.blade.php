@@ -20,10 +20,10 @@
                                 <img src="{{$item->thumbnail}}" alt="">
                                 <div class="tp-portfolio-thumb-info">
                                     {{-- <p>Houses</p> --}}
-                                    <h4 class="tp-portfolio-title"><a href="portfolio.html">{{$item->client_name}}</a></h4>
+                                    <h4 class="tp-portfolio-title"><a href="{{route('works.show', $item)}}">{{$item->client_name}}</a></h4>
                                 </div>
                                 <div class="tp-portfolio-btn">
-                                    <a href="portfolio.html"><i class="fa-light fa-arrow-right"></i></a>
+                                    <a href="{{route('works.show', $item)}}"><i class="fa-light fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>

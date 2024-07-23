@@ -118,7 +118,7 @@
                                     <p>Get latest updates and offers.</p>
                                     <div class="tp-footer-widget-content-input">
                                         {{-- <form action="index.html"> --}}
-                                            <a href="{{setting('footer_'.app()->getLocale())}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style bg-gradient px-3 py-2 border">
+                                            <a href="{{asset(setting('profile_file_'.app()->getLocale()))}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style bg-gradient px-3 py-2 border">
                                                 <span class="mx-2">
                                                     <i class="fas fa-file-download"></i>
                                                 </span>

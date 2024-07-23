@@ -34,8 +34,8 @@
 <body>
 
     <!-- mouse cursor drag start -->
-        <div class="mouseCursor cursor-outer"></div>
-        <div class="mouseCursor cursor-inner"><span><img src="assets/img/icon/mouse-cursor.svg" alt=""></span></div>
+        {{-- <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"><span><img src="assets/img/icon/mouse-cursor.svg" alt=""></span></div> --}}
     <!-- mouse cursor drag end -->
 
     <!-- pre loader area start -->
@@ -47,15 +47,15 @@
     <!-- back to top end -->
 
     <!-- search area start -->
-    <x-theme.search-area />
+    {{-- <x-theme.search-area /> --}}
     <!-- search area end -->
 
     <!-- cart mini area start -->
-    <x-theme.cart-area />
+    {{-- <x-theme.cart-area /> --}}
     <!-- cart mini area end -->
 
     <!-- offcanvas area start -->
-    <x-theme.off-canvas-area />
+    {{-- <x-theme.off-canvas-area /> --}}
     <!-- offcanvas area end -->
 
     <div class="tp-page-wrapper">
@@ -73,26 +73,26 @@
     @include('layouts.theme.footer')
 
     <!-- JS here -->
-    <script src="{{ asset('theme/js/vendor/jquery.js') }}"></script>
-    <script src="{{ asset('theme/js/bootstrap-bundle.js') }}"></script>
-    <script src='{{ asset('theme/js/three.js') }}'></script>
-    <script src="{{ asset('theme/js/gsap.js') }}"></script>
-    <script src="{{ asset('theme/js/webgl.js') }}"></script>
-    <script src="{{ asset('theme/js/hover-effect.umd.js') }}"></script>
-    <script src="{{ asset('theme/js/swiper-bundle.js') }}"></script>
-    <script src="{{ asset('theme/js/magnific-popup.js') }}"></script>
-    <script src="{{ asset('theme/js/tilt.jquery.min.js') }}"></script>
-    <script src="{{ asset('theme/js/purecounter.js') }}"></script>
-    <script src="{{ asset('theme/js/imagesloaded-pkgd.js') }}"></script>
-    <script src="{{ asset('theme/js/isotope-pkgd.js') }}"></script>
-    <script src="{{ asset('theme/js/nice-select.js') }}"></script>
-    <script src="{{ asset('theme/js/countdown.js') }}"></script>
-    <script src="{{ asset('theme/js/wow.js') }}"></script>
-    <script src="{{ asset('theme/js/ajax-form.js') }}"></script>
+    <script defer src="{{ asset('theme/js/vendor/jquery.js') }}"></script>
+    <script defer src="{{ asset('theme/js/bootstrap-bundle.js') }}"></script>
+    <script defer src='{{ asset('theme/js/three.js') }}'></script>
+    <script defer src="{{ asset('theme/js/gsap.js') }}"></script>
+    <script defer src="{{ asset('theme/js/webgl.js') }}"></script>
+    <script defer src="{{ asset('theme/js/hover-effect.umd.js') }}"></script>
+    <script defer src="{{ asset('theme/js/swiper-bundle.js') }}"></script>
+    <script defer src="{{ asset('theme/js/magnific-popup.js') }}"></script>
+    <script defer src="{{ asset('theme/js/tilt.jquery.min.js') }}"></script>
+    <script defer src="{{ asset('theme/js/purecounter.js') }}"></script>
+    <script defer src="{{ asset('theme/js/imagesloaded-pkgd.js') }}"></script>
+    <script defer src="{{ asset('theme/js/isotope-pkgd.js') }}"></script>
+    <script defer src="{{ asset('theme/js/nice-select.js') }}"></script>
+    <script defer src="{{ asset('theme/js/countdown.js') }}"></script>
+    <script defer src="{{ asset('theme/js/wow.js') }}"></script>
+    <script defer src="{{ asset('theme/js/ajax-form.js') }}"></script>
 
     @stack('component-scripts')
 
-    <script src="{{ asset('theme/js/main.js') }}"></script>
+    <script defer src="{{ asset('theme/js/main.js') }}"></script>
 
     @stack('scripts')
     @livewireScripts
