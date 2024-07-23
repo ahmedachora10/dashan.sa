@@ -52,20 +52,22 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-2 mb-50">
-                            <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
-                            <div class="tp-footer-widget-content">
-                                <style>
-                                    .footer-links li a {
-                                        /* margin: 5px 8px; */
-                                        font-weight: bold;
-                                        color: white !important
-                                    }
-                                </style>
-                                <ul class="footer-links">
-                                    @include('layouts.theme.menu')
-                                    <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
-                                </ul>
+                        <div class="tp-footer-widget tp-footer-col-2 mb-50 d-flex justify-content-center">
+                            <div>
+                                <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
+                                <div class="tp-footer-widget-content">
+                                    <style>
+                                        .footer-links li a {
+                                            /* margin: 5px 8px; */
+                                            font-weight: bold;
+                                            color: white !important
+                                        }
+                                    </style>
+                                    <ul class="footer-links">
+                                        @include('layouts.theme.menu')
+                                        <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
