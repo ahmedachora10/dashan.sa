@@ -63,8 +63,8 @@
                                     }
                                 </style>
                                 <ul class="d-flex flex-wrap footer-links">
-                                    <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                     @include('layouts.theme.menu')
+                                    <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                 </ul>
                             </div>
                         </div>
