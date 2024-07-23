@@ -33,7 +33,7 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="tp-header-logo">
                         <a href="index.html">
-                            <img width="40" height="40" src="{{asset(setting('logo'))}}" alt="Logo">
+                            <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="tp-header-logo">
                         <a href="index.html">
-                            <img width="40" height="40" src="{{asset(setting('logo'))}}" alt="Logo">
+                            <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
                         </a>
                     </div>
                 </div>
