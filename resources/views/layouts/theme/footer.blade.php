@@ -1,4 +1,4 @@
-<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-200">
+<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-130">
     <div class="tp-footer-bg"></div>
     <div class="tp-footer-box p-relative">
         <div class="tp-footer-shape">
@@ -6,12 +6,12 @@
             <img class="shape-2" src="assets/img/footer/footer-shape-2.png" alt="">
         </div>
         <div class="container">
-            <div class="tp-footer-main tp-footer-border">
+            <div class="tp-footer-main tp-footer-border pb-0">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12">
                         <div class="tp-footer-widget tp-footer-col-1 mb-50">
                             <div class="tp-footer-logo mb-40">
-                                <a href="{{route('home')}}"> <img width="40" src="{{asset(setting('logo'))}}" alt=""></a>
+                                <a href="{{route('home')}}"> <img width="150" src="{{asset(setting('logo'))}}" alt=""></a>
                             </div>
                             <div class="tp-footer-widget-content">
                                 <p>{{setting('app_description_'.app()->getLocale())}}</p>
