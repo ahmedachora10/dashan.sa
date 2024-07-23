@@ -14,7 +14,7 @@
                                 <a href="{{route('home')}}"> <img width="40" src="{{asset(setting('logo'))}}" alt=""></a>
                             </div>
                             <div class="tp-footer-widget-content">
-                                <p>{{setting('app_description')}}</p>
+                                <p>{{setting('app_description_'.app()->getLocale())}}</p>
                                 <div class="tp-footer-widget-social">
                                     @foreach ([
                                         'facebook' => 'fab fa-facebook-f',
