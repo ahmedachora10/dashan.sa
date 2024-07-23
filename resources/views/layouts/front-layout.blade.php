@@ -55,7 +55,7 @@
     <!-- cart mini area end -->
 
     <!-- offcanvas area start -->
-    {{-- <x-theme.off-canvas-area /> --}}
+    <x-theme.off-canvas-area />
     <!-- offcanvas area end -->
 
     <div class="tp-page-wrapper">

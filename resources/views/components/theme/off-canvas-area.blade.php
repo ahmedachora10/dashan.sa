@@ -14,57 +14,52 @@
             <div class="offcanvas__top mb-40">
                 <div class="offcanvas__logo">
                     <a href="index.html">
-                        <img src="assets/img/logo/logo-white.png" alt="logo">
+                        <img src="{{asset(setting('logo'))}}" width="100" alt="logo">
                     </a>
                 </div>
             </div>
 
             <div class="tp-main-menu-mobile fix d-xl-none mb-30"></div>
 
-            <div class="offcanvas__contact d-none d-xl-block">
-                <div class="offcanvas__text mb-30">
-                    <p>The design readable content of a page hen looking at its layout The point our of using Movie
-                        template</p>
-                </div>
-                <div class="offcanvas__gallery mb-30">
-                    <h4 class="offcanvas__title">Gallery</h4>
-
-                </div>
-            </div>
             <div class="offcanvas-info mb-30">
-                <h4 class="offcanvas__title">Contacts</h4>
-                <div class="offcanvas__contact-content d-flex">
-                    <div class="offcanvas__contact-content-icon">
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="offcanvas__contact-content-content">
-                        <a
-                            href="https://www.google.com/maps/search/86+Road+Broklyn+Street,+600+New+York,+USA/@40.6897806,-74.0278086,12z/data=!3m1!4b1">86
-                            Road Broklyn Street, 600 </a>
-                    </div>
-                </div>
+                <h4 class="offcanvas__title">{{ ucwords(trans('contacts')) }}</h4>
+
+                @if(!empty(setting('email')))
                 <div class="offcanvas__contact-content d-flex">
                     <div class="offcanvas__contact-content-icon">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="offcanvas__contact-content-content">
-                        <a href="mailto:needhelp@company.com"> Needhelp@company.com </a>
+                        <a href="mailto:{{setting('email')}}"> {{setting('email')}} </a>
                     </div>
                 </div>
+                @endif
+                @if(!empty(setting('phone')))
                 <div class="offcanvas__contact-content d-flex">
                     <div class="offcanvas__contact-content-icon">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="offcanvas__contact-content-content">
-                        <a href="tel:01310-069824"> +92 666 888 0000</a>
+                        <a href="tel:{{setting('phone')}}"> {{setting('phone')}} </a>
                     </div>
                 </div>
+                @endif
             </div>
             <div class="offcanvas__social">
-                <a class="icon facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                @foreach ([
+                'facebook' => 'fab fa-facebook-f',
+                'instagram' => 'fa-brands fa-instagram',
+                'linkedin' => 'fa-brands fa-linkedin',
+                'twitter' => 'fab fa-twitter'
+                ] as $media => $icon)
+                @continue(empty(setting($media)))
+
+                <a href="{{setting($media)}}" class="icon {{$media}}"><i class="{{$icon}}"></i></a>
+                @endforeach
+                {{-- <a class="icon facebook" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="icon twitter" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="icon youtube" href="#"><i class="fab fa-youtube"></i></a>
-                <a class="icon linkedin" href="#"><i class="fab fa-linkedin"></i></a>
+                <a class="icon linkedin" href="#"><i class="fab fa-linkedin"></i></a> --}}
             </div>
         </div>
     </div>

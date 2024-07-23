@@ -169,7 +169,7 @@ return [
                 'data' => 'string',
                 'name' => 'phone',
                 'label' => 'Phone Number',
-                'rules' => 'nullable|integer',
+                'rules' => 'nullable|string',
                 'class' => '',
                 'value' => ''
 

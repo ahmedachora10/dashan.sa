@@ -4,9 +4,9 @@
     <x-theme.sections.about />
     <x-theme.margin />
     <x-theme.sections.our-blog :visions="$visions" />
-    {{-- <x-theme.margin /> --}}
     <x-theme.sections.services :services="$ourServices" />
     <x-theme.sections.our-clients />
+    <x-theme.margin />
     <x-theme.sections.works />
     <x-theme.sections.statistics :statistics="null" />
     <x-theme.sections.our-team :members="null" />
