@@ -25,7 +25,7 @@
                                     ] as $media => $icon)
                                         @continue(empty(setting($media)))
 
-                                        <a href="{{setting($media)}}"><i class="{{$icon}}"></i></a>
+                                        <a href="{{setting($media)}}" class="mx-0"><i class="{{$icon}}"></i></a>
                                     @endforeach
                                 </div>
                             </div>
