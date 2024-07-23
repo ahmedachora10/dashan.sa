@@ -43,6 +43,7 @@
                             <nav class="tp-main-menu-content">
                                 <ul>
                                     @include('layouts.theme.menu')
+                                    <li></li>
                                 </ul>
                             </nav>
                         </div>
@@ -85,6 +86,7 @@
                             <nav class="tp-main-menu-content">
                                 <ul>
                                     @include('layouts.theme.menu')
+                                    <li></li>
                                 </ul>
                             </nav>
                         </div>
