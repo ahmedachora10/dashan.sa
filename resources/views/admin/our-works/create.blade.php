@@ -16,11 +16,11 @@
             </div>
 
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="date" name="transaction_start_date" :title="trans('table.columns.transaction start date')" />
+                <x-dashboard.input-group type="date" name="transaction_start_date" :title="trans('table.columns.start date')" />
             </div>
 
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="date" name="transaction_end_date" :title="trans('table.columns.transaction end date')" />
+                <x-dashboard.input-group type="date" name="transaction_end_date" :title="trans('table.columns.end date')" />
             </div>
 
             <div class="col-12 mb-3">

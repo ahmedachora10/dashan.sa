@@ -117,25 +117,14 @@
                                     <h3 class="tp-footer-widget-title">Newsletter</h3>
                                     <p>Get latest updates and offers.</p>
                                     <div class="tp-footer-widget-content-input">
-                                        <form action="index.html">
-                                            <input type="email" placeholder="Your email">
-                                            <button class="tp-icon-style">
-                                                <span>
-                                                    <svg class="qodef-svg--custom-arrow qodef-m-arrow"
-                                                        xmlns="http://www.w3.org/2000/svg" width="14.2" height="14.2"
-                                                        viewBox="0 0 14.2 14.2">
-                                                        <g>
-                                                            <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                            <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                        </g>
-                                                        <g>
-                                                            <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                            <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                        </g>
-                                                    </svg>
+                                        {{-- <form action="index.html"> --}}
+                                            <a href="{{setting('footer_'.app()->getLocale())}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style bg-gradient px-3 py-2 border">
+                                                <span class="mx-2">
+                                                    <i class="fas fa-file-download"></i>
                                                 </span>
-                                            </button>
-                                        </form>
+                                                <span>{{ucwords(trans('download profile'))}}</span>
+                                            </a>
+                                        {{-- </form> --}}
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +136,7 @@
                 <div class="row">
                     <div class="col-md-7 col-12">
                         <div class="tp-footer-copyright-inner">
-                            <p>© 2023 Ishpat is Proudly Powered by Themepure</p>
+                            <p>© {{date('Y')}} {{setting('footer_'.app()->getLocale())}}</p>
                         </div>
                     </div>
                     <div class="col-md-5 col-12">
