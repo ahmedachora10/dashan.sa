@@ -49,6 +49,10 @@ return [
         'message' => 'Message',
         'subject' => 'Subject',
 
+        'client name' => 'Client Name',
+        'content' => 'Content',
+        'duration of work' => 'Duration Of Work',
+
     ],
     'empty' => 'No Records'
 ];

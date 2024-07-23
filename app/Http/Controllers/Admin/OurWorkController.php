@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class OurWorkController extends Controller
 {
-    public function __construct(protected UploadFileService $uploadFileService) {}
+    // public function __construct(protected UploadFileService $uploadFileService) {}
     /**
      * Display a listing of the resource.
      */
@@ -35,7 +35,12 @@ class OurWorkController extends Controller
 
         $request->validated();
 
-        OurWork::create($request->safe()->except('image') + ['image' => $this->uploadFileService->store($request->image, 'images/our-works')]);
+        $newWork = OurWork::create($request->safe()->except('images'));
+
+        foreach($request->images as $img) {
+            $newWork->addMedia($img)->toMediaCollection('works');
+        }
+
         return redirect()->route('our-works.index')->with('success', trans('message.create'));
     }
 
@@ -52,7 +57,9 @@ class OurWorkController extends Controller
      */
     public function edit(OurWork $ourWork)
     {
-        return view('admin.our-works.edit', compact('ourWork'));
+        $images = $ourWork->getMedia('works');
+
+        return view('admin.our-works.edit', compact('ourWork', 'images'));
     }
 
     /**
@@ -63,7 +70,12 @@ class OurWorkController extends Controller
 
         $request->validated();
 
-        $ourWork->update($request->safe()->except('image') + ['image' => $this->uploadFileService->update($request->image, $ourWork->image, 'images/our-works')]);
+        $ourWork->update($request->safe()->except('images'));
+
+        foreach($request->images as $img) {
+            $ourWork->addMedia($img)->toMediaCollection('works');
+        }
+
 
         return redirect()->route('our-works.index')->with('success', trans('message.update'));
     }
@@ -73,9 +85,12 @@ class OurWorkController extends Controller
      */
     public function destroy(OurWork $ourWork)
     {
-        $this->uploadFileService->delete($ourWork->image);
         $ourWork->delete();
 
         return redirect()->route('our-works.index')->with('success', trans('message.delete'));
+    }
+
+    public function removeMedia(Request $request) {
+        return response()->json([$request->input('id'), 'test' => 'ykead']);
     }
 }

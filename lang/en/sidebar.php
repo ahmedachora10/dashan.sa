@@ -19,4 +19,5 @@ return [
     'our services' => 'Our Services',
     'faq' => 'Faq',
     'team' => 'Team',
+    'our works' => 'Our Works'
 ];

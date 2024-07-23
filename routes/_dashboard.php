@@ -76,6 +76,9 @@ Route::middleware(['auth'])->group(function ()
     Route::get('contact-us', ContactUsContainer::class)->name('contact-us.index');
     Route::resource('statistics', StatisticController::class);
     Route::resource('services', ServiceController::class);
+
+    Route::post('our-works/media/remove', [OurWorkController::class, 'removeMedia'])
+        ->name('our-works.media.remove');
     Route::resource('our-works', OurWorkController::class);
 
     Route::get('job-requests', JobRequestsContainer::class)->name('job-requests.index');

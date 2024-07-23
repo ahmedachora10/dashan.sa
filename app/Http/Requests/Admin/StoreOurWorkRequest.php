@@ -14,8 +14,17 @@ class StoreOurWorkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
-            'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'images' => 'array',
+            'images.*' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'client_name_ar' => 'required|string',
+            'client_name_en' => 'nullable|string',
+            'description_ar' => 'required|string',
+            'description_en' => 'nullable|string',
+            'content_ar' => 'required|string',
+            'content_en' => 'nullable|string',
+            'transaction_start_date' => 'required|date',
+            'transaction_end_date' => 'required|date||after:transaction_start_date',
+            'duration_of_work' => 'required|integer'
         ];
     }
 }

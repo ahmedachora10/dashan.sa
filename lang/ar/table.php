@@ -121,6 +121,9 @@ return [
         'answer' => 'جواب',
         'job name' => 'المنصب',
         'social media' => 'حسابات التواصل',
+
+        'client name' => 'اسم العميل',
+        'duration of work' => 'مدة العمل',
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
 ];

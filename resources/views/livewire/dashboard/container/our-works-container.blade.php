@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.our works')" />
 
-    <x-dashboard.tables.table1 :createAction="route('our-works.create')" :columns="['image', 'title']">
+    <x-dashboard.tables.table1 :createAction="route('our-works.create')" :columns="['image', 'client name', 'description', 'duration', 'start date', 'end date']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -14,7 +14,11 @@
                 <td>{{ $item->id }}</td>
                 <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
                         class="rounded-circle"></td>
-                <td>{{ $item->title }}</td>
+                <td>{{ $item->client_name }}</td>
+                <td>{{ $item->description }}</td>
+                <td>{{ $item->duration_of_work }}</td>
+                <td>{{ $item->transaction_start_date }}</td>
+                <td>{{ $item->transaction_end_date }}</td>
                 <td>
                     <x-dashboard.actions.container>
                         <x-dashboard.actions.edit
