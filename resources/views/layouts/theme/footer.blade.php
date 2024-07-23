@@ -30,7 +30,7 @@
                                 </div>
                                 @if(!empty(setting('email')))
                                 <div class="offcanvas__contact-content d-flex">
-                                    <div class="offcanvas__contact-content-icon me-2">
+                                    <div class="offcanvas__contact-content-icon ms-2">
                                         <i class="fa-solid fa-envelope text-white"></i>
                                     </div>
                                     <div class="offcanvas__contact-content-content">
@@ -40,7 +40,7 @@
                                 @endif
                                 @if(!empty(setting('phone')))
                                 <div class="offcanvas__contact-content d-flex mt-2">
-                                    <div class="offcanvas__contact-content-icon me-2">
+                                    <div class="offcanvas__contact-content-icon ms-2">
                                         <i class="fa-solid fa-phone text-white"></i>
                                     </div>
                                     <div class="offcanvas__contact-content-content">
