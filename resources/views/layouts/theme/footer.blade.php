@@ -53,9 +53,9 @@
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="tp-footer-widget tp-footer-col-2 mb-50">
-                            <h3 class="tp-footer-widget-title">Navigation</h3>
+                            <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
                             <div class="tp-footer-widget-content">
-                                <ul>
+                                <ul class="d-flex flex-wrap">
                                     @include('layouts.theme.menu')
                                     <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                 </ul>
