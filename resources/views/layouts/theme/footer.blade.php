@@ -144,7 +144,7 @@
                         <div class="tp-footer-widget tp-footer-col-4 mb-50">
                             <div class="tp-footer-widget-content">
                                 <div class="tp-footer-widget-contact">
-                                    <h3 class="tp-footer-widget-title">Newsletter</h3>
+                                    <h3 class="tp-footer-widget-title">{{ucwords(trans('profile'))}}</h3>
                                     <p>Get latest updates and offers.</p>
                                     <div class="tp-footer-widget-content-input">
                                         {{-- <form action="index.html"> --}}
