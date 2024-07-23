@@ -30,8 +30,8 @@
                                 </div>
                                 @if(!empty(setting('email')))
                                 <div class="offcanvas__contact-content d-flex mt-3">
-                                    <div class="offcanvas__contact-content-icon">
-                                        <i class="fa-solid fa-envelope"></i>
+                                    <div class="offcanvas__contact-content-icon mx-2">
+                                        <i class="fa-solid fa-envelope text-white"></i>
                                     </div>
                                     <div class="offcanvas__contact-content-content">
                                         <a href="mailto:{{setting('email')}}"> {{setting('email')}} </a>
@@ -40,8 +40,8 @@
                                 @endif
                                 @if(!empty(setting('phone')))
                                 <div class="offcanvas__contact-content d-flex mt-2">
-                                    <div class="offcanvas__contact-content-icon">
-                                        <i class="fa-solid fa-phone"></i>
+                                    <div class="offcanvas__contact-content-icon mx-2">
+                                        <i class="fa-solid fa-phone text-white"></i>
                                     </div>
                                     <div class="offcanvas__contact-content-content">
                                         <a href="tel:{{setting('phone')}}"> {{setting('phone')}} </a>
