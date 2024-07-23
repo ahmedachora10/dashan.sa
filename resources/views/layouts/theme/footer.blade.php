@@ -55,7 +55,12 @@
                         <div class="tp-footer-widget tp-footer-col-2 mb-50">
                             <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
                             <div class="tp-footer-widget-content">
-                                <ul class="d-flex flex-wrap">
+                                <style>
+                                    .footer-links li {
+                                        margin: 5px 8px;
+                                    }
+                                </style>
+                                <ul class="d-flex flex-wrap footer-links">
                                     @include('layouts.theme.menu')
                                     <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                 </ul>
