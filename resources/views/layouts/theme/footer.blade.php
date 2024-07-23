@@ -56,13 +56,13 @@
                             <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
                             <div class="tp-footer-widget-content">
                                 <style>
-                                    .footer-links li {
-                                        margin: 5px 8px;
+                                    .footer-links li a {
+                                        /* margin: 5px 8px; */
                                         font-weight: bold;
                                         color: white !important
                                     }
                                 </style>
-                                <ul class="d-flex flex-wrap footer-links">
+                                <ul class="footer-links">
                                     @include('layouts.theme.menu')
                                     <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
                                 </ul>
