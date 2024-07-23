@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ setting('app_name') }} {{ @$title }}</title>
+    <title>{{ setting('app_name_'.app()->getLocale()) }} {{ @$title }}</title>
     <meta name="description" content="{{setting('app_description')}}">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />

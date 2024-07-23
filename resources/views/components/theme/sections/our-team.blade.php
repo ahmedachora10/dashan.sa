@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="tp-team-7-title-wrapper text-center mb-50">
-                    <span class="tp-section-title-pre-2">{{headline('our theam')->subTitle}}</span>
-                    <h3 class="tp-section-title">{{headline('our theam')->title}}</h3>
+                    <span class="tp-section-title-pre-2">{{headline('team')->title}}</span>
+                    <h3 class="tp-section-title">{{headline('team')->subTitle}}</h3>
                 </div>
             </div>
         </div>

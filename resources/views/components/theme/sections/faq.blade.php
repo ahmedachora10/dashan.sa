@@ -1,7 +1,7 @@
 <!-- faq area start -->
 <section class="tp-faq-area p-relative gray-bg pb-120">
     <div class="tp-faq-text">
-        <h2 class="tp-faq-text-title">OUR FAQ’S</h2>
+        <h2 class="tp-faq-text-title">{{headline('faq')->title}}</h2>
     </div>
     <div class="tp-faq-shape">
         <img src="{{asset('theme/img/faq/faq-1-shape.png')}}" alt="">
@@ -11,8 +11,8 @@
             <div class="col-lg-7">
                 <div class="tp-faq-box pt-100 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="tp-faq-title-wrapper mb-35">
-                        <span class="tp-section-title-pre">Our CLIENTS QUESTION</span>
-                        <h3 class="tp-section-title">People frequently asked <br> question</h3>
+                        <span class="tp-section-title-pre">{{headline('faq')->title}}</span>
+                        <h3 class="tp-section-title">{{headline('faq')->subTitle}}</h3>
                     </div>
                     <div class="tp-faq-wrapper">
                         <div class="accordion" id="accordionExample">
