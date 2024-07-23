@@ -30,8 +30,8 @@
             <div class="col-lg-7">
                 <div class="tp-about-wrapper p-relative wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="tp-about-title-wrapper">
-                        <span class="tp-section-title-pre">{{headline('about us')->title}}</span>
-                        <h3 class="tp-section-title">{{headline('about us')->subTitle}}</h3>
+                        <span class="tp-section-title-pre">{{headline('about')->title}}</span>
+                        <h3 class="tp-section-title">{{headline('about')->subTitle}}</h3>
                         <p>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad
                             minim veniam, quisq wiusmod ut tempor incididunt ut labore et dolore sed do magna aliqua.
                         </p>
