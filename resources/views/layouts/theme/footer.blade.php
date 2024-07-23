@@ -1,4 +1,4 @@
-<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-145">
+<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-200">
     <div class="tp-footer-bg"></div>
     <div class="tp-footer-box p-relative">
         <div class="tp-footer-shape">
