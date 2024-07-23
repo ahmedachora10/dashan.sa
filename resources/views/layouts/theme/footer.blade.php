@@ -58,6 +58,8 @@
                                 <style>
                                     .footer-links li {
                                         margin: 5px 8px;
+                                        font-weight: bold;
+                                        color: white !important
                                     }
                                 </style>
                                 <ul class="d-flex flex-wrap footer-links">
