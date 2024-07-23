@@ -1,20 +1,5 @@
 <x-front-layout>
-    <div class="py-4"></div>
-    <section class="site-section block__62272" id="portfolio-section">
-        <div class="container">
-            <x-work-section />
-        </div>
-    </section>
+    <x-theme.sections.breadcrumb image="theme/img/breadcrumb/bradcrumb-14.jpg" title="contact us" />
+    <x-work-section />
 
-
-    @push('scripts')
-        <script defer>
-            var heroSwiper = new Swiper('.swiper', {
-                // Optional parameters
-                // direction: 'vertical',
-                loop: true,
-
-            });
-        </script>
-    @endpush
 </x-front-layout>
