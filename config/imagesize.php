@@ -14,4 +14,5 @@ return [
     'update' => '60x60 (px)',
     'registry' => '60x60 (px)',
     'cta' => '479x257 (px)',
+    'icon' => '69X69 (px)'
 ];

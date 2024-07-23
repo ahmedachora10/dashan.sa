@@ -202,7 +202,8 @@ return [
                 'label' => 'Icon',
                 'rules' => 'nullable|image',
                 'class' => '',
-                'value' => ''
+                'value' => '',
+                'dimension' => 'icon',
 
             ]
         ]
