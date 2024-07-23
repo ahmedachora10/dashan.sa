@@ -145,7 +145,7 @@
                             <div class="tp-footer-widget-content">
                                 <div class="tp-footer-widget-contact">
                                     <h3 class="tp-footer-widget-title">{{ucwords(trans('profile'))}}</h3>
-                                    <p>Get latest updates and offers.</p>
+                                    <p>{{ucwords(trans('to download profile click here'))}}</p>
                                     <div class="tp-footer-widget-content-input">
                                         {{-- <form action="index.html"> --}}
                                             <a href="{{asset(setting('profile_file_'.app()->getLocale()))}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style bg-gradient px-3 py-2 border">
