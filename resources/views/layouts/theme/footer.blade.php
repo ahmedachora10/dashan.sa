@@ -28,6 +28,26 @@
                                         <a href="{{setting($media)}}" class="mx-0"><i class="{{$icon}}"></i></a>
                                     @endforeach
                                 </div>
+                                @if(!empty(setting('email')))
+                                <div class="offcanvas__contact-content d-flex mt-3">
+                                    <div class="offcanvas__contact-content-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-content-content">
+                                        <a href="mailto:{{setting('email')}}"> {{setting('email')}} </a>
+                                    </div>
+                                </div>
+                                @endif
+                                @if(!empty(setting('phone')))
+                                <div class="offcanvas__contact-content d-flex mt-2">
+                                    <div class="offcanvas__contact-content-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-content-content">
+                                        <a href="tel:{{setting('phone')}}"> {{setting('phone')}} </a>
+                                    </div>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
