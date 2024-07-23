@@ -50,7 +50,8 @@
                 'facebook' => 'fab fa-facebook-f',
                 'instagram' => 'fa-brands fa-instagram',
                 'linkedin' => 'fa-brands fa-linkedin',
-                'twitter' => 'fab fa-twitter'
+                'twitter' => 'fab fa-twitter',
+                'snapchat' => 'fab fa-snapchat'
                 ] as $media => $icon)
                 @continue(empty(setting($media)))
 
