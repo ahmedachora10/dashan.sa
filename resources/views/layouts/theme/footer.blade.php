@@ -169,13 +169,6 @@
                             <p> {!! setting('footer_'.app()->getLocale()) !!} © {{date('Y')}}</p>
                         </div>
                     </div>
-                    <div class="col-md-5 col-12">
-                        <div class="tp-footer-copyright-inner text-md-end">
-                            <a href="#">Privacy Policy</a>
-                            <div class="dvd">/</div>
-                            <a href="#">Terms of Use</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
