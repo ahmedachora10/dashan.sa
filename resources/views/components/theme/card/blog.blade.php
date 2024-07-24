@@ -1,6 +1,6 @@
 @props(['image' => '', 'title' => '', 'description' => '', 'link' => '#'])
 <div class="tp-blog-3-item mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-    <div class="tp-blog-3-thumb p-relative fix">
+    <div class="p-relative fix">
         <img src="{{$image}}" alt="" height="300px">
         {{-- <div class="tp-blog-3-icon">
             <a href="blog-details.html"><i class="flaticon-next"></i></a>
