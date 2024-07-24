@@ -1,6 +1,6 @@
 <x-front-layout>
     <x-theme.sections.hero-section :sliders="$sliders" />
-    {{-- <x-theme.margin /> --}}
+    <div class=" pb-90"></div>
     <x-theme.sections.our-blog :visions="$visions" />
     {{-- <x-theme.margin /> --}}
     <x-theme.sections.about />
