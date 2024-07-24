@@ -26,7 +26,7 @@ class HeadlineController extends Controller
     {
         $headline->update($request->validated());
 
-        Cache::forget('headlines');
+        Cache::remember('headlines', now()->addWeek(), fn() => Headline::all());
 
         return redirect()->route('headlines.index')->with('success', trans('message.update'));
     }

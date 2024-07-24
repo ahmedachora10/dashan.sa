@@ -3,8 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="tp-blog-3-title-wrapper text-center mb-65">
-                    <span class="tp-section-title-pre">{{ headline('vision')->title }}</span>
-                    <h3 class="tp-section-title">{{headline('vision')->subTitle}}</h3>
+                    <x-theme.headline key="vision" />
                 </div>
             </div>
         </div>
