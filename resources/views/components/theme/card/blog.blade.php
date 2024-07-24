@@ -1,4 +1,4 @@
-@props(['image' => '', 'title' => '', 'link' => '#'])
+@props(['image' => '', 'title' => '', 'description' => '', 'link' => '#'])
 <div class="tp-blog-3-item mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
     <div class="tp-blog-3-thumb p-relative fix">
         <img src="{{$image}}" alt="" height="300px">
@@ -12,5 +12,6 @@
             <span><i class="flaticon-tag"></i>Repair</span>
         </div> --}}
         <h4 class="tp-blog-3-title"><a href="{{$link}}">{{ $title }}</a></h4>
+        <p>{{ $description }}</p>
     </div>
 </div>

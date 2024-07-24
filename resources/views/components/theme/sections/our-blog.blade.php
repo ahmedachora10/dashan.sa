@@ -12,7 +12,7 @@
             @foreach ($visions as $item)
             <div class="col-lg-4 col-md-6">
                 <x-theme.card.blog :image="asset($item->thumbnail)"
-                    :title="$item->title" />
+                    :title="$item->title" :description="$item->description" />
             </div>
             @endforeach
         </div>
