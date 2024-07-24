@@ -26,7 +26,7 @@
 		2.3 Buttons
 		2.4 Animations
 		2.5 Preloader
-		2.6 Background 
+		2.6 Background
 		2.7 Nice Select
 		2.8 Pagination
 		2.9 Offcanvas
@@ -164,7 +164,7 @@ li,
 }
 
 /*---------------------------------
-	typography css start 
+	typography css start
 ---------------------------------*/
 body {
   font-family: var(--tp-ff-body);
@@ -2938,7 +2938,7 @@ div.demo img {
 }
 
 /*----------------------------------------
-    Body Overlay 
+    Body Overlay
 -----------------------------------------*/
 .body-overlay {
   position: fixed;
@@ -3273,7 +3273,7 @@ div.demo img {
   color: var(--tp-theme-primary);
   padding-left: 15px;
 }
-.tp-section-title-pre::after {
+/* .tp-section-title-pre::after {
   position: absolute;
   content: "";
   height: 6px;
@@ -3282,7 +3282,7 @@ div.demo img {
   top: 50%;
   transform: translateY(-50%);
   border: 1px solid var(--tp-theme-secondary);
-}
+} */
 .tp-section-title-pre-2 {
   position: relative;
   font-size: 14px;
