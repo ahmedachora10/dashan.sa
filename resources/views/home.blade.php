@@ -1,9 +1,9 @@
 <x-front-layout>
     <x-theme.sections.hero-section :sliders="$sliders" />
     <x-theme.margin />
-    <x-theme.sections.about />
-    <x-theme.margin />
     <x-theme.sections.our-blog :visions="$visions" />
+    <x-theme.margin />
+    <x-theme.sections.about />
     <x-theme.sections.services :services="$ourServices" />
     <x-theme.sections.our-clients />
     <x-theme.margin />
