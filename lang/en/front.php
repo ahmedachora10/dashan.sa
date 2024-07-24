@@ -32,5 +32,9 @@ return [
     'click here' => 'Click here',
     'reviews' => 'Reviews',
     'new review' => 'New Review',
-    'job request' => 'Job Request'
+    'job request' => 'Job Request',
+    'vision' => 'Vision',
+    'team' => 'Our Team',
+    'faq' => 'Faq',
+    'work' => 'Our Works',
 ];

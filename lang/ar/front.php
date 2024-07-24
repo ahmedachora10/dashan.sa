@@ -33,5 +33,9 @@ return [
     'new review' => 'تقييم جديد',
     'our services' => 'خدماتنا',
     'our works' => 'أعمالنا',
-    'job request' => 'طلب وظيفة'
+    'job request' => 'طلب وظيفة',
+    'vision' => 'الرؤية والرسالة',
+    'team' => 'فريقنا',
+    'faq' => 'ما يميزنا',
+    'work' => 'أعمالنا',
 ];
