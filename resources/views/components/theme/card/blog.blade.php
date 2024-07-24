@@ -6,7 +6,7 @@
             <a href="blog-details.html"><i class="flaticon-next"></i></a>
         </div> --}}
     </div>
-    <div class="tp-blog-3-content text-center z-index"style="height: 300px !important">
+    <div class="tp-blog-3-content text-center z-index"style="height: {{app()->getLocale() == 'ar' ? '300px' : '400px'}} !important">
         {{-- <div class="tp-blog-3-meta pb-25">
             <span><i class="fa-light fa-circle-user"></i>By thempure</span>
             <span><i class="flaticon-tag"></i>Repair</span>
