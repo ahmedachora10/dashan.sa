@@ -38,18 +38,18 @@
             margin-bottom: 8px;
             text-transform: uppercase;
             display: inline-block;
-            color: var(--tp-theme-primary);
+            color: var(--tp-heading-secondary);
             padding-left: 15px;
-            &::after{
-                position: absolute;
-                content: "";
-                height: 6px;
-                width: 6px;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                border: 1px solid var(--tp-theme-secondary);
-            }
+            // &::after{
+            //     position: absolute;
+            //     content: "";
+            //     height: 6px;
+            //     width: 6px;
+            //     left: 0;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     border: 1px solid var(--tp-theme-secondary);
+            // }
             &-2{
                 position: relative;
                 font-size: 14px;

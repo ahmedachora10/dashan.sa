@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset('theme/css/spacing.css')}}">
 
     @stack('component-styles')
-    <link rel="stylesheet" href="{{asset('theme/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/main.css')}}">
 
     @stack('styles')
 
