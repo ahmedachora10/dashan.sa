@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\CorpController;
@@ -89,5 +90,7 @@ Route::middleware(['auth'])->group(function ()
     Route::get('service-requests', ServiceRequestsContainer::class)->name('services.requests');
     Route::resource('faq', FaqController::class);
     Route::resource('team', TeamController::class);
-
+    Route::post('about-us/media/remove', [AboutController::class, 'removeMedia'])
+        ->name('about-us.media.remove');
+    Route::resource('about-us', AboutController::class);
 });

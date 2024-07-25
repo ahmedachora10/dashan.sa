@@ -12,7 +12,7 @@
         @forelse ($ourWorks as $item)
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
-                <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
+                <td><img src="{{ $item->thumbnail }}" alt="logo" width="40" height="40"
                         class="rounded-circle"></td>
                 <td>{{ $item->client_name }}</td>
                 <td>{{ $item->description }}</td>

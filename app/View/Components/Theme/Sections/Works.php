@@ -23,7 +23,7 @@ class Works extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.works', [
-            'works' => OurWork::all()
+            'works' => OurWork::with('media')->get()
         ]);
     }
 }

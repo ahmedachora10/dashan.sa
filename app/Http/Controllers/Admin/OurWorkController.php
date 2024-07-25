@@ -37,7 +37,8 @@ class OurWorkController extends Controller
 
         $newWork = OurWork::create($request->safe()->except('images'));
 
-        foreach($request->images as $img) {
+
+        foreach($request->images ?? [] as $img) {
             $newWork->addMedia($img)->toMediaCollection('works');
         }
 

@@ -2,12 +2,11 @@
 
 namespace App\View\Components\Theme\Sections;
 
-use App\Models\About as ModelsAbout;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class About extends Component
+class WheyUs extends Component
 {
     /**
      * Create a new component instance.
@@ -22,8 +21,6 @@ class About extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.theme.sections.about', [
-            'about' => ModelsAbout::with('media')->first()
-        ]);
+        return view('components.theme.sections.whey-us');
     }
 }

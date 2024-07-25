@@ -12,13 +12,15 @@ use App\Models\Vision;
 class HomeController extends Controller
 {
     public function index() {
-        view()->share('title', '');
+        view()->share('title',trans('front.home'));
 
         $sliders = Slider::all();
         $statistics = Statistic::all();
         $clients = OurClient::all();
         $visions = Vision::all();
         $ourServices = OurService::all();
+
+        // dd(OurWork::with('media')->get());
 
         return view('home', compact('sliders', 'clients', 'statistics', 'visions', 'ourServices'));
     }

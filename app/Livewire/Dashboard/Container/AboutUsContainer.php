@@ -2,20 +2,19 @@
 
 namespace App\Livewire\Dashboard\Container;
 
-use App\Models\OurWork;
+use App\Models\About;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class OurWorksContainer extends Component
+class AboutUsContainer extends Component
 {
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
-
     public function render()
     {
-        return view('livewire.dashboard.container.our-works-container', [
-            'ourWorks' => OurWork::with('media')->paginate(setting('pagination') ?? 8)
+        return view('livewire.dashboard.container.about-us-container', [
+            'items' => About::with('media')->paginate(setting('pagination') ?? 8)
         ]);
     }
 }

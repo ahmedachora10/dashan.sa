@@ -74,6 +74,7 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.faq')" icon="user-pin" :link="route('faq.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.team')" icon="user-pin" :link="route('team.index')" />
+        <x-dashboard.sidebar.link :title="trans('sidebar.about us')" icon="user-pin" :link="route('about-us.index')" />
 
         <!-- Misc -->
         {{-- <li class="menu-item">

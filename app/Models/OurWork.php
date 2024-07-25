@@ -32,7 +32,8 @@ class OurWork extends Model implements HasMedia
     }
 
     public function getThumbnailAttribute() {
-        $media = $this->getFirstMedia('works')?->getUrl();
+        // $media = $this->getFirstMedia('works')?->getUrl();
+        $media = $this->media?->first()?->getUrl();
         return $media ?? asset(setting('logo'));
     }
 
