@@ -15,7 +15,7 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        app()->setLocale(session('locale', app()->getLocale()));
+        app()->setLocale(session('locale', session('locale') == null ?  'ar' : app()->getLocale()));
 
         return $next($request);
     }
