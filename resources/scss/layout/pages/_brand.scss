@@ -37,7 +37,7 @@
       overflow: hidden;
       vertical-align: top;
       &-img{
-        &:first {
+        &:first-child {
             filter: grayscale(100%);
         }
         position: relative;
