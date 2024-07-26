@@ -1,4 +1,4 @@
-<div class="tp-service-3-item p-relative mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="height: 417px;">
+<div class="tp-service-3-item p-relative mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="height: {{app()->getLocale() == 'ar' ? 417px' : '552px'}};">
     <div class="tp-service-3-icon">
         <span>
             {{-- <i class="flaticon-livingroom"></i> --}}
