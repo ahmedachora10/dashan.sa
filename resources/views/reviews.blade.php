@@ -24,6 +24,10 @@
                                         <x-dashboard.error field="rate" />
                                     </div>
 
+                                    <div class="col-12 mt-3">
+                                        <x-theme.form.input-group type="text" :placeholder="trans('table.columns.name')" name="name" />
+                                    </div>
+
                                     <div class="col-12">
                                         <x-theme.form.text-area :placeholder="trans('table.columns.comment')" name="comment"
                                             cols="10" rows="6">
