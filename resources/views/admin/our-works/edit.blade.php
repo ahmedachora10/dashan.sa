@@ -38,9 +38,19 @@
                     :title="trans('table.columns.end date')" />
             </div>
 
-            <div class="col-12 mb-3">
+            <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.input-group type="number" name="duration_of_work" :value="$ourWork->duration_of_work"
                     :title="trans('table.columns.duration of work')" />
+            </div>
+
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.label>{{trans('table.columns.section')}}</x-dashboard.label>
+                <select name="tag_id" id="tag_id" class="form-select">
+                    @foreach ($tags as $tag)
+                    <option value="{{$tag->id}}" @selected($tag->id === $ourWork->tag_id)>{{ $tag->name }}</option>
+                    @endforeach
+                </select>
+                <x-dashboard.error field="tag_id" />
             </div>
 
             <div class="col-12 mb-3">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreOurWorkRequest;
 use App\Models\OurWork;
+use App\Models\Tag;
 use App\Services\UploadFileService;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class OurWorkController extends Controller
      */
     public function create()
     {
-        return view('admin.our-works.create');
+        $tags = Tag::all();
+        return view('admin.our-works.create', compact('tags'));
     }
 
     /**
@@ -59,8 +61,9 @@ class OurWorkController extends Controller
     public function edit(OurWork $ourWork)
     {
         $images = $ourWork->getMedia('works');
+        $tags = Tag::all();
 
-        return view('admin.our-works.edit', compact('ourWork', 'images'));
+        return view('admin.our-works.edit', compact('ourWork', 'images', 'tags'));
     }
 
     /**
@@ -73,7 +76,7 @@ class OurWorkController extends Controller
 
         $ourWork->update($request->safe()->except('images'));
 
-        foreach($request->images as $img) {
+        foreach($request->images ?? [] as $img) {
             $ourWork->addMedia($img)->toMediaCollection('works');
         }
 

@@ -10,23 +10,22 @@
         <div class="row align-items-end">
             <div class="col-lg-6">
                 <div class="tp-project-title-wrapper mb-70">
-                    {{-- <span class="tp-section-title-pre-2">// WE ARE CONSTRUCTION COMPANY</span>
-                    <h3 class="tp-section-title">Check our projects</h3> --}}
                     <x-theme.headline key="work" />
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="tp-project-tab-button masonary-menu d-flex justify-content-xl-end flex-wrap mb-70">
-                    <button class="active" data-filter="*"><span>Show all</span></button>
-                    <button data-filter=".cat2"><span>Architecture</span></button>
-                    <button data-filter=".cat3"><span>Interior design</span></button>
-                    <button data-filter=".cat4"><span>Residance</span></button>
+                    <button class="active" data-filter="*"><span>{{ucwords(trans('all'))}}</span></button>
+                    @foreach ($tags as $tag)
+                        @continue($tag->works_exists < 1)
+                        <button data-filter=".cat{{$tag->id}}"><span>{{$tag->name}}</span></button>
+                    @endforeach
                 </div>
             </div>
         </div>
         <div class="row grid">
             @foreach ($works as $item)
-            <div class="col-lg-4 col-md-6 grid-item cat2 cat{{$loop->iteration}} cat5">
+            <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}">
                 <div class="tp-project-item p-relative fix mb-30">
                     <div class="tp-project-thumb p-relative fix">
                         <a href="{{route('works.show', $item)}}">
@@ -34,7 +33,7 @@
                         </a>
                     </div>
                     <div class="tp-project-item-content p-relative">
-                        <span>{{$item->client_name}}</span>
+                        <span>{{$item?->tag?->name}}</span>
                         <h4 class="tp-project-item-title"><a href="{{route('works.show', $item)}}" title="{{$item->description}}">{{str($item->description)->limit(90)}}</a></h4>
                         <div class="tp-project-item-btn">
                             <a href="portfolio-details.html">

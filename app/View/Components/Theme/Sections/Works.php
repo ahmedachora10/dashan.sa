@@ -3,6 +3,7 @@
 namespace App\View\Components\Theme\Sections;
 
 use App\Models\OurWork;
+use App\Models\Tag;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -14,7 +15,6 @@ class Works extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**
@@ -23,7 +23,8 @@ class Works extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.works', [
-            'works' => OurWork::with('media')->get()
+            'works' => OurWork::with(['media', 'tag'])->get(),
+            'tags' => Tag::withExists(['works'])->get()
         ]);
     }
 }

@@ -52,6 +52,7 @@ return [
         'client name' => 'Client Name',
         'content' => 'Content',
         'duration of work' => 'Duration Of Work',
+        'section' => 'Section',
 
     ],
     'empty' => 'No Records'

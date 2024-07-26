@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
@@ -13,6 +14,7 @@ class OurWork extends Model implements HasMedia
     use HasFactory, InteractsWithMedia, HasTranslation;
 
     protected $fillable = [
+        'tag_id',
         'client_name_ar',
         'client_name_en',
         'transaction_start_date',
@@ -35,6 +37,10 @@ class OurWork extends Model implements HasMedia
         // $media = $this->getFirstMedia('works')?->getUrl();
         $media = $this->media?->first()?->getUrl();
         return $media ?? asset(setting('logo'));
+    }
+
+    public function tag() : BelongsTo {
+        return $this->belongsTo(Tag::class);
     }
 
 }
