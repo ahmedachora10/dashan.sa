@@ -35,8 +35,8 @@
             </div>
             <div class="col-lg-7">
                 <div class="tp-company-5-wrapper pl-40 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                    {{-- <div class="tp-company-title mb-50">
-                        <span class="tp-section-title-pre-2">WE ARE CONSTRUCTION COMPANY</span>
+                    <div class="tp-company-title mb-50">
+                        {{-- <span class="tp-section-title-pre-2">WE ARE CONSTRUCTION COMPANY</span>
                         <h3 class="tp-section-title">Providing quality desing
                             and best solution</h3> --}}
                             <x-theme.headline key="about" />
