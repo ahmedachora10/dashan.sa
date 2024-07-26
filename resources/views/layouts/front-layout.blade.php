@@ -73,7 +73,7 @@
     @include('layouts.theme.footer')
 
     <!-- JS here -->
-    <script defer src="{{ asset('theme/js/vendor/jquery.js') }}"></script>
+    <script src="{{ asset('theme/js/vendor/jquery.js') }}"></script>
     <script defer src="{{ asset('theme/js/bootstrap-bundle.js') }}"></script>
     <script defer src='{{ asset('theme/js/three.js') }}'></script>
     <script defer src="{{ asset('theme/js/gsap.js') }}"></script>

@@ -47,9 +47,9 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
     return back();
 })->name('switch-language');
 
-// Route::get('clients/reviews', function () {
-//     return view('reviews');
-// })->name('clients.reviews');
+Route::get('clients/reviews', function () {
+    return view('reviews');
+})->name('clients.reviews');
 
 Route::get('/jobs', function () {
     return view('job');
