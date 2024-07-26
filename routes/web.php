@@ -51,6 +51,8 @@ Route::get('clients/reviews', function () {
     return view('reviews');
 })->name('clients.reviews');
 
+Route::resource('reviews', ReviewController::class)->only('store');
+
 Route::get('/jobs', function () {
     return view('job');
 })->name('jobs.request');
