@@ -98,7 +98,9 @@
                     <div class="tp-header-main-right d-flex align-items-center justify-content-end">
                         <div class="tp-header-contact d-xl-flex align-items-center">
                             <div class="tp-header-contact-icon d-none d-xxl-block">
-                                <a href="{{route('switch-language')}}"><i class="fa-sharp fa-regular fa-language"></i></a>
+                                <a href="{{route('switch-language')}}">
+                                    {{ app()->getLocale() == 'ar' ? 'English' : 'العربية' }}
+                                </a>
                             </div>
                             {{-- <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
                                 <span><i class="fa-sharp fa-regular fa-magnifying-glass"></i></span>
