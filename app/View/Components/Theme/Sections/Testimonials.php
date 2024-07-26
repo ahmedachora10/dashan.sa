@@ -23,7 +23,7 @@ class Testimonials extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.testimonials', [
-            'reviews' => Review::all()
+            'reviews' => Review::active()->get()
         ]);
     }
 }
