@@ -42,6 +42,11 @@
                 left: auto !important;
                 right: 85px !important;
             }
+
+            .tp-about-shape {
+                left: auto !important;
+                right: 0 !important;
+            }
         </style>
     @endif
 
