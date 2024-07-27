@@ -21,9 +21,9 @@
                         </div>
                         <div class="tp-hover-distort-wrapper main">
                             <div class="canvas"></div>
-                            <div class="tp-hover-distort" data-displacementImage="assets/img/webgl/1.jpg">
-                                <img class="tp-hover-distort-img front" src="assets/img/about/about-1-2.jpg" alt="">
-                                <img class="tp-hover-distort-img back" src="assets/img/about/about-1-2.jpg" alt="">
+                            <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
+                                <img class="tp-hover-distort-img front" src="{{asset('theme/img/about/about-1-2.jpg')}}" alt="">
+                                <img class="tp-hover-distort-img back" src="{{asset('theme/img/about/about-1-2.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                                         <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
                                     </g>
                                 </svg></span></a>
-                        <img src="assets/img/about/about-1-signature.png" alt="">
+                        <img src="{{asset('theme/img/about/about-1-signature.png')}}" alt="">
                     </div>
                 </div>
             </div>
