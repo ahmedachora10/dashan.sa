@@ -1218,7 +1218,7 @@
 
 
 		function allImagesLoaded() {
-
+            console.log('all images loaded function running up');
 			$('.tp-hover-distort-wrapper').each(function(){
 				var $this = $(this)
 				var canvas = $this.find('.canvas')
