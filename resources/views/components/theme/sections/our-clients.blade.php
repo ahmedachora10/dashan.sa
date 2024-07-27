@@ -4,7 +4,7 @@
         <img src="{{asset('theme/img/brand/home-3/brand-3-bg.png')}}" alt="">
     </div>
     <div class="container px-0">
-        <div class="tp-brand-active swiper-container fix">
+        <div class="tp-brand-active swiper-container fix px-4">
             <div class="swiper-wrapper align-items-center">
                 @foreach ($clients as $item)
                 <div class="swiper-slide text-center">
