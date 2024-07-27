@@ -44,8 +44,8 @@
             }
 
             .tp-about-shape {
-                left: auto !important;
-                right: 0 !important;
+                left: 0 !important;
+                right: unset !important;
             }
         </style>
     @endif
