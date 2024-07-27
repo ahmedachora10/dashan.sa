@@ -106,7 +106,7 @@
 
     @stack('component-scripts')
 
-    <script defer src="{{ asset('theme/js/main.js') }}"></script>
+    <script defer src="{{ asset('theme/js/main.js') }}?v={{rand(2000,9999999)}}"></script>
 
     @stack('scripts')
     @livewireScripts
