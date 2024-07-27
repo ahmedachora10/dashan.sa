@@ -5,12 +5,12 @@
     </div>
     <div class="container">
         <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 align-items-center tp-brand-active swiper-container fix">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper align-items-center">
                 @foreach ($clients as $item)
                 <div class="swiper-slide text-center">
                     <a href="{{$item->link}}" target="_blank" class="tp-brand-item">
-                        <img width="60" height="60" class="tp-brand-item-img home-3" src="{{$item->thumbnail}}" alt="">
-                        <img width="60" height="60" class="tp-brand-item-hover" src="{{$item->thumbnail}}" alt="">
+                        <img class="tp-brand-item-img home-3" src="{{$item->thumbnail}}" alt="">
+                        <img class="tp-brand-item-hover" src="{{$item->thumbnail}}" alt="">
                     </a>
                 </div>
                 @endforeach
