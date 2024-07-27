@@ -4,11 +4,11 @@
     </div>
     <div class="container">
         <div class="row">
-            {{-- <div class="col-lg-5">
+            <div class="col-lg-5">
                 <div class="tp-about-thumb-wrapper">
                     <div class="tp-about-thumb">
-                        <img class="shape-1" src="{{asset('theme/img/about/about-1-3.jpg')}}" alt="">
-                        <img class="shape-2" src="{{asset('theme/img/about/about-1-4.png')}}" alt="">
+                        {{-- <img class="shape-1" src="{{asset('theme/img/about/about-1-3.jpg')}}" alt="">
+                        <img class="shape-2" src="{{asset('theme/img/about/about-1-4.png')}}" alt=""> --}}
                         <p>20</p>
                         <div class="tp-hover-distort-wrapper top">
                             <div class="canvas"></div>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <div class="col-lg-7">
                 <div class="tp-about-wrapper p-relative wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="tp-about-title-wrapper">
