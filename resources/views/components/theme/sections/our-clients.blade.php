@@ -1,7 +1,7 @@
 <!-- brand area start -->
 <div class="tp-brand-area tp-brand-3-bg p-relative pt-60 pb-60 fix" id="clients">
     <div class="tp-brand-3-shape">
-        <img src="{{asset('theme/img/brand/home-3/brand-3-bg.png')}}" alt="">
+        <img src="{{asset('theme/img/brand/home-3/brand-bg.jpg')}}" alt="">
     </div>
     <div class="container px-0">
         <div class="tp-brand-active swiper-container fix px-4">
