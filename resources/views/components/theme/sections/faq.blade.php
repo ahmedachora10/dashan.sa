@@ -24,7 +24,7 @@
                                         {{$item->question}}
                                     </button>
                                 </h2>
-                                <div id="collapse-{{$loop->iteration}}" @class(['accordion-collapse collapse', 'show' => $loop->first])
+                                <div id="collapse-{{$loop->iteration}}" @class(['accordion-collapse collapse'])
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>{{$item->answer}}</p>

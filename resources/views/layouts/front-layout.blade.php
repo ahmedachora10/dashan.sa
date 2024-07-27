@@ -26,6 +26,15 @@
     @stack('component-styles')
     <link rel="stylesheet" href="{{asset('build/assets/main.css')}}?v={{rand(2000,9999999)}}">
 
+    @if (app()->getLocale() == 'ar')
+        <style>
+            .tp-faq-wrapper .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
+                left: 36px !important;
+                right: auto !important;
+            }
+        </style>
+    @endif
+
     @stack('styles')
 
     @livewireStyles
