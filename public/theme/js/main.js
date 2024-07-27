@@ -732,6 +732,7 @@
 			slidesPerView: 4,
 			spaceBetween: 30,
 			loop: true,
+            autoplay: true,
 			breakpoints: {
 				'1400': {
 					slidesPerView: 4,
@@ -875,7 +876,8 @@
 		var slider = new Swiper('.tp-testimonial-active', {
 			slidesPerView: 3,
 			spaceBetween: 30,
-			loop: true,
+            loop: true,
+            autoplay: true,
 			breakpoints: {
 				'1400': {
 					slidesPerView: 3,
