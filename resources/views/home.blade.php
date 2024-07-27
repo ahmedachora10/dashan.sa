@@ -12,4 +12,5 @@
     <x-theme.sections.statistics :statistics="null" />
     <x-theme.sections.our-team :members="null" />
     <x-theme.sections.faq :faq="null" />
+    <x-theme.sections.why-us />
 </x-front-layout>

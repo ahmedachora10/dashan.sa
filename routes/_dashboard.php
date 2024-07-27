@@ -27,6 +27,7 @@ use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\VisionController;
+use App\Http\Controllers\Admin\WhyUsController;
 use App\Http\Controllers\ProfileController;
 use App\Livewire\Dashboard\Branch\StoreCertificate;
 use App\Livewire\Dashboard\Branch\StoreCivilDefenseCertificate;
@@ -94,4 +95,5 @@ Route::middleware(['auth'])->group(function ()
         ->name('about-us.media.remove');
     Route::resource('about-us', AboutController::class);
     Route::resource('reviews', ReviewController::class)->except('store');
+    Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
 });

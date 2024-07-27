@@ -209,9 +209,9 @@ return [
         ]
     ],
 
-    // 'about' => [
+    // 'why us' => [
 
-    //     'title' => 'About',
+    //     'title' => 'Why Us',
     //     'desc' => '',
     //     'icon' => 'menu-icon tf-icons bx bx-user-pin',
 

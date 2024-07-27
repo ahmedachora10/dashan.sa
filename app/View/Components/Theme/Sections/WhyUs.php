@@ -2,11 +2,12 @@
 
 namespace App\View\Components\Theme\Sections;
 
+use App\Models\WhyUs as ModelsWhyUs;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class WheyUs extends Component
+class WhyUs extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +22,8 @@ class WheyUs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.theme.sections.whey-us');
+        return view('components.theme.sections.why-us', [
+            'model' => ModelsWhyUs::first()
+        ]);
     }
 }

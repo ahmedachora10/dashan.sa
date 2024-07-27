@@ -34,7 +34,7 @@
                     <div class="tp-about-title-wrapper">
                         {{-- <span class="tp-section-title-pre">{{headline('about')->title}}</span>
                         <h3 class="tp-section-title">{{headline('about')->subTitle}}</h3> --}}
-                        <x-theme.headline key="about" />
+                        <x-theme.headline key="why us" />
                         <p>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad
                             minim veniam, quisq wiusmod ut tempor incididunt ut labore et dolore sed do magna aliqua.
                         </p>
@@ -59,10 +59,9 @@
                     </div>
                     <div class="tp-about-list">
                         <ul>
-                            <li><i class="fa-regular fa-check"></i> 100% Satisfaction</li>
-                            <li><i class="fa-regular fa-check"></i> Annual Pass Programs</li>
-                            <li><i class="fa-regular fa-check"></i> Trained Emploies</li>
-                            <li><i class="fa-regular fa-check"></i> Flexible and cost effective</li>
+                            @foreach ($model->properties ?? [] as $item)
+                                <li><i class="fa-regular fa-check"></i> {{$item}}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="tp-about-btn">
