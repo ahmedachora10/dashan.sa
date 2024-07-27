@@ -58,9 +58,9 @@
                         </div>
                     </div>
                     <div class="tp-about-list">
-                        <ul class="row justify-content-start align-items-start">
+                        <ul class="row justify-content-between align-items-start">
                             @foreach ($model->properties ?? [] as $item)
-                                <li class="col-md-3 col-sm-2 col-12"><i class="fa-regular fa-check"></i> {{$item}}</li>
+                                <li class="col-sm-2 col-12"><i class="fa-regular fa-check"></i> {{$item}}</li>
                             @endforeach
                         </ul>
                     </div>
