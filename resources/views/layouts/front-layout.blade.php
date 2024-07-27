@@ -82,7 +82,7 @@
             {{$slot}}
         </main>
 
-        <div class="pt-90 pb-90"></div>
+        <div class="pt-100 pb-100"></div>
     </div>
 
     @include('layouts.theme.footer')

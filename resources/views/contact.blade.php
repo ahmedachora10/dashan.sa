@@ -50,6 +50,4 @@
         </div>
     </section>
 
-    <div class="pt-90 pb-90"></div>
-
 </x-front-layout>
