@@ -1214,7 +1214,9 @@
 		.fail(function(instance) {
 
 		  handleFailedImages(instance);
-		});
+        });
+
+    allImagesLoaded();
 
 
 		function allImagesLoaded() {
