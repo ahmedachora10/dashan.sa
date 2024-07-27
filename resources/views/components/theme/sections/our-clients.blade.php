@@ -5,7 +5,7 @@
     </div>
     <div class="container">
         <div class="tp-brand-active swiper-container fix">
-            <div class="swiper-wrapper align-items-center px-0 mx-0">
+            <div class="swiper-wrapper align-items-center">
                 @foreach ($clients as $item)
                 <div class="swiper-slide text-center">
                     <a href="{{$item->link}}" target="_blank" class="tp-brand-item">
