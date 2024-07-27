@@ -37,5 +37,6 @@ return [
     'team' => 'Our Team',
     'faq' => 'Faq',
     'work' => 'Our Works',
-    'service' => 'Services'
+    'service' => 'Services',
+    'why us ' => 'Why Us',
 ];
