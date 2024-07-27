@@ -22,7 +22,7 @@ return [
     'about us' => 'About Us',
     'our works' => 'Our Works',
     'jobs' => 'Jobs',
-    'why uks' => 'Why Us',
+    'why us' => 'Why Us',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
 ];
