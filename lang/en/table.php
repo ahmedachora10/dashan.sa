@@ -53,6 +53,7 @@ return [
         'content' => 'Content',
         'duration of work' => 'Duration Of Work',
         'section' => 'Section',
+        'properties' => 'Properties',
 
     ],
     'empty' => 'No Records'
