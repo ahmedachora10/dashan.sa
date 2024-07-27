@@ -4,7 +4,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
+            {{-- <div class="col-lg-5">
                 <div class="tp-about-thumb-wrapper">
                     <div class="tp-about-thumb">
                         <img class="shape-1" src="{{asset('theme/img/about/about-1-3.jpg')}}" alt="">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-lg-7">
                 <div class="tp-about-wrapper p-relative wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
                     <div class="tp-about-title-wrapper">
@@ -60,7 +60,7 @@
                     <div class="tp-about-list">
                         <ul class="row justify-content-start align-items-start">
                             @foreach ($model->properties ?? [] as $item)
-                                <li><i class="fa-regular fa-check"></i> {{$item}}</li>
+                                <li class="col-md-3 col-sm-2 col-12"><i class="fa-regular fa-check"></i> {{$item}}</li>
                             @endforeach
                         </ul>
                     </div>
