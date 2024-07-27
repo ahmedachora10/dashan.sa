@@ -42,7 +42,7 @@
         }
         position: relative;
         display: block;
-        width: 100px;
+        width: 150px;
         margin: 0 auto;
         opacity: 0.18;
         transition: transform .4s ease;
@@ -54,7 +54,7 @@
         position: absolute;
         top: 0;
         left: 50%;
-        width: 100px;
+        width: 150px;
         transform: translate(-50%, -130%);
         transition: transform 0.5s ease;
       }
