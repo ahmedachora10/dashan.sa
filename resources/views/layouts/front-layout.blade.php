@@ -37,6 +37,11 @@
                 left: 36px !important;
                 right: auto !important;
             }
+
+            .tp-about-thumb .top {
+                left: auto !important;
+                right: 85px !important;
+            }
         </style>
     @endif
 

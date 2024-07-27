@@ -2,7 +2,7 @@
 <section class="tp-about-3-area p-relative pb-120" id="about">
     <div class="tp-about-3-shape">
         <img class="shape-1" src="{{asset('theme/img/about/home-3/about-3-shape.png')}}" alt="">
-        <img class="shape-2" src="{{$about?->thumbnail}}" alt="">
+        {{-- <img class="shape-2" src="{{$about?->thumbnail}}" alt=""> --}}
     </div>
     <div class="container">
         <div class="row">
@@ -11,8 +11,8 @@
                     <div class="tp-hover-distort-wrapper">
                         <div class="canvas"></div>
                         <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
-                            <img class="tp-hover-distort-img front" src="{{asset('theme/img/about/home-3/about-3-1.jpg')}}" alt="">
-                            <img class="tp-hover-distort-img back" src="{{asset('theme/img/about/home-3/about-3-1.jpg')}}" alt="">
+                            <img style="height: 518px" class="tp-hover-distort-img front" src="{{$about?->thumbnail}}" alt="">
+                            <img style="height: 518px" class="tp-hover-distort-img back" src="{{$about?->thumbnail}}" alt="">
                         </div>
                     </div>
                     <div class="tp-hover-distort-wrapper shape-1">
