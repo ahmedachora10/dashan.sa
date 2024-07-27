@@ -10,12 +10,14 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            @foreach ($members as $item)
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <x-theme.card.member :member="$item" />
+        <div class="row tp-team-2-active swiper-container fix">
+            <div class="swiper-wrapper">
+                @foreach ($members as $item)
+                    <div class="swiper-slide">
+                        <x-theme.card.member :member="$item" />
+                    </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
 </section>
