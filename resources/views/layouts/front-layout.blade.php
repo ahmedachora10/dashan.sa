@@ -32,6 +32,11 @@
                 left: 36px !important;
                 right: auto !important;
             }
+
+            .tp-faq-wrapper .accordion .accordion-item .accordion-header .accordion-button:after {
+                left: 36px !important;
+                right: auto !important;
+            }
         </style>
     @endif
 
