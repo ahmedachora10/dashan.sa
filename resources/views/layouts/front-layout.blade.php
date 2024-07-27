@@ -72,7 +72,7 @@
     <x-theme.off-canvas-area />
     <!-- offcanvas area end -->
 
-    <div class="tp-page-wrapper">
+    <div class="tp-page-wrapper" @if(app()->getLocale() == 'ar') style="margin-bottom: 820px !important" @endif>
 
         <!-- header area start -->
         @include('layouts.theme.header')
@@ -81,8 +81,6 @@
         <main>
             {{$slot}}
         </main>
-
-        <div class="pt-100 pb-100"></div>
     </div>
 
     @include('layouts.theme.footer')
