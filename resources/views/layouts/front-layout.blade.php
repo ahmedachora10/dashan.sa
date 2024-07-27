@@ -72,7 +72,7 @@
     <x-theme.off-canvas-area />
     <!-- offcanvas area end -->
 
-    <div class="tp-page-wrapper" @if(app()->getLocale() == 'en') style="margin-bottom: 820px !important" @endif>
+    <div class="tp-page-wrapper" style="margin-bottom: {{app()->getLocale() == 'en' ? '820px' : '700px'}} !important">
 
         <!-- header area start -->
         @include('layouts.theme.header')
