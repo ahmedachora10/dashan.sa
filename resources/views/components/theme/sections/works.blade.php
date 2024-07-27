@@ -1,5 +1,5 @@
 <!-- project area start -->
-<section class="tp-project-area tp-project-bottom-color p-relative pt-170">
+<section class="tp-project-area tp-project-bottom-color p-relative pt-170" id="works">
     <div class="tp-project-text">
         <h4 class="tp-home-2-section-text">{{ strtoupper(trans('projects'))}}</h4>
     </div>

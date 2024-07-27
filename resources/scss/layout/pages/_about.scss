@@ -229,7 +229,7 @@
       }
     }
     &-list {
-      display: inline-block;
+    //   display: inline-block;
       margin-bottom: 25px;
       & ul {
         & li {
@@ -237,8 +237,7 @@
           font-weight: 600;
           color: var(--tp-theme-secondary);
           list-style: none;
-          float: left;
-          width: 50%;
+        //   width: 50%;
           margin-bottom: 10px;
           @media #{$lg,$md,$sm,$xs} {
             width: 100%;

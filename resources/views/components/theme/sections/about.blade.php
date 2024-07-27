@@ -1,5 +1,5 @@
 <!-- about area start -->
-<section class="tp-about-3-area p-relative pb-120">
+<section class="tp-about-3-area p-relative pb-120" id="about">
     <div class="tp-about-3-shape">
         <img class="shape-1" src="{{asset('theme/img/about/home-3/about-3-shape.png')}}" alt="">
         <img class="shape-2" src="{{$about?->thumbnail}}" alt="">
