@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <div class="row tp-team-2-active swiper-container fix">
+        <div class="tp-team-2-active swiper-container fix">
             <div class="swiper-wrapper">
                 @foreach ($members as $item)
                     <div class="swiper-slide">
