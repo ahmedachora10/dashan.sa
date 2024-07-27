@@ -47,6 +47,15 @@
                 left: 0 !important;
                 right: unset !important;
             }
+            .tp-about-thumb:before{
+                right: 566px !important;
+                left: unset !important;
+            }
+
+            .tp-about-thumb:after {
+                right: 32% !important;
+                left: unset !important;
+            }
         </style>
     @endif
 
