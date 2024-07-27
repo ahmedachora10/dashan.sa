@@ -1,5 +1,5 @@
 <!-- brand area start -->
-<div class="tp-brand-area tp-brand-3-bg p-relative pt-60 pb-60 fix" id="clients" style="background-image: url({{asset('theme/img/brand/home-3/brand-bg.jpg')}}) !important; background-size:cover">
+<div class="tp-brand-area tp-brand-3-bg p-relative pt-60 pb-60 fix" id="clients" style="background-image: url({{asset('theme/img/brand/home-3/brand-bg.jpg')}}) !important; background-size:cover;background-position: center;">
     <div class="tp-brand-3-shape">
         {{-- <img src="{{asset('theme/img/brand/home-3/brand-bg.jpg')}}" alt=""> --}}
     </div>
