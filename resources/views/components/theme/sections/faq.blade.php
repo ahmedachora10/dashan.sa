@@ -18,14 +18,14 @@
                         <div class="accordion" id="accordionExample">
                             @foreach ($faqs as $item)
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
+                                <h2 class="accordion-header" id="heading{{$loop->iteration}}">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-{{$loop->iteration}}" aria-expanded="true" aria-controls="collapseOne">
+                                        data-bs-target="#collapse-{{$loop->iteration}}" aria-expanded="true" aria-controls="collapse{{$loop->iteration}}">
                                         {{$item->question}}
                                     </button>
                                 </h2>
                                 <div id="collapse-{{$loop->iteration}}" @class(['accordion-collapse collapse'])
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    aria-labelledby="heading{{$loop->iteration}}" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>{{$item->answer}}</p>
                                     </div>
