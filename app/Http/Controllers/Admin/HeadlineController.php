@@ -24,7 +24,6 @@ class HeadlineController extends Controller
      */
     public function update(StoreHeadlineRequest $request, Headline $headline)
     {
-        Cache::forget('headlines');
         $headline->update($request->validated());
 
         return redirect()->route('headlines.index')->with('success', trans('message.update'));
