@@ -61,7 +61,7 @@
         @else
 
     <style>
-        .tp-about-shape,.tp-faq-shape {
+        .tp-faq-shape {
             left: 0 !important;
             right: unset !important;
         }
