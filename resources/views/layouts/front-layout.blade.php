@@ -48,8 +48,8 @@
                 right: unset !important;
             }
 
-            .tp-about-shape > img {
-                transform: revert;
+            .tp-about-shape img {
+                transform: rotate(180deg);
             }
 
             .tp-about-thumb:before{
