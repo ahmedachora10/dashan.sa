@@ -43,7 +43,7 @@
           margin: 0 auto;
           opacity: 0.18;
           transition: transform .4s ease;
-          filter: grayscale(100%);
+          filter: grayscale(100%) !important;
         &.home-3{
           opacity: 1;
         }
@@ -55,6 +55,7 @@
         width: 150px;
         transform: translate(-50%, -130%);
         transition: transform 0.5s ease;
+        filter: grayscale(100%) !important;
       }
       &:hover{
         & .tp-brand-item{
