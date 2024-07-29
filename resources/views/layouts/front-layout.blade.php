@@ -81,6 +81,12 @@
                 margin-right: unset !important;
                 margin-left: 85px !important;
             }
+
+            @media (min-width: 1599px) {
+                .tp-faq-thumb-wrapper span {
+                    left: -15% !important;
+                }
+            }
         </style>
 
         @else
