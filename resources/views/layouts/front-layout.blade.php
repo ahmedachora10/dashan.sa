@@ -43,7 +43,7 @@
                 right: 85px !important;
             }
 
-            .tp-about-shape {
+            .tp-about-shape,.tp-faq-shape {
                 left: 0 !important;
                 right: unset !important;
             }
