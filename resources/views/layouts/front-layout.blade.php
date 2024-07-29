@@ -47,6 +47,11 @@
                 left: 0 !important;
                 right: unset !important;
             }
+
+            .tp-about-shape > img {
+                transform: revert;
+            }
+
             .tp-about-thumb:before{
                 right: 566px !important;
                 left: unset !important;
