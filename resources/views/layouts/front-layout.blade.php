@@ -61,6 +61,16 @@
                 right: 32% !important;
                 left: unset !important;
             }
+
+            .tp-about-icon-content:not(:last-of-type){
+                margin-right: unset !important;
+                margin-left: 70px !important;
+            }
+
+            .tp-about-icon {
+                margin-right: unset !important;
+                margin-left: 25px !important;
+            }
         </style>
 
         @else
