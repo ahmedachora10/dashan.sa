@@ -34,7 +34,7 @@
                     <div class="tp-about-title-wrapper">
                         <x-theme.headline key="why us" />
                     </div>
-                    <div class="tp-about-icon-box d-flex">
+                    <div class="tp-about-icon-box d-flex pt-40 pb-5">
                         <div class="tp-about-icon-content d-flex">
                             <div class="tp-about-icon">
                                 <span>
