@@ -12,7 +12,7 @@
                     <div class="tp-hero-bg"></div>
                     @foreach ($sliders as $slider)
                     <div class="swiper-slide">
-                        <div @class(['slide-wrap overlay', 'active' => $loop->first]) data-slide="{{$loop->index}}"></div>
+                        {{-- <div @class(['slide-wrap overlay', 'active' => $loop->first]) data-slide="{{$loop->index}}"></div> --}}
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
