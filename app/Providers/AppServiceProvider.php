@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Headline;
 use App\Models\User;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
@@ -27,18 +28,22 @@ class AppServiceProvider extends ServiceProvider
             // if(empty($expression) || !auth()->check()) return false;
 
             // $userPermissions = Cache::remember('user-permissions', now()->addWeek(), function () {
-            //     return auth()->user()->allPermissions()->pluck('name')->toArray();
-            // });
+                //     return auth()->user()->allPermissions()->pluck('name')->toArray();
+                // });
 
-            // if(strpos($expression, '|') === false) return in_array($expression, $userPermissions);
+                // if(strpos($expression, '|') === false) return in_array($expression, $userPermissions);
 
-            // $permissions = explode('|', $expression);
+                // $permissions = explode('|', $expression);
 
-            // foreach ($permissions as $permission) {
-            //     if(in_array($permission, $userPermissions)) return true;
-            // }
+                // foreach ($permissions as $permission) {
+                    //     if(in_array($permission, $userPermissions)) return true;
+                    // }
 
             return true;
         });
+
+        // view()->share('headlines', Headline::all());
+
+        app()->singleton('headlines', fn() => collect(Headline::all() ?? []));
     }
 }

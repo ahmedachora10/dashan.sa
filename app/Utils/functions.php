@@ -66,11 +66,7 @@ if(!function_exists('short_date_name')) {
 if(!function_exists('headline')) {
 
     function headline($key) {
-        $headlines = Cache::remember('headlines', now()->addWeek(), function () {
-            return Headline::all();
-        });
-
-        $headline = collect($headlines)->firstWhere('section', $key);
+        $headline = app('headlines')->firstWhere('section', $key);
 
         return new ReadHeadlineDTO(
             title: $headline?->title,

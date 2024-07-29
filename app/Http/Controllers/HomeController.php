@@ -20,8 +20,6 @@ class HomeController extends Controller
         $visions = Vision::all();
         $ourServices = OurService::all();
 
-        // dd(OurWork::with('media')->get());
-
         return view('home', compact('sliders', 'clients', 'statistics', 'visions', 'ourServices'));
     }
 }
