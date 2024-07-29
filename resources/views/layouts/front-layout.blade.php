@@ -71,6 +71,11 @@
                 margin-right: unset !important;
                 margin-left: 25px !important;
             }
+
+            .tp-about-btn .tp-btn {
+                margin-right: unset !important;
+                margin-left: 85px !important;
+            }
         </style>
 
         @else
