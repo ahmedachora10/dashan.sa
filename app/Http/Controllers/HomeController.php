@@ -12,7 +12,7 @@ use App\Models\Vision;
 class HomeController extends Controller
 {
     public function index() {
-        view()->share('title',trans('front.home'));
+        // view()->share('title',trans('front.home'));
 
         $sliders = Slider::all();
         $statistics = Statistic::all();
