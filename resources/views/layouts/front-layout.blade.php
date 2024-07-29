@@ -43,7 +43,7 @@
                 right: 85px !important;
             }
 
-            .tp-about-shape,.tp-faq-shape {
+            .tp-about-shape {
                 left: 0 !important;
                 right: unset !important;
             }
@@ -57,7 +57,17 @@
                 left: unset !important;
             }
         </style>
+
+        @else
+
+    <style>
+        .tp-about-shape,.tp-faq-shape {
+            left: 0 !important;
+            right: unset !important;
+        }
+    </style>
     @endif
+
 
     @stack('styles')
 
