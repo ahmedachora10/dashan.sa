@@ -43,9 +43,14 @@
                 right: 85px !important;
             }
 
-            .tp-about-shape, .tp-about-3-shape .shape-1 {
+            .tp-about-shape {
                 left: 0 !important;
                 right: unset !important;
+            }
+
+            .tp-about-3-shape .shape-1 {
+                right: 0 !important;
+                left: unset !important;
             }
 
             .tp-about-shape img {
