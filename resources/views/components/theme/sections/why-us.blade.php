@@ -73,7 +73,7 @@
                                         <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
                                     </g>
                                 </svg></span></a>
-                        <img src="{{asset('theme/img/about/about-1-signature.png')}}" alt="">
+                        {{-- <img src="{{asset('theme/img/about/about-1-signature.png')}}" alt=""> --}}
                     </div>
                 </div>
             </div>
