@@ -16,7 +16,8 @@ class AboutController extends Controller
     public function index()
     {
         $aboutU = About::firstOrCreate([]);
-        return view('admin.about-us.index', compact('aboutU'));
+        $images = $aboutU->media;
+        return view('admin.about-us.index', compact('aboutU', 'images'));
     }
 
     /**
