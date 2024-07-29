@@ -16,7 +16,7 @@ class StoreAboutRequest extends FormRequest
         return [
             'images' => 'array',
             'images.*' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
-            'description_ar' => 'required|string',
+            'description_ar' => 'nullable|string',
             'description_en' => 'nullable|string',
         ];
     }
