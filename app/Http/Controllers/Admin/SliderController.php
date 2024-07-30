@@ -35,7 +35,11 @@ class SliderController extends Controller
     {
         $request->validated();
 
-        Slider::create($request->safe()->except('image') + ['image' => $this->uploadFileService->store($request->image, 'images/sliders')]);
+        Slider::create($request->safe()->except(['image_ar', 'image_en', 'top', 'right', 'left', 'bottom']) + [
+            'image_ar' => $this->uploadFileService->store($request->image_ar, 'images/sliders'),
+            'image_en' => $this->uploadFileService->store($request->image_en, 'images/sliders'),
+            'styles' => $request->safe(['top', 'right', 'left', 'bottom'])
+        ]);
 
         return redirect()->route('sliders.index')->with('success', trans('message.create'));
     }
@@ -63,7 +67,11 @@ class SliderController extends Controller
     {
         $request->validated();
 
-        $slider->update($request->safe()->except('image') + ['image' => $this->uploadFileService->update($request->image, $slider->image, 'images/sliders')]);
+        $slider->update($request->safe()->except(['image_ar', 'image_en', 'top', 'right', 'left', 'bottom']) + [
+            'image_ar' => $this->uploadFileService->update($request->image_ar, $slider->image_ar, 'images/sliders'),
+            'image_en' => $this->uploadFileService->update($request->image_en, $slider->image_en, 'images/sliders'),
+            'styles' => $request->safe(['top', 'right', 'left', 'bottom'])
+        ]);
 
         return redirect()->route('sliders.index')->with('success', trans('message.update'));
     }

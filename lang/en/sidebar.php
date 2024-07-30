@@ -23,6 +23,7 @@ return [
     'our works' => 'Our Works',
     'jobs' => 'Jobs',
     'why us' => 'Why Us',
+    'sections' => 'Sections',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
 ];

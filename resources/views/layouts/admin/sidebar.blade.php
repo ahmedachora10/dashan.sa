@@ -69,6 +69,7 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="category" :link="route('our-services.index')" />
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.service requests')" icon="git-pull-request" :link="route('services.requests')" :notification="$servicesRequestsCount" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.our works')" icon="briefcase" :link="route('our-works.index')" />
+        <x-dashboard.sidebar.link :title="trans('sidebar.sections')" icon="briefcase" :link="route('tags.index')" />
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.support')" icon="paper-plane" :link="route('support.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.contact us')" icon="user-pin" :link="route('contact-us.index')" :notification="$contactsCount" />
         <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />

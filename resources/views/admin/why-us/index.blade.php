@@ -6,14 +6,14 @@
                 <div class="col-12 mb-3">
                     {{-- <x-dashboard.input-group type="text" name="description_ar" :value="$model?->description_ar"
                         :title="trans('table.columns.description')" /> --}}
-                        <livewire:add-properties fieldName="properties_ar" :properties="$model->properties_ar ?? []" />
+                    <livewire:add-properties fieldName="properties_ar" :properties="$model->properties_ar ?? []" />
                 </div>
             </x-slot:arForm>
             <x-slot:enForm>
                 <div class="col-12 mb-3">
                     {{-- <x-dashboard.input-group type="text" name="description_en" :value="$model?->description_en"
                         :title="trans('table.columns.description')" /> --}}
-                        <livewire:add-properties fieldName="properties_en" :properties="$model->properties_en ?? []" />
+                    <livewire:add-properties fieldName="properties_en" :properties="$model->properties_en ?? []" />
                 </div>
             </x-slot:enForm>
         </x-theme.tab-list>

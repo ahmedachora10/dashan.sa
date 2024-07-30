@@ -54,7 +54,10 @@ return [
         'duration of work' => 'Duration Of Work',
         'section' => 'Section',
         'properties' => 'Properties',
-
+        'top' => 'Top',
+        'right' => 'Right',
+        'bottom' => 'Bottom',
+        'left' => 'Left',
     ],
     'empty' => 'No Records'
 ];

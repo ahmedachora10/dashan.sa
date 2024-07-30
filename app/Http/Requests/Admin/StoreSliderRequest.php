@@ -14,10 +14,15 @@ class StoreSliderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title_ar' => ['nullable', 'string'],
-            'title_en' => ['nullable', 'string'],
+            // 'title_ar' => ['nullable', 'string'],
+            // 'title_en' => ['nullable', 'string'],
             'link' => ['nullable', 'string'],
-            'image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'top' => ['nullable', 'integer'],
+            'left' => ['nullable', 'integer'],
+            'right' => ['nullable', 'integer'],
+            'bottom' => ['nullable', 'integer'],
+            'image_ar' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'image_en' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
         ];
     }
 }

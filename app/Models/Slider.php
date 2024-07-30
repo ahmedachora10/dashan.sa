@@ -11,7 +11,11 @@ class Slider extends Model
 {
     use HasFactory, ThumbnailModelAttribute, HasTranslation;
 
-    protected $fillable = ['title_ar', 'title_en', 'link', 'image', 'sort'];
+    protected $fillable = ['title_ar', 'title_en', 'link', 'image_ar', 'image_en', 'styles', 'sort'];
+
+    protected $casts = [
+        'styles' => 'json'
+    ];
 
     protected static function boot()
     {

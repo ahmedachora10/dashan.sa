@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Admin\SupportController;
+use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\Admin\WhyUsController;
@@ -82,6 +83,7 @@ Route::middleware(['auth'])->group(function ()
     Route::post('our-works/media/remove', [OurWorkController::class, 'removeMedia'])
         ->name('our-works.media.remove');
     Route::resource('our-works', OurWorkController::class);
+    Route::resource('tags', TagController::class);
 
     Route::get('job-requests', JobRequestsContainer::class)->name('job-requests.index');
     Route::resource('requests/jobs', JobPostController::class);//->parameter('translation', 'headlineTranslation');

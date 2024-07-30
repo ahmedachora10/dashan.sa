@@ -11,8 +11,22 @@
                     </div>
                     <div class="tp-hero-bg"></div>
                     @foreach ($sliders as $slider)
+                    @php
+                        $styles = $slider->styles;
+                        $top = $styles['top'] ?? 0;
+                        $left = $styles['left'] ?? 0;
+                        $right = $styles['right'] ?? 0;
+                        $bottom = $styles['bottom'] ?? 0;
+
+                        $css = '';
+
+                        foreach($styles ?? [] as $key =>$value) {
+                            $css .= "$key: $value" ."px;";
+                        }
+
+                    @endphp
                     <div class="swiper-slide">
-                        {{-- <div @class(['slide-wrap overlay', 'active' => $loop->first]) data-slide="{{$loop->index}}"></div> --}}
+                        <div @class(['slide-wrap overlay', 'active' => $loop->first]) style="opacity:0" data-slide="{{$loop->index}}"></div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
@@ -24,34 +38,34 @@
                                             <div class="tp-hero-title">
                                                 {{-- <div><span>We Build</span></div>
                                                 <div><span>While You Rest</span></div> --}}
-                                                <div><span>{{ $slider->title }}</span></div>
+                                                {{-- <div><span>{{ $slider->title }}</span></div> --}}
                                             </div>
                                         </div>
-                                        <div class="tp-hero-btn-wrap p-relative fix">
-                                            <div class="tp-hero-button-wrapper d-flex flex-wrap align-items-center">
-                                                @if(!empty($slider->link))
-                                                    <div class="tp-hero-btn">
-                                                        <a class="tp-btn tp-icon-style" href="{{$slider->link}}">Get Started
-                                                            <span><svg class="qodef-svg--custom-arrow qodef-m-arrow"
-                                                                    xmlns="http://www.w3.org/2000/svg" width="14.2"
-                                                                    height="14.2" viewBox="0 0 14.2 14.2">
-                                                                    <g>
-                                                                        <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                                        <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                                    </g>
-                                                                    <g>
-                                                                        <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                                        <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                                    </g>
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </div>
+                                        {{-- Button Position --}}
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="tp-hero-btn-wrap p-relative fix" style="position: absolute !important; {{$css}}">
+                            <div class="tp-hero-button-wrapper d-flex flex-wrap align-items-center">
+                                @if(!empty($slider->link))
+                                <div class="tp-hero-btn">
+                                    <a class="tp-btn tp-icon-style" href="{{$slider->link}}">Get Started
+                                        <span><svg class="qodef-svg--custom-arrow qodef-m-arrow" xmlns="http://www.w3.org/2000/svg" width="14.2"
+                                                height="14.2" viewBox="0 0 14.2 14.2">
+                                                <g>
+                                                    <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
+                                                    <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
+                                                </g>
+                                                <g>
+                                                    <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
+                                                    <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
