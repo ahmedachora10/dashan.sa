@@ -38,7 +38,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="tp-faq-thumb-wrapper wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                    <img src="{{asset('theme/img/about-us.jpg')}}" alt="">
+                    <img src="{{asset('theme/img/why-us.jpg')}}" alt="">
                     <span></span>
                 </div>
             </div>
