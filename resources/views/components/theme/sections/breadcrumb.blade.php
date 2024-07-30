@@ -3,9 +3,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-12">
-                <div class="tp-breadcrumb__content text-center">
+                {{-- <div class="tp-breadcrumb__content text-center">
                     <h3 class="tp-breadcrumb__title white">{{ucwords(trans($title))}}</h3>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
