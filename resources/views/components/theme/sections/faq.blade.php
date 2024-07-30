@@ -4,7 +4,7 @@
         <h2 class="tp-faq-text-title">{{headline('faq')->title}}</h2>
     </div>
     <div class="tp-faq-shape">
-        <img src="{{asset('theme/img/faq/faq-1-shape.png')}}" alt="">
+        <img src="{{asset('theme/img/why-us.jpg')}}" alt="">
     </div>
     <div class="container">
         <div class="row">

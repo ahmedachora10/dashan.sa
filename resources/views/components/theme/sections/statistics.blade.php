@@ -3,7 +3,7 @@
     <section class="tp-counter-7-area tp-counter-7-bg-color p-relative">
         <div class="container">
             <div class="tp-counter-7-bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"
-                data-background="{{asset('theme/img/counter/home-7/counter-7-bg.jpg')}}">
+                data-background="{{asset('theme/img/statistics.jpg')}}">
                 <div class="row">
                     @foreach ($statistics as $item)
                     <div class="col-lg-4 col-md-6">

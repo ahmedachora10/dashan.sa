@@ -1,5 +1,5 @@
 <x-front-layout>
-    <x-theme.sections.breadcrumb image="theme/img/breadcrumb/bradcrumb-14.jpg" title="contact us" />
+    <x-theme.sections.breadcrumb image="theme/img/contact-us.jpg" title="contact us" />
 
     <section class="tp-contact-area">
         <div class="container">
