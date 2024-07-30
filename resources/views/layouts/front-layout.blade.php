@@ -84,7 +84,7 @@
 
             @media (min-width: 1599px) {
                 .tp-faq-thumb-wrapper span {
-                    left: -15% !important;
+                    left: 14% !important;
                 }
             }
         </style>
