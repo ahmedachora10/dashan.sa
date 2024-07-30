@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('why_us', function (Blueprint $table) {
-            $table->json('certificates')->after('properties')->nullable();
+            $table->json('certificates')->after('properties_en')->nullable();
         });
     }
 
