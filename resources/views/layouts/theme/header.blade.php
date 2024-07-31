@@ -32,7 +32,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="tp-header-logo">
-                        <a href="index.html">
+                        <a href="{{route('home')}}">
                             <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
                         </a>
                     </div>
@@ -77,7 +77,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="tp-header-logo">
-                        <a href="index.html">
+                        <a href="{{route('home')}}">
                             <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
                         </a>
                     </div>
