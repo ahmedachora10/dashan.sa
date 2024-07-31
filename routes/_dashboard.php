@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\BranchController;
+use App\Http\Controllers\Admin\CertificateController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\CorpController;
 use App\Http\Controllers\Admin\ExportController;
@@ -98,4 +99,5 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('about-us', AboutController::class);
     Route::resource('reviews', ReviewController::class)->except('store');
     Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
+    Route::resource('certificates', CertificateController::class)->except('index');
 });

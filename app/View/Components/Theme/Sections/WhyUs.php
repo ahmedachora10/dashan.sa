@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Theme\Sections;
 
+use App\Models\Certificate;
 use App\Models\WhyUs as ModelsWhyUs;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -23,7 +24,8 @@ class WhyUs extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.why-us', [
-            'model' => ModelsWhyUs::first()
+            'model' => ModelsWhyUs::first(),
+            'certificates' => Certificate::all()
         ]);
     }
 }

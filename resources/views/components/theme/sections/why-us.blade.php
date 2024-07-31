@@ -35,22 +35,16 @@
                         <x-theme.headline key="why us" />
                     </div>
                     <div class="tp-about-icon-box d-flex pt-40 pb-5">
+                        @foreach ($certificates ?? [] as $item)
                         <div class="tp-about-icon-content d-flex">
                             <div class="tp-about-icon">
                                 <span>
-                                    <i class="flaticon-quality"></i>
+                                    <img src="{{$item->thumbnail}}" alt="icon" width="50" height="60">
                                 </span>
                             </div>
-                            <h5>Building quality <br> standards</h5>
+                            <h5>{{$item->title}}</h5>
                         </div>
-                        <div class="tp-about-icon-content d-flex">
-                            <div class="tp-about-icon">
-                                <span>
-                                    <i class="flaticon-worker"></i>
-                                </span>
-                            </div>
-                            <h5>Certified <br> engineer’s team</h5>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="tp-about-list">
                         <ul class="row justify-content-between align-items-start">
