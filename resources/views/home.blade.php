@@ -5,12 +5,14 @@
     {{-- <x-theme.margin /> --}}
     <x-theme.sections.about />
     <x-theme.sections.services :services="$ourServices" />
-    <x-theme.sections.our-clients />
+    <x-theme.margin />
+    <x-theme.sections.why-us />
+    <x-theme.sections.faq :faq="null" />
     <x-theme.margin />
     <x-theme.sections.works />
     <x-theme.sections.testimonials />
     <x-theme.sections.statistics :statistics="null" />
+    <x-theme.margin />
+    <x-theme.sections.our-clients />
     <x-theme.sections.our-team :members="null" />
-    <x-theme.sections.faq :faq="null" />
-    <x-theme.sections.why-us />
 </x-front-layout>
