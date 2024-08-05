@@ -19,6 +19,7 @@ Route::get('/template', function () {
 Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
 Route::get('instagram/feeds', fn() => dd((new InstagramService)->getFeed()));
 Route::get('terms', fn() => 'Terms');
+Route::get('instagram-auth-failure', fn() => 'failure');
 
 Route::get('switch-theme', function () {
     $theme = request()->session()->get('theme', 'light');
