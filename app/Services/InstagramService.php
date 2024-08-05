@@ -8,7 +8,7 @@ class InstagramService {
 
     private $profile;
 
-    const PROFILE_NAME = 'dashan platform_profile';
+    const PROFILE_NAME = 'dashan';
 
     public function __construct() {
         $this->profile = \Dymantic\InstagramFeed\Profile::for(self::PROFILE_NAME);
