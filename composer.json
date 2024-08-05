@@ -9,6 +9,7 @@
         "algolia/algoliasearch-client-php": "^3.4",
         "barryvdh/laravel-debugbar": "^3.9",
         "doctrine/dbal": "^3.7",
+        "dymantic/laravel-instagram-feed": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/breeze": "^1.26",
         "laravel/framework": "^10.10",

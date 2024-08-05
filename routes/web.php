@@ -8,12 +8,16 @@ use App\Models\OurWork;
 use App\Models\Service;
 use App\Models\Support;
 use App\Models\User;
+use App\Services\InstagramService;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/template', function () {
     return view('welcome');
 });
+
+Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
+Route::get('instagram/feeds', fn() => dd((new InstagramService)->getFeed()));
 
 Route::get('switch-theme', function () {
     $theme = request()->session()->get('theme', 'light');

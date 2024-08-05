@@ -8,10 +8,12 @@ use App\Models\OurWork;
 use App\Models\Slider;
 use App\Models\Statistic;
 use App\Models\Vision;
+use App\Services\InstagramService;
 
 class HomeController extends Controller
 {
     public function index() {
+
         view()->share('title','');
 
         $sliders = Slider::all();
