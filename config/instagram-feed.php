@@ -10,7 +10,7 @@ return [
      * The client secret from registering your app on Instagram,
      * This is not the same as an access token.
      */
-    'client_secret'       => 'd17b6d8692f69dd535813dacc581fe9c',
+    'client_secret'       => 'IGQWRPUGU0bGJJY2FBa2I2MFRoOHI2cks5Y1B2MmI0aXE0aFc1V0VCcHFHNXZAFcXlNalpuNFVySEc1RFNOS3hPREtmNWhTeGk4SXppdlpMU1FYUzNJN19oOGZAIVE1wNF9VdFZAVVl85ZAVZAxWDhwTW5Vd0lISzFkZAEkZD',
 
     /*
      * The base url used to generate to auth callback route for instagram.
