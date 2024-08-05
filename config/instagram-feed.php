@@ -4,7 +4,7 @@ return [
     /*
      * The client_id from registering your app on Instagram
      */
-    'client_id'           => '506107825257436',
+    'client_id'           => '7848783215227252',
 
     /*
      * The client secret from registering your app on Instagram,
