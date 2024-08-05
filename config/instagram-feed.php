@@ -4,13 +4,13 @@ return [
     /*
      * The client_id from registering your app on Instagram
      */
-    'client_id'           => '1036782851334893',
+    'client_id'           => '506107825257436',
 
     /*
      * The client secret from registering your app on Instagram,
      * This is not the same as an access token.
      */
-    'client_secret'       => 'd17b6d8692f69dd535813dacc581fe9c',
+    'client_secret'       => 'IGQWRPcXBaZA2RvWUxXMlJGWURrRDRCS1BaYkVaZAVI2TmdhbzBVN0ZAmclROVlpBczFYSVlqZA00xckFERXBDMTBfNC1vUnBBdFlkdHhicUF1ampQXzBwRW5VdmlKamdvZAGRMUlRNMDhNNEt3b0ZAMclZAfU2RmcnpKcEEZD',
 
     /*
      * The base url used to generate to auth callback route for instagram.
