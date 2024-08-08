@@ -9,10 +9,10 @@ use Illuminate\View\Component;
 
 class InstagramFeeds extends Component
 {
-    public array $images = [];
+    public array $feeds = [];
     public function __construct()
     {
-        $this->images = (new InstagramService)->getImages();
+        $this->feeds = (new InstagramService)->getImages();
     }
 
     /**
