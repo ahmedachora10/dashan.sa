@@ -6,7 +6,7 @@
             <div class="tp-footer-widget-gallery-single-item">
                 <a href="{{$feed['permalink']}}" class="tp-footer-widget-gallery-item">
                     <div class="tp-footer-widget-gallery-thumb">
-                        <img src="{{$feed['image']}}" alt="">
+                        <img width="28" height="28" src="{{$feed['image']}}" alt="">
                         <div class="tp-footer-widget-gallery-social">
                             <i class="fa-brands fa-instagram"></i>
                         </div>
