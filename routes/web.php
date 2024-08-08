@@ -2,12 +2,9 @@
 
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
-use App\Models\Corp;
 use App\Models\OurService;
 use App\Models\OurWork;
-use App\Models\Service;
 use App\Models\Support;
-use App\Models\User;
 use App\Services\InstagramService;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +17,7 @@ Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
 Route::get('instagram/feeds', fn() => dd((new InstagramService)->getFeed()));
 Route::get('terms', fn() => 'Terms');
 Route::get('instagram-auth-failure', fn() => 'failure');
+Route::get('instagram-auth-success', fn() => 'success');
 
 Route::get('switch-theme', function () {
     $theme = request()->session()->get('theme', 'light');

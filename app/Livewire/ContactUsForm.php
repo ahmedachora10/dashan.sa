@@ -25,6 +25,8 @@ class ContactUsForm extends Component
     #[Rule('required|string')]
     public string $message;
 
+    public string $view = 'livewire.contact-us-form';
+
     public function save() {
         $contact = ContactUs::create($this->validate());
         session()->flash('success', trans('message.create'));
@@ -33,11 +35,11 @@ class ContactUsForm extends Component
             'message' => $contact->name . ' - ' . $contact->subject,
             'type' => ContactUs::class,
         ]));
-        $this->reset();
+        $this->resetExcept('view');
     }
 
     public function render()
     {
-        return view('livewire.contact-us-form');
+        return view($this->view);
     }
 }

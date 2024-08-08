@@ -53,7 +53,7 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="tp-about-btn">
+                    {{-- <div class="tp-about-btn">
                         <a class="tp-btn tp-icon-style" href="about.html">Discover More <span> <svg
                                     class="qodef-svg--custom-arrow qodef-m-arrow" xmlns="http://www.w3.org/2000/svg"
                                     width="14.2" height="14.2" viewBox="0 0 14.2 14.2">
@@ -67,8 +67,8 @@
                                         <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
                                     </g>
                                 </svg></span></a>
-                        {{-- <img src="{{asset('theme/img/about/about-1-signature.png')}}" alt=""> --}}
-                    </div>
+                        <img src="{{asset('theme/img/about/about-1-signature.png')}}" alt="">
+                    </div> --}}
                 </div>
             </div>
         </div>
