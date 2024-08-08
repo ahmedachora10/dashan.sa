@@ -29,7 +29,7 @@ class InstagramService {
         foreach($feeds as $index => $feed) {
             if (!strtolower($feed?->type) == 'image')
                 continue;
-            $images[$index]['image'] = $feed->thumbnail_url ?? $feed->url;
+            $images[$index]['image'] = $feed->thumbnail_url != '' ? $feed->thumbnail_url : $feed->url;
             $images[$index]['permalink'] = $feed->permalink;
         }
 
