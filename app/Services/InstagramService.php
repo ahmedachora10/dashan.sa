@@ -22,8 +22,10 @@ class InstagramService {
         return InstagramFeed::for(self::PROFILE_NAME);
     }
 
-    public function getImages() : array {
+    public function getImages()  {
         $feeds = $this->getProfile();
+
+        return $feeds;
         $images = [];
         foreach($feeds as $feed) {
             if (!strtolower($feed?->type) == 'image')
