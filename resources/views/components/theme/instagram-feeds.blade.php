@@ -4,7 +4,7 @@
         <div class="tp-footer-widget-gallery-all">
             @foreach ($feeds as $feed)
             <div class="tp-footer-widget-gallery-single-item">
-                <a href="{{$feed['permalink']}}" class="tp-footer-widget-gallery-item">
+                <a href="{{$feed['permalink']}}" class="tp-footer-widget-gallery-item" target="_blank">
                     <div class="tp-footer-widget-gallery-thumb">
                         <img width="74" height="74" src="{{$feed['image']}}" alt="">
                         <div class="tp-footer-widget-gallery-social">
