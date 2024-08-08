@@ -22,7 +22,7 @@ class InstagramService {
         return InstagramFeed::for(self::PROFILE_NAME);
     }
 
-    public static function getImages() {
+    public function getImages() {
         $feeds = $this->getFeeds();
         if(!$feeds?->profile) {
             return [];
