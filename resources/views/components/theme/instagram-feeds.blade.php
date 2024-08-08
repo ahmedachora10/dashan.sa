@@ -2,7 +2,7 @@
     <h3 class="tp-footer-widget-title">Instagram</h3>
     <div class="tp-footer-widget-content">
         <div class="tp-footer-widget-gallery-all">
-            @foreach ($feeds as $feed)
+            {{-- @foreach ($feeds as $feed)
             <div class="tp-footer-widget-gallery-single-item">
                 <a href="{{$feed['permalink']}}" class="tp-footer-widget-gallery-item" target="_blank">
                     <div class="tp-footer-widget-gallery-thumb">
@@ -13,7 +13,7 @@
                     </div>
                 </a>
             </div>
-            @endforeach
+            @endforeach --}}
         </div>
     </div>
 </div>
