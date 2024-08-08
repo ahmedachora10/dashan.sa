@@ -32,8 +32,8 @@ class InstagramService {
             $images[] = $item->url;
         }
 
-        return $images;
-        // ->filter(fn($feed) => strtolower($feed?->type) == 'image')
-        // ->map(fn($feed) => $feed->image);
+        return collect($userProfile)
+        ->filter(fn($feed) => strtolower($feed?->type) == 'image')
+        ->map(fn($feed) => $feed->image);
     }
 }
