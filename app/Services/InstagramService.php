@@ -18,17 +18,17 @@ class InstagramService {
         return \Dymantic\InstagramFeed\Profile::new(self::PROFILE_NAME)->getInstagramAuthUrl();
     }
 
-    public function getFeeds() {
+    public function getProfile() {
         return InstagramFeed::for(self::PROFILE_NAME);
     }
 
     public function getImages() {
-        $feeds = $this->getFeeds();
-        if(!$feeds?->profile) {
+        $userProfile = $this->getProfile();
+        if(!$userProfile?->profile) {
             return [];
         }
-        return $feeds->items
-        ->filter(fn($feed) => strtolower($feed?->type) == 'image')
-        ->map(fn($feed) => $feed->image);
+        return $userProfile->feeds();
+        // ->filter(fn($feed) => strtolower($feed?->type) == 'image')
+        // ->map(fn($feed) => $feed->image);
     }
 }
