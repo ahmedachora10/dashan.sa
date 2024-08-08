@@ -82,7 +82,8 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="tp-footer-widget tp-footer-7-col-3 mb-50">
+                        <x-theme.instagram-feeds />
+                        {{-- <div class="tp-footer-widget tp-footer-7-col-3 mb-50">
                             <h3 class="tp-footer-widget-title">Instagram</h3>
                             <div class="tp-footer-widget-content">
                                 <div class="tp-footer-widget-gallery-all">
@@ -148,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="tp-footer-widget tp-footer-col-4 mb-50">
