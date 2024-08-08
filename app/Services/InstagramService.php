@@ -27,7 +27,7 @@ class InstagramService {
         if(!$userProfile?->profile) {
             return [];
         }
-        return $userProfile->feeds();
+        return $userProfile->feed();
         // ->filter(fn($feed) => strtolower($feed?->type) == 'image')
         // ->map(fn($feed) => $feed->image);
     }
