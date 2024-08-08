@@ -22,15 +22,15 @@ class InstagramService {
         return InstagramFeed::for(self::PROFILE_NAME);
     }
 
-    public function getImages()  {
+    public function getImages() : array  {
         $feeds = $this->getProfile();
 
-        return $feeds;
         $images = [];
         foreach($feeds as $feed) {
             if (!strtolower($feed?->type) == 'image')
                 continue;
-            $images[] = $feed->url;
+            $images[]['image'] = $feed->thumbnail_url ?? $feed->url;
+            $images[]['permalink'] = $feed->permalink;
         }
 
         return $images;
