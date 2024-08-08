@@ -26,11 +26,11 @@ class InstagramService {
         $feeds = $this->getProfile();
 
         $images = [];
-        foreach($feeds as $feed) {
+        foreach($feeds as $index => $feed) {
             if (!strtolower($feed?->type) == 'image')
                 continue;
-            $images[]['image'] = $feed->thumbnail_url ?? $feed->url;
-            $images[]['permalink'] = $feed->permalink;
+            $images[$index]['image'] = $feed->thumbnail_url ?? $feed->url;
+            $images[$index]['permalink'] = $feed->permalink;
         }
 
         return $images;
