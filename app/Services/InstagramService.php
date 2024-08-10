@@ -19,7 +19,7 @@ class InstagramService {
     }
 
     private function getProfile() {
-        return InstagramFeed::for(self::PROFILE_NAME);
+        return InstagramFeed::for(self::PROFILE_NAME, 6);
     }
 
     public function getImages() : array  {
