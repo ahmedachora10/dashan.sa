@@ -37,7 +37,7 @@
                     </div> --}}
                     <div class="tp-video-play p-relative" data-background="assets/img/video/video-1-2.jpg">
                         <div class="tp-video-popup">
-                            <a class="popup-video" href="https://www.youtube.com/watch?v=go7QYaQR494">
+                            <a class="popup-video" href="{{setting('video')}}">
                                 <span><i class="fa-regular fa-play"></i></span>
                                 <p class="mb-0">{{trans('watch video')}}</p>
                             </a>

@@ -209,26 +209,26 @@ return [
         ]
     ],
 
-    // 'why us' => [
+    'video' => [
 
-    //     'title' => 'Why Us',
-    //     'desc' => '',
-    //     'icon' => 'menu-icon tf-icons bx bx-user-pin',
+        'title' => 'Video',
+        'desc' => '',
+        'icon' => 'menu-icon tf-icons bx bx-user-pin',
 
-    //     'elements' => [
-    //         [
-    //             'type' => 'file',
-    //             'data' => 'file',
-    //             'name' => 'about_img',
-    //             'label' => 'Image',
-    //             'rules' => 'nullable|image',
-    //             'class' => '',
-    //             'value' => '',
-    //             'dimension' => 'contact_image',
+        'elements' => [
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'about_img',
+                'label' => 'Video',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => '',
+                // 'dimension' => 'contact_image',
 
-    //         ],
-    //     ]
-    // ],
+            ],
+        ]
+    ],
 
     'footer' => [
 
