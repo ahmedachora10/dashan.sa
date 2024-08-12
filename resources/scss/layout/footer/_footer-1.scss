@@ -199,7 +199,7 @@
                     width: 100%;
                     transform: scale(0);
                     @include transition();
-                    background-color: rgb(255, 94, 20);
+                    background-color: var(--tp-theme-primary);
                 }
                 & img{
                     max-width: 100%;
@@ -349,7 +349,7 @@
         }
     }
     &-3{
-        
+
     }
     &-4{
         margin-left: -30px;
