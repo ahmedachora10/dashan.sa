@@ -15,7 +15,7 @@
                             <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
                                 <img class="tp-hover-distort-img front" width="470" height="518" src="{{asset('theme/img/speciality-1-'.app()->getLocale().'.jpg')}}"
                                     alt="">
-                                <img class="tp-hover-distort-img back" width="470" height="518" src="{{asset('theme/img/speciality-2-'.app()->getLocale().'.jpg')}}"
+                                <img class="tp-hover-distort-img back" width="470" height="518" src="{{asset('theme/img/speciality-1-'.app()->getLocale().'.jpg')}}"
                                     alt="">
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                             <div class="canvas"></div>
                             <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
                                 <img class="tp-hover-distort-img front" width="470" height="622" src="{{asset('theme/img/speciality-2-'.app()->getLocale().'.jpg')}}" alt="">
-                                <img class="tp-hover-distort-img back" width="470" height="622" src="{{asset('theme/img/speciality-2-'.app()->getLocale().'.jpg')}}" alt="">
+                                <img class="tp-hover-distort-img back" width="470" height="622" src="{{asset('theme/img/speciality-1-'.app()->getLocale().'.jpg')}}" alt="">
                             </div>
                         </div>
                     </div>
