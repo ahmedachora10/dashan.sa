@@ -1,9 +1,9 @@
 <!-- contact area start -->
 <section class="tp-contact-7-area p-relative pt-120">
     <div class="tp-contact-7-bg" data-background="{{asset('theme/img/contact/contact-bg.jpg')}}"></div>
-    <div class="tp-contact-7-shape">
-    <img src="{{asset('theme/img/contact/contact.jpg')}}" width="419" height="693" alt="">
-    </div>
+    {{-- <div class="tp-contact-7-shape">
+        <img src="{{asset('theme/img/contact/contact.jpg')}}" width="419" height="693" alt="">
+    </div> --}}
     <div class="container">
     <div class="row">
         <div class="col-lg-7 col-md-6">
