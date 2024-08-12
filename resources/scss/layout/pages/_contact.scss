@@ -286,17 +286,17 @@
     @media #{$sm,$xs} {
       width: 100%;
     }
-    &::before{
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0.9;
-      background: var(--tp-theme-secondary);
-      z-index: 0;
-    }
+    // &::before{
+    //   position: absolute;
+    //   content: "";
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   opacity: 0.9;
+    //   background: var(--tp-theme-secondary);
+    //   z-index: 0;
+    // }
   }
   &-shape{
     position: absolute;
