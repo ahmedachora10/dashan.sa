@@ -1,8 +1,8 @@
 <!-- contact area start -->
 <section class="tp-contact-7-area p-relative pt-120">
-    <div class="tp-contact-7-bg" data-background="https://html.hixstudio.net/ishpat-prev/ishpat/assets/img/feature/feature-1-1.jpg"></div>
+    <div class="tp-contact-7-bg" data-background="{{asset('theme/img/contact/contact-bg.jpg')}}"></div>
     <div class="tp-contact-7-shape">
-    <img src="https://html.hixstudio.net/ishpat-prev/ishpat/assets/img/portfolio/portfolio-1-2.jpg" alt="">
+    <img src="{{asset('theme/img/contact/contact.jpg')}}" alt="">
     </div>
     <div class="container">
     <div class="row">
