@@ -98,6 +98,26 @@
                     top: 6% !important;
                 }
             }
+
+            @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width:
+            1399px) {
+                .tp-contact-thumb .shape-main, .tp-contact-thumb .shape-1, .tp-contact-thumb .shape-2, .tp-contact-thumb .shape-3 {
+                    right: unset !important;
+                    left: 2% !important;
+                }
+            }
+
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                .tp-contact-thumb .shape-main {
+                    right: unset !important;
+                    left: 0 !important;
+                }
+            }
+
+            .tp-video-popup span {
+                margin-right: unset !important;
+                margin-left: 40px !important;
+            }
         </style>
 
         @else
@@ -109,6 +129,12 @@
         }
     </style>
     @endif
+
+    <style>
+        .tp-video-play {
+            width: fit-content !important;
+        }
+    </style>
 
     @stack('styles')
 

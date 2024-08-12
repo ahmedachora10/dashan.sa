@@ -227,28 +227,6 @@ return [
     //             'dimension' => 'contact_image',
 
     //         ],
-    //         [
-    //             'type' => 'text',
-    //             'data' => 'string',
-    //             'name' => 'about_title',
-    //             'label' => 'title',
-    //             'rules' => 'nullable|string',
-    //             'class' => '',
-    //             'value' => '',
-    //             'dimension' => 'logo',
-
-    //         ],
-    //         [
-    //             'type' => 'textarea',
-    //             'data' => 'string',
-    //             'name' => 'about_content',
-    //             'label' => 'Content',
-    //             'rules' => 'nullable|string',
-    //             'class' => '',
-    //             'value' => '',
-    //             'column' => 'col-12',
-
-    //         ],
     //     ]
     // ],
 

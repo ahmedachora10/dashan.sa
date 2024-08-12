@@ -39,5 +39,6 @@ return [
     'work' => 'Our Works',
     'service' => 'Services',
     'why us ' => 'Why Us',
+    'video' => 'Video'
 
 ];
