@@ -222,7 +222,7 @@ return [
                 'name' => 'video',
                 'label' => 'Video',
                 'rules' => 'nullable|string',
-                'class' => '',
+                'class' => 'col-12',
                 'value' => '',
                 // 'dimension' => 'contact_image',
 
