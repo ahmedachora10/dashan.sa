@@ -8,6 +8,7 @@
     <x-theme.margin />
     <x-theme.sections.why-us />
     <x-theme.sections.faq :faq="null" />
+    <x-theme.sections.video />
     <x-theme.margin />
     <x-theme.sections.works />
     <x-theme.sections.testimonials />
@@ -15,7 +16,6 @@
     <x-theme.margin />
     <x-theme.sections.our-clients />
     <x-theme.sections.our-team :members="null" />
-    <x-theme.sections.video />
     {{-- <x-theme.margin /> --}}
     <x-theme.sections.contact />
 </x-front-layout>
