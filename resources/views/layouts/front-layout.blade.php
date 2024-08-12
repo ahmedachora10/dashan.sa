@@ -107,7 +107,7 @@
                 }
             }
 
-            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            @media only screen and (min-width: 992px) {
                 .tp-contact-thumb .shape-main {
                     right: unset !important;
                     left: 0 !important;
