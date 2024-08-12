@@ -32,4 +32,5 @@ return [
     'english name' => 'App Name (english)',
     'english description' => 'App Description (english)',
     'english footer' => 'Footer(en)',
+    'video' => 'Video About Us'
 ];

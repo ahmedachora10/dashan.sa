@@ -32,4 +32,5 @@ return [
     'contact account' => 'معلومات التواصل',
     'email' => 'البريد الالكتروني',
     'phone number' => 'رقم الهاتف',
+    'video' => 'فيديو عنا'
 ];
