@@ -99,8 +99,7 @@
                 }
             }
 
-            @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width:
-            1399px) {
+            @media only screen and (min-width: 1400px) {
                 .tp-contact-thumb .shape-main, .tp-contact-thumb .shape-1, .tp-contact-thumb .shape-2, .tp-contact-thumb .shape-3 {
                     right: unset !important;
                     left: 2% !important;
