@@ -59,6 +59,9 @@
                 & a{
                     &:hover{
                         background: var(--tp-theme-4);
+                        & svg {
+                            fill: $white !important;
+                        }
                     }
                 }
             }
