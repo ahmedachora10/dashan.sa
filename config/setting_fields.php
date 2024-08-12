@@ -219,7 +219,7 @@ return [
             [
                 'type' => 'text',
                 'data' => 'string',
-                'name' => 'about_img',
+                'name' => 'video',
                 'label' => 'Video',
                 'rules' => 'nullable|string',
                 'class' => '',
