@@ -133,6 +133,11 @@
         .tp-video-play {
             width: fit-content !important;
         }
+
+        .tp-contact-7-bg {
+            background-size: cover;
+            background-position: center center;
+         }
     </style>
 
     @stack('styles')
