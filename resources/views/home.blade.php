@@ -9,7 +9,7 @@
     <x-theme.sections.why-us />
     <x-theme.sections.faq :faq="null" />
     <x-theme.sections.video />
-    <x-theme.margin />
+    {{-- <x-theme.margin /> --}}
     <x-theme.sections.works />
     <x-theme.sections.testimonials />
     <x-theme.sections.statistics :statistics="null" />
