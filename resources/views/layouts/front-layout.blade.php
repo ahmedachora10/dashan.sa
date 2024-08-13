@@ -138,6 +138,12 @@
             background-size: cover;
             background-position: center center;
          }
+
+        @media (min-width: 768px) {
+            .tp-contact-7-project {
+                top: 248px;
+            }
+        }
     </style>
 
     @stack('styles')
