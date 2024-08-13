@@ -1,5 +1,5 @@
 <!-- project area start -->
-<section class="tp-project-area tp-project-bottom-color p-relative pt-170" id="works">
+<section class="tp-project-area tp-project-bottom-color p-relative pt-170" id="works" @if (app()->getLocale() == 'ar') dir="rtl" @endif>
     <div class="tp-project-text">
         <h4 class="tp-home-2-section-text">{{ strtoupper(trans('projects'))}}</h4>
     </div>
@@ -46,108 +46,6 @@
                 </div>
             </div>
             @endforeach
-            {{-- <div class="col-lg-4 col-md-6 grid-item cat5 cat3 cat6">
-                <div class="tp-project-item p-relative fix mb-30">
-                    <div class="tp-project-thumb p-relative fix">
-                        <a href="portfolio-details.html">
-                            <img src="assets/img/project/project-2-2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="tp-project-item-content p-relative">
-                        <span>Building</span>
-                        <h4 class="tp-project-item-title"><a href="portfolio-details.html">Architecture</a></h4>
-                        <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
-                                <span>
-                                    <i class="fa-regular fa-plus"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 grid-item cat3 cat2 cat6">
-                <div class="tp-project-item p-relative fix mb-30">
-                    <div class="tp-project-thumb p-relative fix">
-                        <a href="portfolio-details.html">
-                            <img src="assets/img/project/project-2-3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="tp-project-item-content p-relative">
-                        <span>Building</span>
-                        <h4 class="tp-project-item-title"><a href="portfolio-details.html">Real Estate</a></h4>
-                        <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
-                                <span>
-                                    <i class="fa-regular fa-plus"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 grid-item cat4 cat2 cat6">
-                <div class="tp-project-item p-relative fix mb-30">
-                    <div class="tp-project-thumb p-relative fix">
-                        <a href="portfolio-details.html">
-                            <img src="assets/img/project/project-2-4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="tp-project-item-content p-relative">
-                        <span>Building</span>
-                        <h4 class="tp-project-item-title"><a href="portfolio-details.html">Interior architecture</a>
-                        </h4>
-                        <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
-                                <span>
-                                    <i class="fa-regular fa-plus"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 grid-item cat2 cat4 cat6">
-                <div class="tp-project-item p-relative fix mb-30">
-                    <div class="tp-project-thumb p-relative fix">
-                        <a href="portfolio-details.html">
-                            <img src="assets/img/project/project-2-5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="tp-project-item-content p-relative">
-                        <span>Building</span>
-                        <h4 class="tp-project-item-title"><a href="portfolio-details.html">Roofing architecture</a></h4>
-                        <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
-                                <span>
-                                    <i class="fa-regular fa-plus"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 grid-item cat3 cat5 cat6">
-                <div class="tp-project-item p-relative fix mb-30">
-                    <div class="tp-project-thumb p-relative fix">
-                        <a href="portfolio-details.html">
-                            <img src="assets/img/project/project-2-6.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="tp-project-item-content p-relative">
-                        <span>Building</span>
-                        <h4 class="tp-project-item-title"><a href="portfolio-details.html">Electrician architecture</a>
-                        </h4>
-                        <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
-                                <span>
-                                    <i class="fa-regular fa-plus"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </section>
