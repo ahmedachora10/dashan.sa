@@ -19,7 +19,7 @@
                 <img src="{{asset('theme/img/contact/home-7/contact-7-shape.png')}}" alt="">
                 </div>
             </div> --}}
-            <div class="tp-contact-7-project justify-content-lg-end d-flex">
+            <div class="tp-contact-7-project justify-content-lg-end d-flex p-relative">
                 @if(!empty(setting('email')))
                 <div class="tp-contact-7-complete text-center">
                     <h4 class="tp-contact-7-count"><span class="fa-solid fa-envelope"></span></h4>
