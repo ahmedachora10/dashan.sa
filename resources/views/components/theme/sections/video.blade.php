@@ -35,7 +35,7 @@
                                     </g>
                                 </svg></span></a>
                     </div> --}}
-                    <div class="tp-video-play p-relative" data-background="assets/img/video/video-1-2.jpg">
+                    <div class="tp-video-play p-relative" data-background="{{asset('theme/img/video-bg.jpg')}}">
                         <div class="tp-video-popup">
                             <a class="popup-video" href="{{setting('video')}}">
                                 <span><i class="fa-regular fa-play"></i></span>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="tp-contact-thumb">
-                    <img class="shape-main" src="{{asset('theme/img/contact/contact-1-1.png')}}" alt="">
+                    <img class="shape-main" src="{{asset('theme/img/video.jpg')}}" alt="">
                     <img class="shape-1" src="{{asset('theme/img/contact/contact-1-shape1.png')}}" alt="">
                     <img class="shape-2" src="{{asset('theme/img/contact/contact-1-shape2.png')}}" alt="">
                     <img class="shape-3" src="{{asset('theme/img/contact/contact-1-shape3.png')}}" alt="">
