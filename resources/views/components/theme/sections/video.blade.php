@@ -1,6 +1,6 @@
 <!-- contact area start -->
 <section class="tp-contact-area p-relative fix pt-190 pb-200">
-    <div class="tp-contact-bg" data-background="{{asset('theme/img/contact/contact-1-bg.jpg')}}"></div>
+    <div class="tp-contact-bg" data-background="{{asset('theme/img/video-bg.jpg')}}"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
