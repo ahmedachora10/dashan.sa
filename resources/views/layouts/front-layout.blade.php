@@ -155,6 +155,10 @@
     @stack('styles')
 
     @livewireStyles
+
+    <script>
+        localStorage.setItem('tp_dir', "{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}");
+    </script>
 </head>
 
 <body>
