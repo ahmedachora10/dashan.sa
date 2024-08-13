@@ -9,7 +9,7 @@
                     <div class="tp-about-thumb">
                         {{-- <img class="shape-1" src="{{asset('theme/img/about/about-1-3.jpg')}}" alt="">
                         <img class="shape-2" src="{{asset('theme/img/about/about-1-4.png')}}" alt=""> --}}
-                        <p>20</p>
+                        {{-- <p>20</p> --}}
                         <div class="tp-hover-distort-wrapper top">
                             <div class="canvas"></div>
                             <div class="tp-hover-distort" data-displacementImage="{{asset('theme/img/webgl/1.jpg')}}">
