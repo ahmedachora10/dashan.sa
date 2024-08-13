@@ -43,6 +43,11 @@
                 right: 85px !important;
             }
 
+            .tp-about-thumb .top:hover {
+                transition: .3s;
+                z-index: 5;
+            }
+
             .tp-about-shape {
                 left: 0 !important;
                 right: unset !important;
