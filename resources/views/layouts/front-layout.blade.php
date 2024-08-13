@@ -43,12 +43,6 @@
                 right: 85px !important;
             }
 
-            .tp-about-thumb .top:hover {
-                z-index: 5;
-                border: 15px solid rgb(255, 255, 255) !important;
-                transition: .3s;
-            }
-
             .tp-about-shape {
                 left: 0 !important;
                 right: unset !important;
@@ -143,12 +137,18 @@
         .tp-contact-7-bg {
             background-size: cover;
             background-position: center center;
-         }
+        }
 
         @media (min-width: 768px) {
             .tp-contact-7-project {
                 top: 318px;
             }
+        }
+
+        .tp-about-thumb .top:hover {
+            z-index: 5;
+            border: 15px solid rgb(255, 255, 255) !important;
+            transition: .3s;
         }
     </style>
 
