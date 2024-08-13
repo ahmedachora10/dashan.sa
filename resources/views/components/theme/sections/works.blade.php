@@ -7,7 +7,7 @@
         <img src="{{asset('theme/img/project/home-2/project-2-shape.png')}}" alt="">
     </div>
     <div class="container">
-        <div class="row align-items-end">
+        <div class="row align-items-{{}}">
             <div class="col-lg-6">
                 <div class="tp-project-title-wrapper mb-70">
                     <x-theme.headline key="work" />
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="row grid">
+        <div class="row grid justify-content-start">
             @foreach ($works as $item)
             <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}">
                 <div class="tp-project-item p-relative fix mb-30">
