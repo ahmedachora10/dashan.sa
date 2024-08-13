@@ -1147,11 +1147,14 @@
 
 		////////////////////////////////////////////////////
 		// 15. Masonary Js
-		$('.grid').imagesLoaded(function () {
-			// init Isotope
+    $('.grid').imagesLoaded(function () {
+            var tp_rtl = localStorage.getItem('tp_dir');
+			let rtl_setting = tp_rtl != 'rtl';
+            // init Isotope
 			var $grid = $('.grid').isotope({
 				itemSelector: '.grid-item',
-				percentPosition: true,
+                percentPosition: true,
+                originLeft: tp_rtl,
 				masonry: {
 					// use outer width of grid-sizer for columnWidth
 					columnWidth: 1,

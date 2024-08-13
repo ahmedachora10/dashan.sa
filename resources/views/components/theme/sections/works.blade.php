@@ -25,7 +25,7 @@
         </div>
         <div class="row grid">
             @foreach ($works as $item)
-            <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}" @if (app()->getLocale() == 'ar') style="left: unset; right: 0%" @endif style="">
+            <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}" style="">
                 <div class="tp-project-item p-relative fix mb-30">
                     <div class="tp-project-thumb p-relative fix">
                         <a href="{{route('works.show', $item)}}">
