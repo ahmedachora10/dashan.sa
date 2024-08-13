@@ -44,8 +44,9 @@
             }
 
             .tp-about-thumb .top:hover {
-                transition: .3s;
                 z-index: 5;
+                border: 15px solid rgb(255, 255, 255);
+                transition: .3s;
             }
 
             .tp-about-shape {
