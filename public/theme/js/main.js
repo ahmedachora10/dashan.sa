@@ -1156,8 +1156,8 @@
             // init Isotope
 			var $grid = $('.grid').isotope({
 				itemSelector: '.grid-item',
-                percentPosition: true,
                 originLeft: tp_rtl,
+                // percentPosition: true,
 				masonry: {
 					// use outer width of grid-sizer for columnWidth
 					columnWidth: 1,
@@ -1168,7 +1168,7 @@
 			// filter items on button click
 			$('.masonary-menu').on('click', 'button', function () {
 				var filterValue = $(this).attr('data-filter');
-				$grid.isotope({ filter: filterValue, originLeft: tp_rtl });
+				$grid.isotope({ filter: filterValue });
 			});
 
 			//for menu active class
