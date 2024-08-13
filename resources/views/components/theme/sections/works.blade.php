@@ -7,7 +7,7 @@
         <img src="{{asset('theme/img/project/home-2/project-2-shape.png')}}" alt="">
     </div>
     <div class="container">
-        <div class="row align-items-{{app()->getLocale() == 'ar' ? 'start' : 'end'}}">
+        <div class="row align-items-end">
             <div class="col-lg-6">
                 <div class="tp-project-title-wrapper mb-70">
                     <x-theme.headline key="work" />
@@ -25,7 +25,7 @@
         </div>
         <div class="row grid">
             @foreach ($works as $item)
-            <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}">
+            <div class="col-lg-4 col-md-6 grid-item cat{{$item->tag_id}}" style="right: 0 !important; left:unset !important">
                 <div class="tp-project-item p-relative fix mb-30">
                     <div class="tp-project-thumb p-relative fix">
                         <a href="{{route('works.show', $item)}}">
