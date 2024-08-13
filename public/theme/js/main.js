@@ -28,7 +28,7 @@
 	});
 
     var tp_rtl = localStorage.getItem('tp_dir');
-    let rtl_setting = tp_rtl != 'rtl' ? false : true;
+    let rtl_setting = tp_rtl != 'rtl';
 
 
 	////////////////////////////////////////////////////
