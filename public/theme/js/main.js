@@ -1149,7 +1149,9 @@
 		// 15. Masonary Js
     $('.grid').imagesLoaded(function () {
             var tp_rtl = localStorage.getItem('tp_dir');
-			let rtl_setting = tp_rtl != 'rtl';
+        let rtl_setting = tp_rtl != 'rtl';
+        console.log('rtl_setting', rtl_setting);
+
             // init Isotope
 			var $grid = $('.grid').isotope({
 				itemSelector: '.grid-item',
