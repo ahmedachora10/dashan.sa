@@ -1258,15 +1258,15 @@
 		}
 
 		function handleFailedImages(instance) {
-			console.error('One or more images failed to load.');
+			// console.error('One or more images failed to load.');
 
-			var failedImages = instance.images.filter(function(img) {
-			return !img.isLoaded;
-			});
+			// var failedImages = instance.images.filter(function(img) {
+			// return !img.isLoaded;
+			// });
 
-			failedImages.forEach(function(failedImage) {
-			console.error('Failed image source:', failedImage.img.src);
-			});
+			// failedImages.forEach(function(failedImage) {
+			// console.error('Failed image source:', failedImage.img.src);
+			// });
 		}
 
 
