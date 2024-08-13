@@ -19,16 +19,20 @@
                 <img src="{{asset('theme/img/contact/home-7/contact-7-shape.png')}}" alt="">
                 </div> --}}
             </div>
-            {{-- <div class="tp-contact-7-project justify-content-lg-end d-flex">
+            <div class="tp-contact-7-project justify-content-lg-end d-flex">
+                @if(!empty(setting('email')))
                 <div class="tp-contact-7-complete text-center">
-                <h4 class="tp-contact-7-count"><span class="purecounter" data-purecounter-duration="2" data-purecounter-end="140"></span>+</h4>
-                <span>Completed projects</span>
+                    <h4 class="tp-contact-7-count"><span class="purecounter"></span></h4>
+                    <span>{{setting('email')}}</span>
                 </div>
+                @endif
+                @if(!empty(setting('phone')))
                 <div class="tp-contact-7-complete text-center">
-                <h4 class="tp-contact-7-count"><span class="purecounter" data-purecounter-duration="2" data-purecounter-end="90"></span>+</h4>
-                <span>Completed projects</span>
+                    <h4 class="tp-contact-7-count"><span class="purecounter"></span></h4>
+                    <span>{{setting('email')}}</span>
                 </div>
-            </div> --}}
+                @endif
+            </div>
         </div>
         <div class="col-lg-5 col-md-6">
             <div class="tp-contact-7-box">
