@@ -29,7 +29,7 @@
                 @if(!empty(setting('phone')))
                 <div class="tp-contact-7-complete text-center">
                     <h4 class="tp-contact-7-count"><span class="fa-solid fa-phone"></span></h4>
-                    <span>{{setting('email')}}</span>
+                    <span>{{setting('phone')}}</span>
                 </div>
                 @endif
             </div>
