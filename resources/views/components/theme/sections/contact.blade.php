@@ -22,13 +22,13 @@
             <div class="tp-contact-7-project justify-content-lg-end d-flex">
                 @if(!empty(setting('email')))
                 <div class="tp-contact-7-complete text-center">
-                    <h4 class="tp-contact-7-count"><span class="fa-solid fa-envelope text-primary"></span></h4>
+                    <h4 class="tp-contact-7-count"><span class="fa-solid fa-envelope"></span></h4>
                     <span>{{setting('email')}}</span>
                 </div>
                 @endif
                 @if(!empty(setting('phone')))
                 <div class="tp-contact-7-complete text-center">
-                    <h4 class="tp-contact-7-count"><span class="fa-solid fa-phone text-primary"></span></h4>
+                    <h4 class="tp-contact-7-count"><span class="fa-solid fa-phone"></span></h4>
                     <span>{{setting('email')}}</span>
                 </div>
                 @endif
