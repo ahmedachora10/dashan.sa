@@ -27,6 +27,9 @@
 		$("#loading").fadeOut(500);
 	});
 
+    var tp_rtl = localStorage.getItem('tp_dir');
+    let rtl_setting = tp_rtl != 'rtl' ? false : true;
+
 
 	////////////////////////////////////////////////////
 	// 02. Sticky Header Js
@@ -1148,8 +1151,6 @@
 		////////////////////////////////////////////////////
 		// 15. Masonary Js
     $('.grid').imagesLoaded(function () {
-            var tp_rtl = localStorage.getItem('tp_dir');
-            let rtl_setting = tp_rtl != 'rtl';
             console.log('rtl_setting', rtl_setting);
 
             // init Isotope
@@ -1167,7 +1168,7 @@
 			// filter items on button click
 			$('.masonary-menu').on('click', 'button', function () {
 				var filterValue = $(this).attr('data-filter');
-				$grid.isotope({ filter: filterValue });
+				$grid.isotope({ filter: filterValue, originLeft: tp_rtl });
 			});
 
 			//for menu active class
