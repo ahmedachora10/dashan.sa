@@ -1156,7 +1156,7 @@
             // init Isotope
 			var $grid = $('.grid').isotope({
 				itemSelector: '.grid-item',
-                originLeft: false,
+                originLeft: tp_rtl,
                 percentPosition: true,
 				masonry: {
 					// use outer width of grid-sizer for columnWidth
