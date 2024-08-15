@@ -46,7 +46,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="tp-contact-thumb">
-                    <img class="shape-main" width="438" height="546" src="{{asset('theme/img/video.jpg')}}" alt="">
+                    <img class="shape-main" width="438" height="546" src="{{asset('theme/img/video-'. app()->getLocale() .'.jpg')}}" alt="">
                     {{-- <img class="shape-1" src="{{asset('theme/img/contact/contact-1-shape1.png')}}" alt="">
                     <img class="shape-2" src="{{asset('theme/img/contact/contact-1-shape2.png')}}" alt="">
                     <img class="shape-3" src="{{asset('theme/img/contact/contact-1-shape3.png')}}" alt=""> --}}

@@ -126,6 +126,13 @@
             left: 0 !important;
             right: unset !important;
         }
+
+        @media (min-width: 1599px) {
+            .tp-contact-thumb .shape-main {
+                right: 0;
+            }
+
+        }
     </style>
     @endif
 
