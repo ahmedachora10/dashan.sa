@@ -29,7 +29,7 @@ if (document.querySelector('#dropzone-basic')) {
         maxFilesize: 265,
         addRemoveLinks: true,
         paramName: 'image',
-    maxFiles: 4,
+    maxFiles: 18,
     headers: {
         'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute(
             'content')
