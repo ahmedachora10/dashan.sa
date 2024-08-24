@@ -36,7 +36,7 @@
                         <span>{{$item?->tag?->name}}</span>
                         <h4 class="tp-project-item-title"><a href="{{route('works.show', $item)}}" title="{{$item->description}}">{{str($item->description)->limit(90)}}</a></h4>
                         <div class="tp-project-item-btn">
-                            <a href="portfolio-details.html">
+                            <a href="{{route('works.show', $item)}}">
                                 <span>
                                     <i class="fa-regular fa-plus"></i>
                                 </span>

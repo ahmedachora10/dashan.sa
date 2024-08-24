@@ -42,9 +42,9 @@
                             </div>
                             <div class="product__details-thumb-nav tp-tab">
                                 <nav>
-                                    <div class="nav nav-tabs justify-content-sm-between" id="nav-tab" role="tablist">
+                                    <div class="nav nav-tabs justify-content-sm-start" id="nav-tab" role="tablist">
                                         @foreach ($images as $img)
-                                        <button @class(['nav-link', 'active' => $loop->first]) id="nav-{{$loop->iteration}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{$loop->iteration}}"
+                                        <button @class(['nav-link m-1', 'active' => $loop->first]) id="nav-{{$loop->iteration}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{$loop->iteration}}"
                                             type="button" role="tab" aria-controls="nav-{{$loop->iteration}}" aria-selected="true">
                                             <img src="{{$img->getUrl()}}" alt="">
                                         </button>
