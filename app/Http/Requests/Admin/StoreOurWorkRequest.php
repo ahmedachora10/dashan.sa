@@ -15,8 +15,9 @@ class StoreOurWorkRequest extends FormRequest
     {
         return [
             'tag_id' => 'required|integer|exists:tags,id',
-            'images' => 'array',
-            'images.*' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            // 'images' => 'array',
+            'bg_image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
+            'thumb' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
             'client_name_ar' => 'required|string',
             'client_name_en' => 'nullable|string',
             'description_ar' => 'required|string',

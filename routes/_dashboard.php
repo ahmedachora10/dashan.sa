@@ -45,6 +45,7 @@ use App\Livewire\Dashboard\Container\JobRequestsContainer;
 use App\Livewire\Dashboard\Container\NotificationsContainer;
 use App\Livewire\Dashboard\Container\ServiceRequestsContainer;
 use App\Livewire\Dashboard\Container\SubscribersContainer;
+use App\Models\OurWork;
 use Illuminate\Support\Facades\Route;
 
 
@@ -83,6 +84,8 @@ Route::middleware(['auth'])->group(function ()
 
     Route::post('our-works/media/remove', [OurWorkController::class, 'removeMedia'])
         ->name('our-works.media.remove');
+
+    Route::post('our-works/add-images/{work}', [OurWorkController::class, 'uploadImages'])->name('our-works.add-images.store');
     Route::resource('our-works', OurWorkController::class);
     Route::resource('tags', TagController::class);
 
@@ -100,4 +103,11 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('reviews', ReviewController::class)->except('store');
     Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
     Route::resource('certificates', CertificateController::class)->except('index');
+
+    Route::controller(MediaController::class)
+        ->name('media.')
+        ->prefix('media')
+        ->group(function () {
+            Route::post('/', 'store')->name('store');
+        });
 });

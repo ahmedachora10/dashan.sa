@@ -35,8 +35,19 @@ class OurWork extends Model implements HasMedia
 
     public function getThumbnailAttribute() {
         // $media = $this->getFirstMedia('works')?->getUrl();
-        $media = $this->media?->first()?->getUrl();
+        $media = $this->getFirstMedia('works-thumb')?->getUrl();
         return $media ?? asset(setting('logo'));
+    }
+    public function getBackgroundAttribute() {
+        // $media = $this->getFirstMedia('works')?->getUrl();
+        $media = $this->getFirstMedia('works-bg')?->getUrl();
+        return $media ?? asset(setting('logo'));
+    }
+
+    public function getImagesAttribute() {
+        // $media = $this->getFirstMedia('works')?->getUrl();
+        $images = $this->getMedia('works');
+        return $images;
     }
 
     public function tag() : BelongsTo {

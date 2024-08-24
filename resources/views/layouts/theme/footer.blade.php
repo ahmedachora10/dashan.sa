@@ -27,11 +27,7 @@
 
                                         <a href="{{setting($media)}}" class="mx-0">
                                             @if($media == 'twitter')
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" fill="#fff">
-                                                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                                <path
-                                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                                            </svg>
+                                            <x-x-twitter fill="#fff" />
                                             @else
                                             <i class="{{$icon}}"></i>
                                             @endif
@@ -83,73 +79,6 @@
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                         <x-theme.instagram-feeds />
-                        {{-- <div class="tp-footer-widget tp-footer-7-col-3 mb-50">
-                            <h3 class="tp-footer-widget-title">Instagram</h3>
-                            <div class="tp-footer-widget-content">
-                                <div class="tp-footer-widget-gallery-all">
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-1.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-2.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-3.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-4.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-5.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="tp-footer-widget-gallery-single-item">
-                                        <a href="#" class="tp-footer-widget-gallery-item">
-                                            <div class="tp-footer-widget-gallery-thumb">
-                                                <img src="{{asset('theme/img/footer/footer-7-6.jpg')}}" alt="">
-                                                <div class="tp-footer-widget-gallery-social">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-6 col-12">
                         <div class="tp-footer-widget tp-footer-col-4 mb-50">

@@ -2,9 +2,18 @@
 
     <x-theme.tab-list :route="route('our-works.store')">
         <x-slot:arForm>
-            <div class="col-12 mb-3">
-                <x-dashboard.input-group type="file" name="images[]" multiple :title="trans('table.columns.image')" />
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="file" name="thumb" multiple :title="trans('table.columns.image')" />
                 <x-size-notice key="our_special" />
+            </div>
+
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="file" name="bg_image" multiple :title="trans('table.columns.background image')" />
+                <x-size-notice key="our_special" />
+            </div>
+
+            <div class="col-12 mb-3">
+
             </div>
 
             <div class="col-md-6 col-12 mb-3">

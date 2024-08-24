@@ -157,6 +157,11 @@
             border: 15px solid rgb(255, 255, 255) !important;
             transition: .3s;
         }
+
+        .tp-team-7-item:hover .tp-team-7-social a svg{
+            fill: #fff !important;
+            transition: all .3s 0s ease-out;
+        }
     </style>
 
     @stack('styles')

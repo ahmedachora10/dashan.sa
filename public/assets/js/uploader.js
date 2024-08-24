@@ -28,6 +28,7 @@ if (document.querySelector('#dropzone-basic')) {
         parallelUploads: 1,
         maxFilesize: 5,
         addRemoveLinks: true,
+        paramName: 'image',
     maxFiles: 4,
     headers: {
         'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute(
@@ -37,7 +38,7 @@ if (document.querySelector('#dropzone-basic')) {
 
     myDropzone.on("complete", function(file) {
         setTimeout(() => {
-            window.livewire.emit('refresh-images');
+            Livewire.dispatch('refresh-media');
             myDropzone.removeFile(file);
         }, 4000);
     });

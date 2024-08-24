@@ -37,14 +37,13 @@ class OurWorkController extends Controller
 
         $request->validated();
 
-        $newWork = OurWork::create($request->safe()->except('images'));
+        $newWork = OurWork::create($request->safe()->except(['thumb', 'bg_image']));
 
 
-        foreach($request->images ?? [] as $img) {
-            $newWork->addMedia($img)->toMediaCollection('works');
-        }
+        $newWork->addMediaFromRequest('thumb')->toMediaCollection('works-thumb');
+        $newWork->addMediaFromRequest('bg_image')->toMediaCollection('works-bg');
 
-        return redirect()->route('our-works.index')->with('success', trans('message.create'));
+        return redirect()->route('our-works.show', $newWork)->with('success', trans('message.create'));
     }
 
     /**
@@ -52,7 +51,7 @@ class OurWorkController extends Controller
      */
     public function show(OurWork $ourWork)
     {
-        //
+        return view('admin.our-works.add-images', compact('ourWork'));
     }
 
     /**
@@ -60,10 +59,10 @@ class OurWorkController extends Controller
      */
     public function edit(OurWork $ourWork)
     {
-        $images = $ourWork->getMedia('works');
+        // $images = $ourWork->getMedia('works');
         $tags = Tag::all();
 
-        return view('admin.our-works.edit', compact('ourWork', 'images', 'tags'));
+        return view('admin.our-works.edit', compact('ourWork', 'tags'));
     }
 
     /**
@@ -74,10 +73,16 @@ class OurWorkController extends Controller
 
         $request->validated();
 
-        $ourWork->update($request->safe()->except('images'));
+        $ourWork->update($request->safe()->except(['thumb', 'bg_image']));
 
-        foreach($request->images ?? [] as $img) {
-            $ourWork->addMedia($img)->toMediaCollection('works');
+        if($request->thumb !== null) {
+            $ourWork->clearMediaCollection('works-thumb');
+            $ourWork->addMediaFromRequest('thumb')->toMediaCollection('works-thumb');
+        }
+
+        if($request->bg_image !== null) {
+            $ourWork->clearMediaCollection('works-bg');
+            $ourWork->addMediaFromRequest('bg_image')->toMediaCollection('works-bg');
         }
 
 
@@ -92,6 +97,14 @@ class OurWorkController extends Controller
         $ourWork->delete();
 
         return redirect()->route('our-works.index')->with('success', trans('message.delete'));
+    }
+
+    public function uploadImages(Request $request, OurWork $work) {
+        $request->validate(['image' => 'required|image'], $request->all());
+
+        $work->addMediaFromRequest('image')->toMediaCollection('works');
+
+        return true;
     }
 
     public function removeMedia(Request $request) {

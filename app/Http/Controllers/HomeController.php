@@ -17,11 +17,9 @@ class HomeController extends Controller
         view()->share('title','');
 
         $sliders = Slider::all();
-        $statistics = Statistic::all();
-        $clients = OurClient::all();
         $visions = Vision::all();
         $ourServices = OurService::all();
 
-        return view('home', compact('sliders', 'clients', 'statistics', 'visions', 'ourServices'));
+        return view('home', compact('sliders', 'visions', 'ourServices'));
     }
 }

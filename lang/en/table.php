@@ -58,6 +58,7 @@ return [
         'right' => 'Right',
         'bottom' => 'Bottom',
         'left' => 'Left',
+        'backgroud image' => 'Background Image',
     ],
     'empty' => 'No Records'
 ];

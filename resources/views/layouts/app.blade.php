@@ -35,6 +35,11 @@
 
     @if (app()->getLocale() == 'ar')
         {{-- <link rel="stylesheet" href="{{ asset('assets/css/rtl.css') }}"> --}}
+        <style>
+            .light-style .dropzone {
+                border: 2px dashed #d9dee3;
+            }
+        </style>
         @if (session('theme') == 'dark')
             <link rel="stylesheet" href="{{ asset('assets/vendor/css/dark-core.css') }}"
                 class="template-customizer-core-css" />
@@ -86,6 +91,9 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/quill/typography.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/quill/katex.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/quill/editor.css') }}" />
+
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/dropzone/custom-dropzone.css') }}" />
 
     @stack('component-styles')
 
@@ -161,7 +169,7 @@
 
     <!-- Vendors JS -->
     <script src="{{ asset('assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
-
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
@@ -182,7 +190,7 @@
     @stack('scripts')
 
     @livewireScripts
-
+    <script src="{{ asset('assets/js/uploader.js') }}"></script>
     <script defer>
         Livewire.on('close-modal', ({
             target

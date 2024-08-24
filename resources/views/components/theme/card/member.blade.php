@@ -8,10 +8,12 @@
     </div>
     <div class="tp-team-7-social">
         @if(!empty($member->twitter))
-            <a href="{{$member->twitter}}" target="_blank"><i class="flaticon-twitter"></i></a>
+            <a href="{{$member->twitter}}" target="_blank">
+                <x-x-twitter width="15px" fill="#000" style="position: relative; top:-2px" />
+            </a>
         @endif
         @if(!empty($member->linkedin))
-            <a href="{{$member->linkedin}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="{{$member->linkedin}}" target="_blank"><i class="fa-brands fa-linkedin mx-2"></i></a>
         @endif
     </div>
 </div>

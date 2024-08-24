@@ -1,21 +1,31 @@
 <x-app-layout>
 
+    <div class="col-12 mb-4">
+        <x-dropzone-form :action="route('our-works.add-images.store', $ourWork)" id="dropzone-basic" />
+    </div>
+
+    <x-dashboard.cards.sample column="col-12">
+        <livewire:dashboard.media-container :model="$ourWork" :images="$ourWork->images" />
+    </x-dashboard.cards.sample>
+
     <x-theme.tab-list :route="route('our-works.update', $ourWork)">
         <x-slot:arForm>
             @method('PUT')
-            <div class="col-12 mb-3">
-                <div class="row">
-                    @foreach ($images as $img)
-                        <div class=" col-auto mx-2 position-relative mb-2">
-                            <img width="80" height="80" src="{{$img->getUrl()}}" alt="">
-                            <a data-id="{{$img->id}}" href="#!" class="position-absolute remove-img" style="top: -10px;right: 7px;">
-                                <i class="fas fa-trash text-danger"></i>
-                            </a>
-                        </div>
-                    @endforeach
+            <div class="col-md-6 col-12 mb-3">
+
+                <div class="col-auto mb-2">
+                    <img width="80" height="80" src="{{$ourWork->thumbnail}}" alt="">
                 </div>
-                <x-dashboard.input-group type="file" name="images[]" multiple :title="trans('table.columns.image')" />
-                <x-size-notice key="our_special" />
+                <x-dashboard.input-group type="file" name="thumb" multiple :title="trans('table.columns.image')" />
+                {{-- <x-size-notice key="our_special" /> --}}
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+
+                <div class="col-auto mb-2">
+                    <img width="80" height="80" src="{{$ourWork->background}}" alt="">
+                </div>
+                <x-dashboard.input-group type="file" name="bg_image" multiple :title="trans('table.columns.background image')" />
+                {{-- <x-size-notice key="our_special" /> --}}
             </div>
 
             <div class="col-md-6 col-12 mb-3">

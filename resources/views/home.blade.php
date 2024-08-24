@@ -7,15 +7,15 @@
     <x-theme.sections.services :services="$ourServices" />
     <x-theme.margin />
     <x-theme.sections.why-us />
-    <x-theme.sections.faq :faq="null" />
+    <x-theme.sections.faq />
     <x-theme.sections.video />
     {{-- <x-theme.margin /> --}}
     <x-theme.sections.works />
     <x-theme.sections.testimonials />
-    <x-theme.sections.statistics :statistics="null" />
+    <x-theme.sections.statistics />
     <x-theme.margin />
     <x-theme.sections.our-clients />
-    <x-theme.sections.our-team :members="null" />
+    <x-theme.sections.our-team  />
     {{-- <x-theme.margin /> --}}
     <x-theme.sections.contact />
 </x-front-layout>
