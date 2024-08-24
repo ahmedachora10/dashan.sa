@@ -16,7 +16,7 @@
                 <div class="col-auto mb-2">
                     <img width="80" height="80" src="{{$ourWork->thumbnail}}" alt="">
                 </div>
-                <x-dashboard.input-group type="file" name="thumb" multiple :title="trans('table.columns.image')" />
+                <x-dashboard.input-group type="file" name="thumb" :title="trans('table.columns.image')" />
                 {{-- <x-size-notice key="our_special" /> --}}
             </div>
             <div class="col-md-6 col-12 mb-3">
@@ -24,7 +24,7 @@
                 <div class="col-auto mb-2">
                     <img width="80" height="80" src="{{$ourWork->background}}" alt="">
                 </div>
-                <x-dashboard.input-group type="file" name="bg_image" multiple :title="trans('table.columns.background image')" />
+                <x-dashboard.input-group type="file" name="bg_image" :title="trans('table.columns.background image')" />
                 {{-- <x-size-notice key="our_special" /> --}}
             </div>
 
