@@ -26,7 +26,7 @@ if (document.querySelector('#dropzone-basic')) {
     const myDropzone = new Dropzone('#dropzone-basic', {
         previewTemplate: view,
         parallelUploads: 1,
-        maxFilesize: 5,
+        maxFilesize: 265,
         addRemoveLinks: true,
         paramName: 'image',
     maxFiles: 4,
