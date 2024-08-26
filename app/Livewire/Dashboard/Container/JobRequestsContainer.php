@@ -38,7 +38,7 @@ class JobRequestsContainer extends Component
             $jobRequest->delete();
         });
 
-        session()->put('success', trans('message.delete'));
+        session()->put('success', trans('request has been send'));
 
         $this->dispatch('refresh-alert');
     }

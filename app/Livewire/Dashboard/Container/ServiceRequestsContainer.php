@@ -13,7 +13,7 @@ class ServiceRequestsContainer extends Component
 
     protected $paginationTheme = 'bootstrap';
 
-    public string $content = '';
+    public ?ServiceRequest $request = null;
 
     public function mount() {
         User::first()->unreadnotifications()->whereJsonContains('data->type',ServiceRequest::class)?->update(['read_at' => now()]);
@@ -28,7 +28,7 @@ class ServiceRequestsContainer extends Component
     }
 
     public function readMore(ServiceRequest $serviceRequest) {
-        $this->content = $serviceRequest->description;
+        $this->request = $serviceRequest;
         $this->dispatch('open-modal', target:'#showMessage');
     }
     public function render()

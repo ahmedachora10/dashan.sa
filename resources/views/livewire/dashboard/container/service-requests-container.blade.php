@@ -41,7 +41,17 @@
 
     <x-dashboard.modals.modal1 id="showMessage">
         <div class="col-12">
-            {{ $content }}
+            <div class="col-sm-5 col-12">
+                <p class="text-wrap"><i class="bx bx-category bx-sm me-2"></i>{{ $request?->service?->title }}</p>
+                <p class="text-wrap"><i class="bx bx-user bx-sm me-2"></i>{{ $request?->name }}</p>
+                <p class="text-wrap"><i class="bx bx-phone bx-sm me-2"></i>{{ $request?->phone }}</p>
+                <p class="text-wrap"><i class="bx bx-map-alt bx-sm me-2"></i>{{ $request?->city }}</p>
+                <p class="text-wrap">
+                    <i class="bx bx-info-square bx-sm me-2"></i>
+                    {{ $request?->description }}
+                </p>
+
+            </div>
         </div>
     </x-dashboard.modals.modal1>
 

@@ -167,6 +167,11 @@
             fill: #fff !important;
             transition: all .3s 0s ease-out;
         }
+
+        .alert-primary {
+            background-color: var(--tp-theme-primary) !important;
+            color: var(--tp-theme-secondary);
+        }
     </style>
 
     @stack('styles')

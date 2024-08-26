@@ -124,12 +124,12 @@
                                 <span class="fw-medium">{{ trans('table.columns.file') }}
                                     {{ $loop->iteration }}</span>
                                 <div>
-                                    <a class="badge bg-label-primary" href="{{ asset('storage/' . $item->file) }}"
+                                    <a class="badge bg-label-primary" href="{{ asset('storage/' . $item->cv) }}"
                                         target="_blank"
-                                        download="{{ str($item->file)->replace('jobs/attachments/', '') }}">
+                                        download="{{ str($item->cv)->replace('jobs/attachments/', '') }}">
                                         <i class="bx bx-download"></i>
                                     </a>
-                                    <a class="badge bg-label-danger" href="{{ asset('storage/' . $item->file) }}"
+                                    <a class="badge bg-label-danger" href="{{ asset('storage/' . $item->cv) }}"
                                         target="_blank">
                                         <i class="bx bx-show"></i>
                                     </a>
