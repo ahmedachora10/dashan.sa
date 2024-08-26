@@ -6,7 +6,7 @@
         </span>
     </div>
     <div class="tp-service-3-content">
-        <h4 class="tp-service-3-title"><a href="service-details.html">{{ $title }}</a></h4>
+        <h4 class="tp-service-3-title">{{ $title }}</h4>
         @if($description !== '')
         <p>{{ $description }}</p>
         @endif
