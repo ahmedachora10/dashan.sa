@@ -8,15 +8,16 @@
                 <div class="tp-portfolio-details-wrapper">
                     {{-- <h3 class="tp-portfolio-details-title">You can dream, create, build <br> the most wonderful place in
                         the world.</h3> --}}
-                    <p class="text-1">{{ $item->description }}</p>
                     <div class="tp-portfolio-details-wrap">
-                        <ul>
+                        <ul class="d-flex justify-content-center">
                             <li class="mb-20"><span>{{trans('table.columns.client name')}}:</span>{{ $item->client_name }}</li>
                             <li class="mb-20"><span>{{trans('table.columns.start date')}}:</span>{{ $item->transaction_start_date }}</li>
                             <li class="mb-20"><span>{{trans('table.columns.end date')}}:</span>{{ $item->transaction_end_date }}</li>
                             <li class="mb-20"><span>{{trans('table.columns.duration of work')}}:</span>{{ $item->duration_of_work }}</li>
                         </ul>
                     </div>
+                    <h6 class="fw-bold">{{ trans('table.columns.description') }}</h6>
+                    <p class="text-1">{{ $item->description }}</p>
                     <div class="tp-portfolio-details-thumb">
                         {{-- <div class="tp-portfolio-slider tp-cursor-point-area">
                             <div class="tp-portfolio-active swiper slider-drag">
@@ -54,6 +55,7 @@
                             </div>
                         </div>
                     </div>
+                    <h6 class="fw-bold">{{ trans('table.columns.content') }}</h6>
                     <p class="text-2">{!! $item->content !!}</p>
                     {{-- <h4 class="tp-portfolio-details-title-2">The challenge of project</h4>
                     <p class="text-3">Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi
