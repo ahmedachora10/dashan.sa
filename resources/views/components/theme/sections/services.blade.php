@@ -13,7 +13,7 @@
                     :title="$service->title"
                     :description="$service->description"
                     :image="$service->thumbnail"
-                    link="#"
+                    :link="route('services.request', $service)"
                 />
             </div>
             @endforeach

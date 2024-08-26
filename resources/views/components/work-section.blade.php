@@ -35,7 +35,7 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     @foreach ($images as $img)
                                     <div @class(['tab-pane fade', 'show active' => $loop->last]) id="nav-{{$loop->iteration}}" role="tabpanel" aria-labelledby="nav-{{$loop->iteration}}-tab">
-                                        <img src="{{$img->getUrl()}}" alt="" style="height: 500px !important">
+                                        <img src="{{$img->getUrl()}}" alt="" style="height: auto !important">
                                     </div>
                                     @endforeach
                                 </div>

@@ -44,7 +44,10 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
     $locale = app()->getLocale() === 'ar' ? 'en' : 'ar';
 
+    // dd($locale, session('locale'),app()->getLocale() === 'ar',app()->getLocale());
     session()->put('locale', $locale);
+
+    // dd($locale, session('locale'),app()->getLocale() === 'ar',app()->getLocale());
 
     app()->setLocale($locale);
 

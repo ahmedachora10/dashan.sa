@@ -7,33 +7,18 @@ use App\Models\OurService;
 use App\Models\ServiceRequest;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
-use App\Services\UploadFileService;
 use Livewire\Component;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class StoreServiceRequest extends Component
 {
-    use WithFileUploads;
-
-    protected UploadFileService $uploadFileService;
-
     public ServiceRequestForm $form;
 
     public OurService $service;
 
-    public function mount() {
-        $this->uploadFileService = new UploadFileService;
-    }
-
     public function save() {
         $this->validate();
 
-        $this->uploadFileService = new UploadFileService;
-
-        ServiceRequest::create($this->form->except('image') + [
-            'image' => $this->uploadFileService->store($this->form->image, 'services/requests'),
-            'service_id' => $this->service->id
-        ]);
+        ServiceRequest::create($this->form->all() + ['service_id' => $this->service->id]);
 
         User::first()->notify(new UserActionNotification([
             'title' => '',

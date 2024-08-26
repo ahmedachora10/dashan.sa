@@ -7,34 +7,28 @@
     @endif
 
     <div class="col-md-6 col-12 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="الاسم رباعي" />
+        <x-theme.form.input-group type="text" wire:model.defer="form.name" name="form.name" :placeholder="trans('table.columns.name')" />
     </div>
 
     <div class="col-md-6 col-12 mb-3">
-        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" :title="trans('table.columns.phone')" />
-    </div>
-
-    <div class="col-md-6 col-12 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.location" name="form.location" title="الموقع" />
-    </div>
-
-    <div class="col-md-6 col-12 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.city" name="form.city" :title="trans('table.columns.city')" />
+        <x-theme.form.input-group type="number" wire:model.defer="form.phone" name="form.phone" :placeholder="trans('table.columns.phone')" />
     </div>
 
     <div class="col-12 mb-3">
-        <x-dashboard.input-group type="file" wire:model.defer="form.image" name="form.image"
-            title="صورة خارطة للمشروع المطلوب" />
+        <x-theme.form.input-group type="text" wire:model.defer="form.city" name="form.city" :placeholder="trans('table.columns.city')" />
     </div>
 
     <div class="col-12 mb-3">
-        <x-dashboard.label>وصف الطلب او المشروع</x-dashboard.label>
-        <textarea wire:model.defer="form.description" class="form-control" name="form.description" cols="10"
-            rows="6"></textarea>
+        <x-theme.form.label :required="false" class="mb-1"> {{trans('table.columns.description')}} </x-theme.form.label>
+        <x-theme.form.text-area wire:model.defer="form.description" class="form-control" name="form.description" cols="10"
+            rows="6"></x-theme.form.text-area>
         <x-dashboard.error field="form.description" />
     </div>
 
     <div class="col-12">
-        <button type="button" wire:click="save" class="btn btn-primary">{{ trans('common.send') }}</button>
+        <div class="tp-contact-btn">
+            <button class="tp-btn" type="button" wire:click="save">{{ trans('send') }}</button>
+            <p class="ajax-response"></p>
+        </div>
     </div>
 </div>

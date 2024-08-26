@@ -1,5 +1,5 @@
 const view = `
-<div class="dz-preview dz-processing dz-image-preview dz-success dz-complete"
+<div class="dz dz-preview dz-processing dz-image-preview dz-success dz-complete"
     <div class="dz-details">
       <div class="dz-thumbnail">
          <img data-dz-thumbnail alt="" src="">
@@ -33,13 +33,30 @@ if (document.querySelector('#dropzone-basic')) {
     headers: {
         'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]').getAttribute(
             'content')
-        }
+        },
     });
 
-    myDropzone.on("complete", function(file) {
+    myDropzone.on("complete", function (file) {
+        setTimeout(() => {
+                const progressBar = document.querySelector('.dz .progress-bar');
+                progressBar.parentElement.style.display = 'none';
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+            }, 2000);
         setTimeout(() => {
             Livewire.dispatch('refresh-media');
             myDropzone.removeFile(file);
         }, 4000);
     });
+
+    myDropzone.on("uploadprogress", function (file, progress, bytesSent) {
+        const progressBar = document.querySelector('.dz .progress-bar');
+
+            progressBar.parentElement.style.display = 'block';
+            progressBar.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuemin', progress);
+            progressBar.textContent = Math.round(progress) + '%';
+        });
+
+
 }

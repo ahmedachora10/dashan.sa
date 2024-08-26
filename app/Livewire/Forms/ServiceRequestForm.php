@@ -18,11 +18,6 @@ class ServiceRequestForm extends Form
     public string $city = '';
 
     #[Rule('required|string')]
-    public string $location = '';
-
-    #[Rule('required|string')]
     public string $description = '';
 
-    #[Rule('required|image')]
-    public $image = null;
 }

@@ -28,6 +28,11 @@
 
     @if (app()->getLocale() == 'ar')
         <style>
+
+            .tp-portfolio-details-wrap ul li:not(:last-of-type) {
+                margin-right: 0px !important;
+                margin-left: 80px;
+            }
             .tp-faq-wrapper .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed):after {
                 left: 36px !important;
                 right: auto !important;
