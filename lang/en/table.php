@@ -59,6 +59,7 @@ return [
         'bottom' => 'Bottom',
         'left' => 'Left',
         'backgroud image' => 'Background Image',
+        'city' => 'City',
     ],
     'empty' => 'No Records'
 ];
