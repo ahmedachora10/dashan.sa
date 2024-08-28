@@ -3,7 +3,7 @@
         <img width="160" height="160" src="{{asset($member->thumbnail)}}" alt="">
     </div>
     <div class="tp-team-7-content">
-        <h4 class="tp-team-7-title"><a href="team-details.html">{{$member->name}}</a></h4>
+        <h4 class="tp-team-7-title"><a href="#!">{{$member->name}}</a></h4>
         <span>{{$member->job_name}}</span>
     </div>
     <div class="tp-team-7-social">

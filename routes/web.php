@@ -42,14 +42,11 @@ Route::controller(HomeController::class)
 
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
-    $locale = app()->getLocale() === 'ar' ? 'en' : 'ar';
+    $locale = session('lang_locale') === 'ar' ? 'en' : 'ar';
 
-    // dd($locale, session('locale'),app()->getLocale() === 'ar',app()->getLocale());
-    session()->put('locale', $locale);
+    session()->put('lang_locale', $locale);
 
-    // dd($locale, session('locale'),app()->getLocale() === 'ar',app()->getLocale());
-
-    app()->setLocale($locale);
+    app()->setLocale(session('lang_locale'));
 
     return back();
 })->name('switch-language');
