@@ -26,4 +26,5 @@ return [
     'sections' => 'Sections',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
+    'service requests' => 'Service Requests'
 ];
