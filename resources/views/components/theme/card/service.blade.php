@@ -2,7 +2,7 @@
     <div class="tp-service-3-icon">
         <span>
             {{-- <i class="flaticon-livingroom"></i> --}}
-            <img src="{{asset($image)}}" alt="{{$title}}" width="55">
+            <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{asset($image)}}" alt="{{$title}}" width="55">
         </span>
     </div>
     <div class="tp-service-3-content">

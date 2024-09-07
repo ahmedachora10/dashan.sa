@@ -29,7 +29,7 @@
                 <div class="tp-project-item p-relative fix mb-30">
                     <div class="tp-project-thumb p-relative fix">
                         <a href="{{route('works.show', $item)}}">
-                            <img width="370" height="438" src="{{$item->thumbnail}}" alt="">
+                            <img width="370" height="438" class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{$item->thumbnail}}" alt="">
                         </a>
                     </div>
                     <div class="tp-project-item-content p-relative">

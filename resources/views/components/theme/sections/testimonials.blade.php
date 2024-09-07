@@ -17,10 +17,10 @@
                             <div class="swiper-slide">
                                 <div class="tp-testimonial-item text-center p-relative">
                                     <div class="tp-testimonial-shape">
-                                        <img src="assets/img/testimonial/testimonial-2-shape-2.png" alt="">
+                                        <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{ asset('theme/img/testimonial/testimonial-2-shape-2.png') }}" alt="">
                                     </div>
                                     <div class="tp-testimonial-thumb">
-                                        <img src="{{asset('theme/img/testimonial/testimonial-2-1.jpg')}}" alt="">
+                                        <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{asset('theme/img/testimonial/testimonial-2-1.jpg')}}" alt="">
                                     </div>
                                     <div class="tp-testimonial-content p-relative">
                                         <h4 class="tp-testimonial-title">{{$review->name}}</h4>

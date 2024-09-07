@@ -66,7 +66,7 @@
                                                 @endphp
                                                 <a href="{{ $img->getUrl() }}" data-pswp-width="{{$dimensions['width']}}"
                                                     data-pswp-height="{{$dimensions['height']}}" target="_blank" class="nav-link m-1">
-                                                    <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{ $img->getUrl('thumb') ?? $img->getUrl() }}" />
+                                                    <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{ $img->getUrl('thumb') }}" />
                                                 </a>
                                         @endforeach
 

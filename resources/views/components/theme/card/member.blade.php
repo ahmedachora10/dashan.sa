@@ -1,6 +1,6 @@
 <div class="tp-team-7-item p-relative text-center mb-30">
     <div class="tp-team-7-thumb">
-        <img width="160" height="160" src="{{asset($member->thumbnail)}}" alt="">
+        <img width="160" height="160" class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{asset($member->thumbnail)}}" alt="">
     </div>
     <div class="tp-team-7-content">
         <h4 class="tp-team-7-title"><a href="#!">{{$member->name}}</a></h4>
