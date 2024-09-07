@@ -36,7 +36,7 @@ class OurWork extends Model implements HasMedia
 
     public function getThumbnailAttribute() {
         // $media = $this->getFirstMedia('works')?->getUrl();
-        $media = $this->getFirstMedia('works-thumb')?->getUrl();
+        $media = $this->getFirstMedia('works-thumb')?->getUrl('main-thumb');
         return $media ?? asset(setting('logo'));
     }
     public function getBackgroundAttribute() {
@@ -60,6 +60,11 @@ class OurWork extends Model implements HasMedia
         $this->addMediaConversion('thumb')
             ->width(110)
             ->height(110)
+            ->sharpen(10);
+
+            $this->addMediaConversion('main-thumb')
+            ->width(370)
+            ->height(438)
             ->sharpen(10);
     }
 
