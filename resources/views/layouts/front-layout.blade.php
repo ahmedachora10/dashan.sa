@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ asset('theme/css/spacing.css') }}">
 
     @stack('component-styles')
+    <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}?v={{ rand(2000, 9999999) }}">
     <link rel="stylesheet" href="{{ asset('build/assets/main.css') }}?v={{ rand(2000, 9999999) }}">
 
     @if (app()->getLocale() == 'ar')
@@ -249,6 +250,7 @@
     @stack('component-scripts')
 
     <script defer src="{{ asset('theme/js/main.js') }}?v={{ rand(2000, 9999999) }}"></script>
+    <script defer src="{{ asset('build/assets/app2.js') }}?v={{ rand(2000, 9999999) }}"></script>
 
     @stack('scripts')
     <script>

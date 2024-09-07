@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class OurWork extends Model implements HasMedia
 {
@@ -52,6 +53,20 @@ class OurWork extends Model implements HasMedia
 
     public function tag() : BelongsTo {
         return $this->belongsTo(Tag::class);
+    }
+
+    public function getImageDimensions(Media $media)
+    {
+        // Get the full path to the image
+        $filePath = $media->getPath();
+
+        // Use getimagesize() to retrieve width and height
+        list($width, $height) = getimagesize($filePath);
+
+        return [
+            'width' => $width,
+            'height' => $height,
+        ];
     }
 
 }
