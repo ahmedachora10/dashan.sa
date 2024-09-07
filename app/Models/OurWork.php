@@ -55,6 +55,14 @@ class OurWork extends Model implements HasMedia
         return $this->belongsTo(Tag::class);
     }
 
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(110)
+            ->height(110)
+            ->sharpen(10);
+    }
+
     public function getImageDimensions(Media $media)
     {
         // Get the full path to the image
