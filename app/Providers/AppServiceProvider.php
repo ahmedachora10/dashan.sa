@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Headline;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
@@ -44,5 +45,6 @@ class AppServiceProvider extends ServiceProvider
         // view()->share('headlines', Headline::all());
 
         app()->singleton('headlines', fn() => collect(Headline::all() ?? []));
+        app()->singleton('settings', fn() => Setting::getAllSettings());
     }
 }

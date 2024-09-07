@@ -17,9 +17,9 @@ if (! function_exists('setting')) {
             return Setting::set($key[0], $key[1]);
         }
 
-        $value = Setting::get($key);
+        $value = app('settings')->firstWhere('name', $key);
 
-        return is_null($value) ? value($default) : $value;
+        return is_null($value) ? value($default) : Setting::castValue($value->val, $value->type);
     }
 }
 
