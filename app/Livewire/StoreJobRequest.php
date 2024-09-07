@@ -18,7 +18,7 @@ class StoreJobRequest extends Component
 {
     use WithFileUploads;
 
-    protected UploadFileService $uploadFileService;
+    protected ?UploadFileService $uploadFileService;
 
     public JobRequestForm $form;
 

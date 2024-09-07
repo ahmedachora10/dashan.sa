@@ -10,10 +10,17 @@
                         the world.</h3> --}}
                     <div class="tp-portfolio-details-wrap">
                         <ul class="d-flex justify-content-center">
-                            <li class="mb-20"><span>{{trans('table.columns.client name')}}:</span>{{ $item->client_name }}</li>
-                            <li class="mb-20"><span>{{trans('table.columns.start date')}}:</span>{{ $item->transaction_start_date }}</li>
-                            <li class="mb-20"><span>{{trans('table.columns.end date')}}:</span>{{ $item->transaction_end_date }}</li>
-                            <li class="mb-20"><span>{{trans('table.columns.duration of work')}}:</span>{{ $item->duration_of_work }}</li>
+                            <li class="mb-20">
+                                <span>{{ trans('table.columns.client name') }}:</span>{{ $item->client_name }}</li>
+                            <li class="mb-20">
+                                <span>{{ trans('table.columns.start date') }}:</span>{{ $item->transaction_start_date }}
+                            </li>
+                            <li class="mb-20">
+                                <span>{{ trans('table.columns.end date') }}:</span>{{ $item->transaction_end_date }}
+                            </li>
+                            <li class="mb-20">
+                                <span>{{ trans('table.columns.duration of work') }}:</span>{{ $item->duration_of_work }}
+                            </li>
                         </ul>
                     </div>
                     <h6 class="fw-bold">{{ trans('table.columns.description') }}</h6>
@@ -35,9 +42,11 @@
                             <div class="product__details-thumb-content w-img">
                                 <div class="tab-content" id="nav-tabContent">
                                     @foreach ($images as $img)
-                                    <div @class(['tab-pane fade', 'show active' => $loop->last]) id="nav-{{$loop->iteration}}" role="tabpanel" aria-labelledby="nav-{{$loop->iteration}}-tab">
-                                        <img src="{{$img->getUrl()}}" alt="" style="height: auto !important">
-                                    </div>
+                                        <div @class(['tab-pane fade', 'show active' => $loop->last]) id="nav-{{ $loop->iteration }}"
+                                            role="tabpanel" aria-labelledby="nav-{{ $loop->iteration }}-tab">
+                                            <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{ $img->getUrl() }}" alt="{{ $img->name }}"
+                                                style="height: auto !important" loading="lazy">
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
@@ -45,10 +54,13 @@
                                 <nav>
                                     <div class="nav nav-tabs justify-content-sm-start" id="nav-tab" role="tablist">
                                         @foreach ($images as $img)
-                                        <button @class(['nav-link m-1', 'active' => $loop->first]) id="nav-{{$loop->iteration}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{$loop->iteration}}"
-                                            type="button" role="tab" aria-controls="nav-{{$loop->iteration}}" aria-selected="true">
-                                            <img src="{{$img->getUrl()}}" alt="">
-                                        </button>
+                                            <button @class(['nav-link m-1', 'active' => $loop->first]) id="nav-{{ $loop->iteration }}-tab"
+                                                data-bs-toggle="tab" data-bs-target="#nav-{{ $loop->iteration }}"
+                                                type="button" role="tab"
+                                                aria-controls="nav-{{ $loop->iteration }}" aria-selected="true">
+                                                <img class="lazy" src="{{asset('theme/img/loading.webp')}}" data-src="{{ $img->getUrl() }}"
+                                                    alt="{{ $img->name }}" loading="lazy">
+                                            </button>
                                         @endforeach
                                     </div>
                                 </nav>
@@ -114,4 +126,53 @@
             </div>
         </div>
     </div>
+
+    @push('scripts')
+        <script>
+            // JavaScript for Lazy Loading
+            document.addEventListener("DOMContentLoaded", function() {
+                const lazyImages = document.querySelectorAll("img.lazy");
+
+                console.log(lazyImages);
+
+
+                if ("IntersectionObserver" in window) {
+                    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                let lazyImage = entry.target;
+                                lazyImage.src = lazyImage.dataset.src;
+                                lazyImage.classList.remove("lazy");
+                                lazyImageObserver.unobserve(lazyImage);
+                            }
+                        });
+                    });
+
+                    lazyImages.forEach(function(lazyImage) {
+                        lazyImageObserver.observe(lazyImage);
+                    });
+                } else {
+                    // Fallback for browsers without Intersection Observer
+                    let lazyLoad = function() {
+                        lazyImages.forEach(function(lazyImage) {
+                            if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
+                                lazyImage.src = lazyImage.dataset.src;
+                                lazyImage.classList.remove('lazy');
+                            }
+                        });
+                        if (lazyImages.length == 0) {
+                            document.removeEventListener("scroll",
+                                lazyLoad);
+                            window.removeEventListener("resize", lazyLoad);
+                            window.removeEventListener("orientationchange",
+                                lazyLoad);
+                        }
+                    };
+                    document.addEventListener("scroll", lazyLoad);
+                    window.addEventListener("resize", lazyLoad);
+                    window.addEventListener("orientationchange", lazyLoad);
+                }
+            });
+        </script>
+    @endpush
 </section>
