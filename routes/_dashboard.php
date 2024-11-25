@@ -1,23 +1,15 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
-use App\Http\Controllers\Admin\BranchController;
 use App\Http\Controllers\Admin\CertificateController;
-use App\Http\Controllers\Admin\ContactUsController;
-use App\Http\Controllers\Admin\CorpController;
-use App\Http\Controllers\Admin\ExportController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeadlineController;
-use App\Http\Controllers\Admin\HeadlineTranslationController;
 use App\Http\Controllers\Admin\JobCityController;
 use App\Http\Controllers\Admin\JobPostController;
 use App\Http\Controllers\Admin\MediaController;
-use App\Http\Controllers\Admin\MonthlyQuarterlyUpdateController;
 use App\Http\Controllers\Admin\OurClientController;
 use App\Http\Controllers\Admin\OurServiceController;
 use App\Http\Controllers\Admin\OurWorkController;
-use App\Http\Controllers\Admin\PackageController;
-use App\Http\Controllers\Admin\RegistryController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -31,21 +23,10 @@ use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\Admin\WhyUsController;
 use App\Http\Controllers\ProfileController;
-use App\Livewire\Dashboard\Branch\StoreCertificate;
-use App\Livewire\Dashboard\Branch\StoreCivilDefenseCertificate;
-use App\Livewire\Dashboard\Branch\StoreEmployee;
-use App\Livewire\Dashboard\Branch\StoreMonthlyQuarterlyUpdate;
-use App\Livewire\Dashboard\Branch\StoreRecord;
-use App\Livewire\Dashboard\Branch\StoreRegistry;
-use App\Livewire\Dashboard\Branch\StoreSubscription;
-use App\Livewire\Dashboard\Container\BranchRegistriesContainer;
 use App\Livewire\Dashboard\Container\ContactUsContainer;
-use App\Livewire\Dashboard\Container\EmployeesContainer;
 use App\Livewire\Dashboard\Container\JobRequestsContainer;
-use App\Livewire\Dashboard\Container\NotificationsContainer;
 use App\Livewire\Dashboard\Container\ServiceRequestsContainer;
 use App\Livewire\Dashboard\Container\SubscribersContainer;
-use App\Models\OurWork;
 use Illuminate\Support\Facades\Route;
 
 
@@ -102,7 +83,6 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('about-us', AboutController::class);
     Route::resource('reviews', ReviewController::class)->except('store');
     Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
-    Route::resource('certificates', CertificateController::class)->except('index');
 
     Route::controller(MediaController::class)
         ->name('media.')
