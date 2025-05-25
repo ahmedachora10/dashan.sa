@@ -8,6 +8,7 @@ return [
     'cancel' => 'Cancel',
     'submit' => 'Submit',
     'save' => 'Save',
+    'send' => 'Send',
 
     'my profile' => 'My Profile',
     'log out' => 'Log Out',

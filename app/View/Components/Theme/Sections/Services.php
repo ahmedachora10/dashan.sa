@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
+use App\Models\Slider;
 
 class Services extends Component
 {
@@ -13,7 +14,9 @@ class Services extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public ?Collection $services = null
+        public ?Collection $services = null ,
+        public ?Collection $sliders = null ,
+        public ?Slider  $servicesSlider = null
     )
     {
         //

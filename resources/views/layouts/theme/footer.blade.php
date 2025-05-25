@@ -1,116 +1,114 @@
-<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-130">
-    <div class="tp-footer-bg"></div>
-    <div class="tp-footer-box p-relative">
-        <div class="tp-footer-shape">
-            <img class="shape-1" src="assets/img/footer/footer-shape-1.png" alt="">
-            <img class="shape-2" src="assets/img/footer/footer-shape-2.png" alt="">
+<!-- ==================== Start Footer ==================== -->
+<footer class="modern-footer pt-80">
+  <div class="footer-container">
+    <div class="container ontop">
+      <div class="row pb-30 bord-thin-bottom">
+        <div class="col-lg-2">
+          <div class="logo icon-img-120">
+            <img src="{{asset(setting('logo'))}}" alt="logo" />
+          </div>
         </div>
-        <div class="container">
-            <div class="tp-footer-main tp-footer-border pb-0">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-1 mb-50">
-                            <div class="tp-footer-logo mb-40">
-                                <a href="{{route('home')}}"> <img width="150" src="{{asset(setting('logo'))}}" alt=""></a>
-                            </div>
-                            <div class="tp-footer-widget-content">
-                                <p>{{setting('app_description_'.app()->getLocale())}}</p>
-                                <div class="tp-footer-widget-social mb-4">
-                                    @foreach ([
-                                        'facebook' => 'fab fa-facebook-f',
-                                        'instagram' => 'fa-brands fa-instagram',
-                                        'linkedin' => 'fa-brands fa-linkedin',
-                                        'twitter' => 'fa-brands fa-x-twitter',
-                                        'snapchat' => 'fab fa-snapchat'
-                                    ] as $media => $icon)
-                                        @continue(empty(setting($media)))
-
-                                        <a href="{{setting($media)}}" class="mx-0">
-                                            @if($media == 'twitter')
-                                            <x-x-twitter fill="#fff" />
-                                            @else
-                                            <i class="{{$icon}}"></i>
-                                            @endif
-                                        </a>
-                                    @endforeach
-                                </div>
-                                @if(!empty(setting('email')))
-                                <div class="offcanvas__contact-content d-flex">
-                                    <div class="offcanvas__contact-content-icon ms-2">
-                                        <i class="fa-solid fa-envelope text-white"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-content-content">
-                                        <a href="mailto:{{setting('email')}}"> {{setting('email')}} </a>
-                                    </div>
-                                </div>
-                                @endif
-                                @if(!empty(setting('phone')))
-                                <div class="offcanvas__contact-content d-flex mt-2">
-                                    <div class="offcanvas__contact-content-icon ms-2">
-                                        <i class="fa-solid fa-phone text-white"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-content-content">
-                                        <a href="tel:{{setting('phone')}}"> {{setting('phone')}} </a>
-                                    </div>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-2 mb-50 d-flex justify-content-center">
-                            <div>
-                                <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
-                                <div class="tp-footer-widget-content">
-                                    <style>
-                                        .footer-links li a {
-                                            /* margin: 5px 8px; */
-                                            font-weight: bold;
-                                            color: white !important
-                                        }
-                                    </style>
-                                    <ul class="footer-links">
-                                        @include('layouts.theme.menu')
-                                        <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <x-theme.instagram-feeds />
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-4 mb-50">
-                            <div class="tp-footer-widget-content">
-                                <div class="tp-footer-widget-contact">
-                                    <h3 class="tp-footer-widget-title">{{ucwords(trans('profile'))}}</h3>
-                                    <p>{{ucwords(trans('to download the profile click here'))}}</p>
-                                    <div class="tp-footer-widget-content-input">
-                                        {{-- <form action="index.html"> --}}
-                                            <a href="{{asset(setting('profile_file_'.app()->getLocale()))}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style text-white bg-gradient px-3 py-2 border">
-                                                <span class="mx-2">
-                                                    <i class="fas fa-file-download"></i>
-                                                </span>
-                                                <span>{{ucwords(trans('download profile'))}}</span>
-                                            </a>
-                                        {{-- </form> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tp-footer-copyright">
-                <div class="row">
-                    <div class="col-md-7 col-12">
-                        <div class="tp-footer-copyright-inner">
-                            <p> {!! setting('footer_'.app()->getLocale()) !!} © {{date('Y')}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-10 d-flex align-items-center justify-content-start">
+          <h6 class="footer_title custom-sub-title-footer">
+          {{ headline('footer')->title }}
+          </h6>
         </div>
+      </div>
+      <div class="row pt-80">
+        <div class="col-lg-7">
+          <div>
+            <h4 class="d-slideup wow ">
+              <span class="sideup-text">
+                <span class="up-text custom-sub-title-footer">
+                {{ headline('footer')->subTitle }}
+                 </span>
+              </span>
+              <span class="sideup-text">
+                <span class="up-text underline">
+                  <a href="{{route('contact')}}" class="main-color">
+                    {{trans('front.click here')}}
+                  </a>
+                </span>
+              </span>
+            </h4>
+            <div class="info mt-80 d-flex align-items-center row">
+              <div class="col-lg-6 col-12">
+                <a href="mailto:{{ setting('email') }}" class="butn butn-md butn-bord-thin radius-30 w-100 text-center">
+                  <span class="text">
+                  {{ setting('email') }}
+                  </span>
+                </a>
+              </div>
+              <div class="col-lg-6 col- mt-4 mt-lg-0">
+                <a href="tel:{{ setting('phone') }}" class="butn butn-md butn-bord-thin radius-30 w-100 text-center">
+                  <span class="text" style="direction: ltr; unicode-bidi: embed;">
+                  &#x200E;+{{ setting('phone') }}
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="subscribe-minimal mt-4 col-12 col-lg-6">
+                <a href="{{asset(app()->getLocale() == 'ar' ? setting('profile_file_ar') : setting('profile_file_en'))}}" 
+                   class="butn butn-md butn-bord-thin radius-30 w-100 d-flex align-items-center justify-content-center" style=" text-decoration: none;"
+                   download>
+                  <span class="custom-sub-title">{{trans('footer.download-profile')}}</span>
+                  <i class="fas fa-cloud-download-alt" style="color: #b19777 !important;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-{{app()->getLocale() == 'ar' ? '3' : '4'}} offset-lg-1 bord-left">
+          <div class="column">
+            <h6 class="custom-sub-title mb-30">
+              {{trans('footer.quick-links')}}
+            </h6>
+            <div class="">
+              <div class="">
+                <ul class="rest fz-14 row row-cols-1 row-cols-3 g-4">
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('home')}}" style=" text-decoration: none;">{{trans('front.home')}}</a>
+                  </li>
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('about-us')}}" style=" text-decoration: none;">{{trans('front.about')}}</a>
+                  </li>
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('works.index')}}" style=" text-decoration: none;">{{trans('front.our works')}}</a>
+                  </li>
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('services.all')}}" style=" text-decoration: none;">{{trans('front.services')}}</a>
+                  </li>
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('career.index')}}" style=" text-decoration: none;">{{trans('front.career')}}</a>
+                  </li>
+                  <li class="mb-15 col custom-sub-title-footer">
+                    <a href="{{route('contact')}}" style=" text-decoration: none;">{{trans('front.contact us')}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-30 pb-30 sub-bg mt-80">
+      @if(app()->getLocale() == 'ar')
+                        {{ Str::before(setting('footer_ar'), 'بواسطة') }} 
+                        بواسطة 
+                        <a href="https://sadnah.sa/" target="_blank">
+                            <img src="{{ asset('storage/images/logo/sadanah.png') }}" alt="شعار" style="height: 30px; vertical-align: middle;">
+                        </a>
+                        {{ Str::after(setting('footer_ar'), 'بواسطة') }} {{ date('Y') }}©
+                    @else
+                        {{ Str::before(setting('footer_en'), 'by') }} 
+                        by 
+                        <a href="https://sadnah.sa/" target="_blank">
+                            <img src="{{ asset('storage/images/logo/sadanah.png') }}" alt="Logo" style="height: 30px; vertical-align: middle;">
+                        </a>
+                        {{ Str::after(setting('footer_en'), 'by') }} {{ date('Y') }}©
+                    @endif
+      </div>
     </div>
+  </div>
 </footer>
+<!-- ==================== End Footer ==================== -->

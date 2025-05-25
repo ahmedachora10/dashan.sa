@@ -37,7 +37,7 @@ class SliderController extends Controller
 
         Slider::create($request->safe()->except(['image_ar', 'image_en', 'top', 'right', 'left', 'bottom']) + [
             'image_ar' => $this->uploadFileService->store($request->image_ar, 'images/sliders'),
-            'image_en' => $this->uploadFileService->store($request->image_en, 'images/sliders'),
+            'image_en' => $this->uploadFileService->store($request->image_ar, 'images/sliders'),
             'styles' => $request->safe(['top', 'right', 'left', 'bottom'])
         ]);
 
@@ -69,7 +69,7 @@ class SliderController extends Controller
 
         $slider->update($request->safe()->except(['image_ar', 'image_en', 'top', 'right', 'left', 'bottom']) + [
             'image_ar' => $this->uploadFileService->update($request->image_ar, $slider->image_ar, 'images/sliders'),
-            'image_en' => $this->uploadFileService->update($request->image_en, $slider->image_en, 'images/sliders'),
+            'image_en' => $this->uploadFileService->update($request->image_ar, $slider->image_en, 'images/sliders'),
             'styles' => $request->safe(['top', 'right', 'left', 'bottom'])
         ]);
 

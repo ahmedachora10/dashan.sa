@@ -14,7 +14,6 @@ class UploadFileService {
         if(!$file->isValid()) {
             return null;
         }
-
         $name = $this->name($file->getClientOriginalExtension());
         $name = $file->storeAs("{$this->driver}/$destination", $name);
 

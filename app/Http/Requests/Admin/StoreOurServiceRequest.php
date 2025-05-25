@@ -14,6 +14,8 @@ class StoreOurServiceRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name_ar' => 'required|string',
+            'name_en' => 'nullable|string',
             'title_ar' => 'required|string',
             'title_en' => 'nullable|string',
             'description_ar' => 'required|string',

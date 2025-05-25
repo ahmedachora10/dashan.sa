@@ -1,21 +1,14 @@
 <x-front-layout>
     <x-theme.sections.hero-section :sliders="$sliders" />
-    <div class="pb-100"></div>
-    <x-theme.sections.our-blog :visions="$visions" />
-    {{-- <x-theme.margin /> --}}
-    <x-theme.sections.about />
-    <x-theme.sections.services :services="$ourServices" />
-    <x-theme.margin />
-    <x-theme.sections.why-us />
-    <x-theme.sections.faq />
-    <x-theme.sections.video />
-    {{-- <x-theme.margin /> --}}
-    <x-theme.sections.works />
-    <x-theme.sections.testimonials />
-    <x-theme.sections.statistics />
-    <x-theme.margin />
-    <x-theme.sections.our-clients />
+    <!-- this is the master div for all the home page content-wrapper -->
+    <x-theme.sections.vision />
+    <x-theme.sections.about :sliders="$sliders" />
+    <x-theme.sections.process :processSliders="$processSliders" />
+    <x-theme.sections.services :services="$ourServices" :sliders="$sliders" />
+    <x-theme.sections.works :whyUsIcons="$whyUsIcons" />
     <x-theme.sections.our-team  />
-    {{-- <x-theme.margin /> --}}
-    <x-theme.sections.contact />
+    @if ($reviews->count() > 0)
+        <x-theme.sections.testimonials :reviews="$reviews" />
+    @endif
+    <x-theme.instagram-feeds />
 </x-front-layout>

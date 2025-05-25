@@ -1,0 +1,97 @@
+[dir="rtl"] h1, [dir="rtl"] h2 {
+    
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+[dir="rtl"] .sub-title {
+    font-size: 20px !important ;
+}
+
+[dir="rtl"] .section-head h6 {
+    font-size: 20px !important ;
+}
+
+[dir="rtl"] .section-head h4 {
+    font-family: "Cairo", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 600 !important;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+[dir="rtl"] .services .item-sm h6 {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+[dir="rtl"] .custom-header {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 60px ;
+}
+
+.process .coulmn::after {
+    width: 50px;
+    right: -25px;
+}
+
+.custom-sub-header {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+[dir="rtl"] .numbers .item h6 {
+    font-size: 15px ;
+}
+.custom-font-english {
+    font-family: 'Teko', sans-serif !important ;
+}
+
+[dir="rtl"] .custom-sub-title {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+[dir="ltr"] .custom-sub-title {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* Set the container to a fixed size */
+.img.imago {
+    width: 319px;  
+    height: 478px; 
+    overflow: hidden;
+    border-radius: 8px; 
+    position: relative;
+}
+
+/* Make all images the same size and cover the container */
+.staff-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    transition: transform 0.3s ease; 
+}
+
+/* Add hover effect */
+.img.imago:hover .staff-image {
+    transform: scale(1.05);
+}

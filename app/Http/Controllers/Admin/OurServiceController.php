@@ -35,7 +35,10 @@ class OurServiceController extends Controller
     {
         $request->validated();
 
-        OurService::create($request->safe()->except('image') + ['image' => $this->uploadFileService->store($request->image, 'images/our-services')]);
+        OurService::create($request->safe()->except('image','logo') + [
+            'image' => $this->uploadFileService->store($request->image, 'images/our-services'),
+            'logo' => $this->uploadFileService->store($request->logo, 'images/services')
+        ]);
         return redirect()->route('our-services.index')->with('success', trans('message.create'));
     }
 
@@ -62,7 +65,10 @@ class OurServiceController extends Controller
     {
         $request->validated();
 
-        $ourService->update($request->safe()->except('image') + ['image' => $this->uploadFileService->update($request->image, $ourService->image, 'images/our-services')]);
+        $ourService->update($request->safe()->except('image','logo') + [
+            'image' => $this->uploadFileService->update($request->image, $ourService->image, 'images/our-services'),
+            'logo' => $this->uploadFileService->update($request->logo, $ourService->logo, 'images/our-services'),
+        ]);
 
         return redirect()->route('our-services.index')->with('success', trans('message.update'));
     }

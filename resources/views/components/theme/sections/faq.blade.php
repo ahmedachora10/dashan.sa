@@ -1,48 +1,30 @@
-<!-- faq area start -->
-<section class="tp-faq-area p-relative gray-bg pb-120">
-    <div class="tp-faq-text">
-        <h2 class="tp-faq-text-title">{{headline('faq')->title}}</h2>
-    </div>
-    <div class="tp-faq-shape">
-        <img src="{{asset('theme/img/faq/faq-1-shape.png')}}" alt="">
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="tp-faq-box pt-100 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class="tp-faq-title-wrapper mb-35">
-                        <span class="tp-section-title-pre">{{headline('faq')->title}}</span>
-                        <h3 class="tp-section-title">{{headline('faq')->subTitle}}</h3>
-                    </div>
-                    <div class="tp-faq-wrapper">
-                        <div class="accordion" id="accordionExample">
-                            @foreach ($faqs as $item)
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading{{$loop->iteration}}">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-{{$loop->iteration}}" aria-expanded="true" aria-controls="collapse{{$loop->iteration}}">
-                                        {{$item->question}}
-                                    </button>
-                                </h2>
-                                <div id="collapse-{{$loop->iteration}}" @class(['accordion-collapse collapse'])
-                                    aria-labelledby="heading{{$loop->iteration}}" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>{{$item->answer}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="tp-faq-thumb-wrapper wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                    <img width="400px" height="497px" src="{{asset('theme/img/why-us-'. app()->getLocale() .'.jpg')}}" alt="">
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- faq area end -->
+<!--=================================
+				FAQ -->
+				<section class="faq grid section-padding">
+        			<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-xxl-5 col-lg-6">
+								<div class="tit">
+                    				<h6 class="custom-font mb-10 wow fadeInDown" data-wow-delay=".3s">{{headline('faq')->title}}</h6>
+                    				<p class="wow fadeInUp" data-wow-delay=".3s">{{headline('faq')->subTitle}}</p>
+								</div>
+							</div>
+							<div class="col-lg-6 mt-4 mt-md-5 mt-lg-0">
+								<div class="accordion wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1500ms" id="pgsaccordion">
+								@foreach ($faqs as $question )
+									<div class="accordion-item">
+										<h5 class="accordion-header" id="headingOne" style="background-color:#252531; color: rgb(177, 151, 119);">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:#252531; color: rgb(177, 151, 119) !important;">{{$loop->iteration}}. {{ $question->question }}</button>
+										</h5>
+										<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pgsaccordion">
+											<div class="accordion-body">{{ $question->answer }}</div>
+										</div>
+									</div>
+								@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--=================================
+				FAQ -->

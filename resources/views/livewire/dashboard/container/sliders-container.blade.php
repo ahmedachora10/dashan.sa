@@ -2,7 +2,9 @@
 
     <x-dashboard.headline :title="trans('sidebar.sliders')" />
 
-    <x-dashboard.tables.table1 :createAction="route('sliders.create')" :columns="['image', 'title', 'link']">
+    <x-dashboard.tables.table1 :columns="['image', 'title', 'link']"> 
+
+   {{--  <x-dashboard.tables.table1 :createAction="route('sliders.create')" :columns="['image', 'title', 'link']"> --}}
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"

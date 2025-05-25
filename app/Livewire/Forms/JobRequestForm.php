@@ -30,11 +30,7 @@ class JobRequestForm extends Form
     #[Rule('required|string')]
     public string $excerpt = '';
 
-    #[Rule('required|integer|exists:job_posts,id')]
     public string $job = '';
-
-    #[Rule('required|exists:job_cities,id')]
-    public string $job_city = '';
 
     #[Rule('required|file')]
     public $cv = null;

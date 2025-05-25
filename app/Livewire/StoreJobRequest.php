@@ -9,10 +9,12 @@ use App\Models\JobRequest;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
 use App\Services\UploadFileService;
+use Illuminate\Queue\Jobs\Job;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
+use function Laravel\Prompts\form;
 
 class StoreJobRequest extends Component
 {
@@ -22,8 +24,7 @@ class StoreJobRequest extends Component
 
     public JobRequestForm $form;
 
-    public $jobs = [];
-    public $jobCities = [];
+    public $job = '';
 
     #[Validate([
         'attachments.*' => 'file',
@@ -32,18 +33,18 @@ class StoreJobRequest extends Component
 
     public function mount() {
         $this->uploadFileService = new UploadFileService;
-        $this->jobs = JobPost::all();
-        $this->jobCities = JobCity::all();
+        
     }
 
     public function save() {
         $this->validate();
-
         $this->uploadFileService = new UploadFileService;
-
-        DB::transaction(function () {
+        $this->form->job = $this->job->id;
+        
+        
+       
             $jobRequest = JobRequest::create($this->form->except('cv') + ['cv' => $this->uploadFileService->store($this->form->cv, 'jobs/cv')]);
-
+            
             if(count($this->attachments) > 0) {
                 foreach ($this->attachments as $attachment) {
                     $jobRequest->attachments()->create(['file' => $this->uploadFileService->store($attachment, 'jobs/attachments')]);
@@ -59,10 +60,9 @@ class StoreJobRequest extends Component
             session()->flash('success', trans('message.create'));
             $this->form->reset();
             $this->reset('attachments');
-        });
+        
 
         $this->dispatch('close-modal', target:'#jobsForm');
-
     }
 
     public function render()

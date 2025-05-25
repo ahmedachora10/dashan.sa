@@ -188,5 +188,6 @@ class Setting extends Model
     {
         return self::all();
     }
+   
 
 }

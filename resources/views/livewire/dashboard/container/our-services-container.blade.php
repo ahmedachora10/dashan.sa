@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.our services')" />
 
-    <x-dashboard.tables.table1 :createAction="route('our-services.create')" :columns="['image', 'title', 'description']">
+    <x-dashboard.tables.table1 :createAction="route('our-services.create')" :columns="['logo', 'name','title']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -12,10 +12,10 @@
         @forelse ($services as $item)
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
-                <td><img src="{{ asset($item->thumbnail) }}" alt="logo" width="40" height="40"
+                <td><img src="{{asset('storage/'.$item->logo)}}" alt="logo" width="40" height="40"
                         class="rounded-circle"></td>
+                <td>{{ $item->name }}</td>
                 <td>{{ $item->title }}</td>
-                <td>{{ $item->description }}</td>
                 <td>
                     <x-dashboard.actions.container>
                         <x-dashboard.actions.edit

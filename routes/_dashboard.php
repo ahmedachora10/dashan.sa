@@ -81,7 +81,7 @@ Route::middleware(['auth'])->group(function ()
     Route::post('about-us/media/remove', [AboutController::class, 'removeMedia'])
         ->name('about-us.media.remove');
     Route::resource('about-us', AboutController::class);
-    Route::resource('reviews', ReviewController::class)->except('store');
+    Route::resource('reviews', ReviewController::class);
     Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
 
     Route::controller(MediaController::class)

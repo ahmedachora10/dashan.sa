@@ -31,7 +31,7 @@ class JobPostController extends Controller
     public function store(StoreJobPostRequest $request)
     {
         JobPost::create($request->validated());
-        return redirect()->route('jobs.index')->with('success', trans('message.create'));
+        return redirect()->route('requests/jobs.index')->with('success', trans('message.create'));
     }
 
     /**

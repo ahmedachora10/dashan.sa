@@ -3,6 +3,16 @@
 
     <x-theme.tab-list :route="route('our-services.update', $ourService)">
         <x-slot:arForm>
+
+            <div class="col-md-6 col-12 mb-3">
+                <div class="mb-3">
+                    <img src="{{asset('storage/'.$ourService->logo)}}" alt="image" width="60" height="60" class="img-thumbnail">
+                </div>
+
+                <x-dashboard.input-group type="file" name="logo" :title="trans('table.columns.logo')" />
+                <x-size-notice key="our_special" />
+            </div>
+
             <div class="col-md-6 col-12 mb-3">
                 <div class="mb-3">
                     <img src="{{ asset($ourService->thumbnail) }}" alt="image" width="60" height="60" class="img-thumbnail">
@@ -10,6 +20,11 @@
 
                 <x-dashboard.input-group type="file" name="image" :title="trans('table.columns.image')" />
                 <x-size-notice key="our_special" />
+            </div>
+
+            <div class="col-md-6 col-12 mb-3">
+                @method('PUT')
+                <x-dashboard.input-group type="text" name="name_ar" :value="$ourService->name_ar" :title="trans('table.columns.name')" />
             </div>
 
             <div class="col-md-6 col-12 mb-3">
@@ -23,6 +38,10 @@
         </x-slot:arForm>
 
         <x-slot:enForm>
+            <div class="col-md-6 col-12 mb-3">
+                @method('PUT')
+                <x-dashboard.input-group type="text" name="name_en" :value="$ourService->name_en" :title="trans('table.columns.name')" />
+            </div>
             <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.input-group type="text" name="title_en" :value="$ourService->title_en" :title="trans('table.columns.title')" />
             </div>

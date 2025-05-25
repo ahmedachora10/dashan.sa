@@ -74,3 +74,84 @@ if(!function_exists('headline')) {
         );
     }
 }
+
+
+if(!function_exists('convertImagePath')) {
+    function convertImagePath($url) {
+        // Remove domain and fix double slash
+        $path = preg_replace('/^https?:\/\/[^\/]+(\/+)/', '/', $url);
+
+        // Remove 'conversions/' directory
+        $path = str_replace('/conversions/', '/', $path);
+
+        // Replace -main-thumb before the extension
+        $path = preg_replace('/-(main-thumb|thumb)(\.[^.]+)$/', '$2', $path);
+
+        // Ensure there's only one leading slash in the path
+        return ltrim($path, '/');
+    }
+}
+
+if(!function_exists('formatDescription')) {
+    function formatDescription($text, $isRTL = true) {
+        // Check if the text already contains bullet points (either - or ●)
+        if (strpos($text, ' - ') === false && strpos($text, '- ') !== 0 && 
+            strpos($text, '● ') === false && strpos($text, ' ● ') === false) {
+            // No bullet points found, return the text with line breaks preserved
+            return nl2br($text);
+        }
+        
+        // First, normalize spaces around the dash and bullet to ensure consistent splitting
+        $text = preg_replace('/ - /', "\n- ", $text);
+        $text = preg_replace('/^- /', "\n- ", $text);
+        $text = preg_replace('/ ● /', "\n● ", $text);
+        $text = preg_replace('/^● /', "\n● ", $text);
+        
+        // Split the text by newlines
+        $lines = explode("\n", $text);
+        
+        // Direction attributes
+        $dir = $isRTL ? 'rtl' : 'ltr';
+        $align = $isRTL ? 'right' : 'left';
+        
+        $html = '';
+        $inList = false;
+        
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (empty($line)) continue;
+            
+            // Check if the line starts with a bullet point (either - or ●)
+            if (strpos($line, '- ') === 0 || strpos($line, '● ') === 0) {
+                // This is a bullet point
+                if (!$inList) {
+                    // Start a new list
+                    $html .= '<ul class="custom-bullet-list" dir="' . $dir . '" style="text-align: ' . $align . ';">';
+                    $inList = true;
+                }
+                
+                // Add the list item (removing the prefix)
+                $content = (strpos($line, '- ') === 0) ? substr($line, 2) : substr($line, 2);
+                $html .= '<li class="bullet-item">' . trim($content) . '</li>';
+            } else {
+                // This is regular text
+                if ($inList) {
+                    // Close the list if we were in one
+                    $html .= '</ul>';
+                    $inList = false;
+                }
+                
+                // Add the regular text
+                $html .= '<p dir="' . $dir . '" style="text-align: ' . $align . ';">' . $line . '</p>';
+            }
+        }
+        
+        // Close the list if we're still in one
+        if ($inList) {
+            $html .= '</ul>';
+        }
+        
+        return $html;
+    }
+}
+

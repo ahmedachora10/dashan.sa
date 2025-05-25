@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.subscribers')" />
 
-    <x-dashboard.tables.table1 :columns="['phone']" :withActions="false">
+    <x-dashboard.tables.table1 :columns="['email']" :withActions="false">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -13,7 +13,7 @@
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
 
-                <td>{{ $item->phone }}</td>
+                <td>{{ $item->email }}</td>
             </tr>
         @empty
             <tr>

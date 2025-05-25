@@ -26,11 +26,15 @@ return [
     'linkedin' => 'لينكد ان',
     'whatsapp' => 'واتساب',
     'tiktok' => 'تيك توك',
+    'youtube' => 'يو تيوب',
     'snapchat' => 'سناب شات',
     'social media' => 'مواقع التواصل الاجتماعية',
     'contact image' => 'صورة صفحة التواصل',
     'contact account' => 'معلومات التواصل',
     'email' => 'البريد الالكتروني',
     'phone number' => 'رقم الهاتف',
-    'video' => 'فيديو عنا'
+    'video' => 'فيديو عنا',
+    'location' => 'الموقع',
+    'address_ar' => 'العنوان',
+    'address_en' => 'العنوان(انجليزي)'
 ];

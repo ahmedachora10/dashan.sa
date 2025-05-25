@@ -9,9 +9,9 @@
     <div class="app-brand demo d-flex align-items-center justify-content-center">
         <a href="@hasPermission('dashboard.show')
 {{ route('dashboard') }}
-@else
+
 #!
-@endhasPermission"
+@endhasPermission
             class="app-brand-link">
             <span class="app-brand-logo demo">
                 {{-- <x-dashboard.logo width="25" /> --}}
@@ -61,10 +61,10 @@
             :notification="$jobsRequestsCount">
             <x-dashboard.sidebar.link :title="trans('sidebar.job requests')" :link="route('job-requests.index')" :notification="$jobsRequestsCount" />
             <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" :link="route('jobs.index')" />
-            <x-dashboard.sidebar.link :title="trans('sidebar.cities')" :link="route('job-cities.index')" />
+          {{--  <x-dashboard.sidebar.link :title="trans('sidebar.cities')" :link="route('job-cities.index')" /> --}}
         </x-dashboard.sidebar.link>
 
-        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.subscribers')" icon="user" :link="route('subscribers.index')" /> --}}
+        <x-dashboard.sidebar.link :title="trans('sidebar.subscribers')" icon="user" :link="route('subscribers.index')" />
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="server" :link="route('services.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="category" :link="route('our-services.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.service requests')" icon="git-pull-request" :link="route('services.requests')" :notification="$servicesRequestsCount" />
@@ -72,12 +72,13 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.sections')" icon="briefcase" :link="route('tags.index')" />
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.support')" icon="paper-plane" :link="route('support.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.contact us')" icon="user-pin" :link="route('contact-us.index')" :notification="$contactsCount" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" /> --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.faq')" icon="user-pin" :link="route('faq.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.team')" icon="user-pin" :link="route('team.index')" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.about us')" icon="user-pin" :link="route('about-us.index')" />
+        {{-- <x-dashboard.sidebar.link :title="trans('sidebar.about us')" icon="user-pin" :link="route('about-us.index')" />  --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.reviews')" icon="star" :link="route('reviews.index')" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.why us')" icon="star" :link="route('why-us.index')" />
+        <x-dashboard.sidebar.link :title="app()->getLocale() == 'ar' ? 'English' : 'العربية'" icon="cog" :link="route('switch-language')" />
+        
 
         <!-- Misc -->
         {{-- <li class="menu-item">

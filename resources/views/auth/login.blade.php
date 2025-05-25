@@ -18,7 +18,7 @@
             <div class="app-brand mb-5 d-flex justify-content-center align-items-center">
                 <a href="{{ route('home') }}" class="app-brand-link gap-2">
                     <span class="app-brand-logo demo">
-                        <x-logo width="120" />
+                        <x-logo width="200" />
                     </span>
                     {{-- <span class="app-brand-text demo text-body fw-bold">{{ setting('app_name') }}</span> --}}
                 </a>

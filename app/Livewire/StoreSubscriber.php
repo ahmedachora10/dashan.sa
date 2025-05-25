@@ -8,8 +8,8 @@ use Livewire\Component;
 
 class StoreSubscriber extends Component
 {
-    #[Rule('required|numeric')]
-    public string $phone;
+    #[Rule('required|string')]
+    public string $email;
 
     public function save() {
         Subscriber::create($this->validate());

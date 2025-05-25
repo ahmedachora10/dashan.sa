@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.reviews')" />
 
-    <x-dashboard.tables.table1 :columns="['name', 'rate', 'comment', 'status']">
+    <x-dashboard.tables.table1 :columns="['name', 'comment', 'rate','status']" :createAction="route('reviews.create')">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -11,7 +11,7 @@
 
         <x-slot:actions>
             <label class=" badge bg-warning mx-3">
-                الاجمالي : {{ $reviews->total() }}
+                {{ trans('table.total') }} : {{ $reviews->total() }}
             </label>
         </x-slot:actions>
 
@@ -19,23 +19,23 @@
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->name }}</td>
+                <td>{{ $item->comment }}</td>
                 <td>
                     <div class="rating-container" data-rating="{{ $item->rate }}" id="rateYo-{{ $item->id }}"></div>
                 </td>
-                <td>{{ $item->comment }}</td>
                 <td>
                     <x-dashboard.badge style="cursor: pointer" wire:click="switchStatus({{ $item }})"
                         :color="$item->status ? 'primary' : 'danger'">
                         @if ($item->status)
-                            منشور
+                            {{ trans('table.publish') }}
                         @else
-                            مسودة
+                            {{ trans('table.draft') }}
                         @endif
                     </x-dashboard.badge>
                 </td>
                 <td>
                     <x-dashboard.actions.container>
-                        {{-- <x-dashboard.actions.edit :href="route('reviews.edit', $item->id)">{{ trans('common.edit') }}</x-dashboard.actions.edit> --}}
+                        <x-dashboard.actions.edit :href="route('reviews.edit', $item->id)">{{ trans('common.edit') }}</x-dashboard.actions.edit>
                         <x-dashboard.actions.delete :route="route('reviews.destroy', $item)" />
                     </x-dashboard.actions.container>
                 </td>

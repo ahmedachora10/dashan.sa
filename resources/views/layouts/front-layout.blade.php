@@ -15,19 +15,44 @@
     <link rel="shortcut icon" type="image/x-icon"
         href="{{ asset(setting('icon')) ?? asset('assets/img/favicon/favicon.ico') }}">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{ asset('theme/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/swiper-bundle.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/swiper-gl.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/font-awesome-pro.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/flaticon_ishpat.css') }}">
-    <link rel="stylesheet" href="{{ asset('theme/css/spacing.css') }}">
 
-    @stack('component-styles')
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/all.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('assets/front-assets/css/bootstrap.min.css') }}"> -->
+    @if (app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{ asset('assets/front-assets/css/bootstrap/bootstrap.rtl.min.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('assets/front-assets/css/bootstrap/bootstrap.min.css') }}">
+    @endif
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/pe-icon-7-stroke.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/YouTubePopUp.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/justifiedGallery.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/slick-theme.css') }}">
+
+
+
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/dashan.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front-assets/css/footer.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+
+    <!-- @stack('component-styles')
     <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}?v={{ rand(2000, 9999999) }}">
-    <link rel="stylesheet" href="{{ asset('build/assets/main.css') }}?v={{ rand(2000, 9999999) }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/main.css') }}?v={{ rand(2000, 9999999) }}"> -->
 
     @if (app()->getLocale() == 'ar')
         <style>
@@ -146,159 +171,98 @@
         </style>
     @endif
 
-    <style>
-        .tp-video-play {
-            width: fit-content !important;
-        }
-
-        .tp-contact-7-bg {
-            background-size: cover;
-            background-position: center center;
-        }
-
-        @media (min-width: 768px) {
-            .tp-contact-7-project {
-                top: 318px;
-            }
-        }
-
-        .tp-about-thumb .top:hover {
-            z-index: 5;
-            border: 15px solid rgb(255, 255, 255) !important;
-            transition: .3s;
-        }
-
-        .tp-team-7-item:hover .tp-team-7-social a svg {
-            fill: #fff !important;
-            transition: all .3s 0s ease-out;
-        }
-
-        .alert-primary {
-            background-color: var(--tp-theme-primary) !important;
-            color: var(--tp-theme-secondary);
-        }
-    </style>
-
-    @stack('styles')
-
-    @livewireStyles
-
     <script>
         localStorage.setItem('tp_dir', "{{ app()->getLocale() == 'ar' ? 'rtl' : 'ltr' }}");
     </script>
 </head>
 
-<body>
+<body data-logo="{{ asset(setting('logo')) }}">
 
-    <!-- mouse cursor drag start -->
-    {{-- <div class="mouseCursor cursor-outer"></div>
-        <div class="mouseCursor cursor-inner"><span><img src="assets/img/icon/mouse-cursor.svg" alt=""></span></div> --}}
-    <!-- mouse cursor drag end -->
+    <!-- ==================== Start Loading ==================== -->
 
-    <!-- pre loader area start -->
-    <x-theme.loading />
-    <!-- pre loader area end -->
-
-    <!-- back to top start -->
-    <x-theme.back-to-top-button />
-    <!-- back to top end -->
-
-    <!-- search area start -->
-    {{-- <x-theme.search-area /> --}}
-    <!-- search area end -->
-
-    <!-- cart mini area start -->
-    {{-- <x-theme.cart-area /> --}}
-    <!-- cart mini area end -->
-
-    <!-- offcanvas area start -->
-    <x-theme.off-canvas-area />
-    <!-- offcanvas area end -->
-
-    <div class="tp-page-wrapper"
-        style="margin-bottom: {{ app()->getLocale() == 'en' ? '820px' : '700px' }} !important">
-
-        <!-- header area start -->
-        @include('layouts.theme.header')
-        <!-- header area end -->
-
-        <main>
-            {{ $slot }}
-        </main>
+    <div id="preloader">
+        <div class="loading-text">Loading</div>
     </div>
+
+    <!-- ==================== End Loading ==================== -->
+
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- ==================== End progress-scroll-button ==================== -->
+
+
+    <!-- ==================== Start cursor ==================== -->
+
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- ==================== End cursor ==================== -->
+
+
+    <!-- header area start -->
+    @include('layouts.theme.header')
+    <!-- header area end -->
+
+    <main>
+        {{ $slot }}
+    </main>
+
 
     @include('layouts.theme.footer')
 
-    <!-- JS here -->
-    <script src="{{ asset('theme/js/vendor/jquery.js') }}"></script>
-    <script defer src="{{ asset('theme/js/bootstrap-bundle.js') }}"></script>
-    <script defer src='{{ asset('theme/js/three.js') }}'></script>
-    <script defer src="{{ asset('theme/js/gsap.js') }}"></script>
-    <script defer src="{{ asset('theme/js/webgl.js') }}"></script>
-    <script defer src="{{ asset('theme/js/hover-effect.umd.js') }}"></script>
-    <script defer src="{{ asset('theme/js/swiper-bundle.js') }}"></script>
-    <script defer src="{{ asset('theme/js/magnific-popup.js') }}"></script>
-    <script defer src="{{ asset('theme/js/tilt.jquery.min.js') }}"></script>
-    <script defer src="{{ asset('theme/js/purecounter.js') }}"></script>
-    <script defer src="{{ asset('theme/js/imagesloaded-pkgd.js') }}"></script>
-    <script defer src="{{ asset('theme/js/isotope-pkgd.js') }}"></script>
-    <script defer src="{{ asset('theme/js/nice-select.js') }}"></script>
-    <script defer src="{{ asset('theme/js/countdown.js') }}"></script>
-    <script defer src="{{ asset('theme/js/wow.js') }}"></script>
-    <script defer src="{{ asset('theme/js/ajax-form.js') }}"></script>
 
-    @stack('component-scripts')
+    <!-- jQuery -->
+    <script src="{{ asset('assets/front-assets/js/jquery-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
+    <!-- JS Global Compulsory (Do not remove)-->
+    <!-- plugins -->
+    <script src="{{ asset('assets/front-assets/js/plugins.js') }}"></script>
+    <!-- custom scripts -->
+    <script src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
-    <script defer src="{{ asset('theme/js/main.js') }}?v={{ rand(2000, 9999999) }}"></script>
-    <script defer src="{{ asset('build/assets/app2.js') }}?v={{ rand(2000, 9999999) }}"></script>
-
-    @stack('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script>
-        // JavaScript for Lazy Loading
-        document.addEventListener("DOMContentLoaded", function() {
-            const lazyImages = document.querySelectorAll("img.lazy");
-
-            if (lazyImages.length > 0) {
-                if ("IntersectionObserver" in window) {
-                    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                let lazyImage = entry.target;
-                                lazyImage.src = lazyImage.dataset.src;
-                                lazyImage.classList.remove("lazy");
-                                lazyImageObserver.unobserve(lazyImage);
-                            }
-                        });
-                    });
-
-                    lazyImages.forEach(function(lazyImage) {
-                        lazyImageObserver.observe(lazyImage);
-                    });
-                } else {
-                    // Fallback for browsers without Intersection Observer
-                    let lazyLoad = function() {
-                        lazyImages.forEach(function(lazyImage) {
-                            if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
-                                lazyImage.src = lazyImage.dataset.src;
-                                lazyImage.classList.remove('lazy');
-                            }
-                        });
-                        if (lazyImages.length == 0) {
-                            document.removeEventListener("scroll",
-                                lazyLoad);
-                            window.removeEventListener("resize", lazyLoad);
-                            window.removeEventListener("orientationchange",
-                                lazyLoad);
-                        }
-                    };
-                    document.addEventListener("scroll", lazyLoad);
-                    window.addEventListener("resize", lazyLoad);
-                    window.addEventListener("orientationchange", lazyLoad);
+        $(document).ready(function() {
+            // Initialize Instagram Slider
+            var instaSlider = new Swiper('.insta-slider-fullwidth .swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                speed: 800,
+                grabCursor: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                    },
                 }
-            }
+            });
         });
     </script>
-    @livewireScripts
+
+
 </body>
 
 </html>

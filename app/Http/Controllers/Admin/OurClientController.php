@@ -52,8 +52,9 @@ class OurClientController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OurClient $ourClient)
+    public function edit($id)
     {
+        $ourClient = OurClient::find($id);
         return view('admin.our-clients.edit', compact('ourClient'));
     }
 

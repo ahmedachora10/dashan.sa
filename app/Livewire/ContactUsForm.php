@@ -15,12 +15,9 @@ class ContactUsForm extends Component
 
     #[Rule('required|email')]
     public string $email;
-
+    
     #[Rule('required|numeric')]
     public string $phone;
-
-    #[Rule('required|string')]
-    public string $subject;
 
     #[Rule('required|string')]
     public string $message;

@@ -10,6 +10,6 @@ class OurClient extends Model
 {
     use HasFactory, ThumbnailModelAttribute;
 
-    protected $fillable = ['company_name', 'image', 'link'];
+    protected $fillable = ['name', 'image', 'link'];
 
 }

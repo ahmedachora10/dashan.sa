@@ -12,11 +12,14 @@ class OurService extends Model
     use HasFactory, ThumbnailModelAttribute, HasTranslation;
 
     protected $fillable = [
+        'name_ar',
+        'name_en',
         'title_ar',
         'title_en',
         'description_ar',
         'description_en',
         'image',
+        'logo',
         'sort'
     ];
 

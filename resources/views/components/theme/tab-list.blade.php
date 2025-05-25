@@ -9,10 +9,12 @@
                     data-bs-target="#{{$key}}-ar" role="tab" aria-selected="true">{{
                     trans('arabic') }}</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#{{$key}}-en"
-                    role="tab" aria-selected="false" tabindex="-1">{{ trans('english') }}</a>
-            </li>
+            @if (!request()->routeIs('sliders.edit'))
+                <li class="nav-item" role="presentation">
+                    <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#{{$key}}-en"
+                        role="tab" aria-selected="false" tabindex="-1">{{ trans('english') }}</a>
+                </li>
+            @endif
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade active show" id="{{$key}}-ar" role="tabpanel">

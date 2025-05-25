@@ -17,6 +17,7 @@ return [
     'our clients' => 'Our Clients',
     'statistics' => 'Statistics',
     'our services' => 'Our Services',
+    'all settings' => 'All Settings',
     'faq' => 'Faq',
     'team' => 'Team',
     'about us' => 'About Us',
@@ -26,5 +27,6 @@ return [
     'sections' => 'Sections',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
-    'service requests' => 'Service Requests'
+    'service requests' => 'Service Requests',
+    'subscribers' => 'Subscribers',
 ];

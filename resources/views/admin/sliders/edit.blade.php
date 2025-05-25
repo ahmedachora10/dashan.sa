@@ -33,18 +33,5 @@
                 <x-dashboard.input-group type="number" name="bottom" :value="$slider->styles['bottom'] ?? 0" :title="trans('table.columns.bottom')" />
             </div>
         </x-slot:arForm>
-        <x-slot:enForm>
-
-            <div class="col-md-6 col-12 mb-3">
-
-                <div class="mb-3">
-                    <img src="{{ asset('storage/'. $slider->image_en) }}" alt="image" width="60" height="60" class="img-thumbnail">
-                </div>
-
-                <x-dashboard.input-group type="file" name="image_en" :title="trans('table.columns.image')" />
-                <x-size-notice key="slider" />
-            </div>
-
-        </x-slot:enForm>
     </x-theme.tab-list>
 </x-app-layout>

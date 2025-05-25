@@ -1,21 +1,26 @@
-<!-- brand area start -->
-<div class="tp-brand-area tp-brand-3-bg p-relative pt-60 pb-60 fix" id="clients" style="background-image: url({{asset('theme/img/brand/home-3/brand-bg.jpg')}}) !important; background-size:cover;background-position: center;">
-    <div class="tp-brand-3-shape">
-        {{-- <img src="{{asset('theme/img/brand/home-3/brand-bg.jpg')}}" alt=""> --}}
-    </div>
-    <div class="container px-0">
-        <div class="tp-brand-active swiper-container fix px-4">
-            <div class="swiper-wrapper align-items-center">
-                @foreach ($clients as $item)
-                <div class="swiper-slide text-center">
-                    <a href="{{$item->link}}" target="_blank" class="tp-brand-item">
-                        <img class="tp-brand-item-img home-3" src="{{$item->thumbnail}}" alt="">
-                        <img class="tp-brand-item-hover" src="{{$item->thumbnail}}" alt="">
-                    </a>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</div>
-<!-- brand area end -->
+                
+@props(['OurClients' => []])
+				<!--=================================
+				Client Logo -->
+				<section class="client-logo-section wow fadeInUp" data-swiper-animation="fadeInUp" data-duration="0.3s" data-delay="0.25s">
+					<div class="rounded-section bg-dark space-medium-ptb">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<h6 class="trusted-client">{{headline('our-clients')->title}}</h6>
+									<div class="client-logos">
+										<div class="owl-carousel client-logo-slider" data-cursor-type="arrow" data-nav-dots="false" data-nav-arrow="false" data-items="6" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="3" data-xx-items="2" data-space="82" data-autoheight="true">
+											@foreach ($OurClients as $OurClient)
+												<div class="item">
+													<img class="img-fluid" src="{{asset($OurClient->thumbnail)}}" alt="">
+												</div>
+											@endforeach
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--=================================
+				Client Logo -->

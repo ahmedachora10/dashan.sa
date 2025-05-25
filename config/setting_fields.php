@@ -144,6 +144,16 @@ return [
                 'value' => ''
 
             ],
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'youtube',
+                'label' => 'youtube',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => ''
+
+            ],
         ]
     ],
 
@@ -169,6 +179,36 @@ return [
                 'data' => 'string',
                 'name' => 'phone',
                 'label' => 'Phone Number',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => ''
+
+            ],
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'location',
+                'label' => 'Location',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => ''
+
+            ],
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'address_ar',
+                'label' => 'Address_ar',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => ''
+
+            ],
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'address_en',
+                'label' => 'Address_en',
                 'rules' => 'nullable|string',
                 'class' => '',
                 'value' => ''

@@ -15,7 +15,7 @@ class ServiceRequestForm extends Form
     public string $phone = '';
 
     #[Rule('required|string')]
-    public string $city = '';
+    public string $email = '';
 
     #[Rule('required|string')]
     public string $description = '';

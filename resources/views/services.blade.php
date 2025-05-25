@@ -1,20 +1,24 @@
 <x-front-layout>
-    <div class="py-4"></div>
-    <section class="site-section block__62272" id="portfolio-section">
-        <div class="container">
-            <x-services-section class="bg-light" />
-        </div>
-    </section>
+    
+				<!-- ==================== Start Header ==================== -->
+  
+				<header class="pages-header bg-img valign parallaxie" data-background="{{asset($headerSlider->thumbnail)}}" data-overlay-dark="5">
+    			    <div class="container">
+    			        <div class="row">
+    			            <div class="col-lg-12">
+    			                <div class="cont text-center">
+    			                    <h1 class="custom-sub-title">{{trans('front.services')}}</h1>
+    			                    <div class="path">
+    			                        <a class="custom-sub-header custom-sub-title" href="{{ route('home') }}">{{trans('front.home')}}</a><span>/</span><a href="#0" class="active custom-sub-header custom-sub-title">{{trans('front.services')}}</a>
+    			                    </div>
+    			                </div>
+    			            </div>
+    			        </div>
+    			    </div>
+    			</header>
 
-
-    @push('scripts')
-        <script defer>
-            var heroSwiper = new Swiper('.swiper', {
-                // Optional parameters
-                // direction: 'vertical',
-                loop: true,
-
-            });
-        </script>
-    @endpush
+    <!-- ==================== End Header ==================== -->
+			<x-theme.sections.services :services="$ourServices" :servicesSlider="$servicesSlider"/>
+			
+    
 </x-front-layout>

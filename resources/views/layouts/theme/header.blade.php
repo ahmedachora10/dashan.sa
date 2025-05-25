@@ -1,142 +1,143 @@
-<header class="tp-header-area p-relative">
-    {{-- <div class="tp-header-top d-none d-xl-block fix">
-        <div class="container container-large">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="tp-header-top-info">
-                        <a href="https://www.google.com/maps" target="_blank"><span><i
-                                    class="fa-sharp fa-solid fa-location-dot"></i></span>Manchester 21, Zurich,
-                            CH</a>
-                        <a href="mailto:needhelp@company.com"><span><i
-                                    class="fa-solid fa-envelope"></i></span>ishpatinfo@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tp-header-top-right d-flex justify-content-end">
-                        <div class="tp-header-top-right-color d-flex align-items-center">
-                            <p>You can follow us:</p>
-                            <div class="tp-header-top-social">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <div class="tp-header-main-sticky tp-header-main p-relative">
-        <div class="container container-large">
-            <div class="row align-items-center">
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="tp-header-logo">
-                        <a href="{{route('home')}}">
-                            <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-7 d-none d-lg-block">
-                    <div class="tp-header-main-menu">
-                        <div class="tp-main-menu d-none d-xl-block">
-                            <nav class="tp-main-menu-content">
-                                <ul>
-                                    @include('layouts.theme.menu')
-                                    <li></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-9 col-6">
-                    <div class="tp-header-main-right d-flex align-items-center justify-content-end">
-                        <div class="tp-header-contact d-xl-flex align-items-center">
-                            <div class="tp-header-contact-icon d-none d-xxl-block">
-                                <a href="{{route('switch-language')}}">
-                                    {{ app()->getLocale() == 'ar' ? 'English' : 'العربية' }}
-                                </a>
-                            </div>
-                            <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
-                                <button class="hamburger-btn">
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<!-- ==================== Start Navbar ==================== -->
+<nav class="navbar change navbar-expand-lg">
+	<div class="container">
+		<!-- Logo -->
+		<a class="logo navbar-brand" href="{{route('home')}}" style="max-width: 150px;">
+			<img src="{{ asset(setting('logo')) }}" alt="logo" style="max-width: 100%; height: auto;">
+		</a>
+        
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar"><i class="fas fa-bars"></i></span>
+		</button>
+        
+		<!-- navbar links -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto">
+				@include('layouts.theme.menu')
+				<li class="nav-item"><a class="nav-link custom-sub-title" style="font-size: 18px;" href="{{route('switch-language')}}">
+						{{ app()->getLocale() == 'ar' ? 'English' : 'العربية' }} </a>
+				</li>
+			</ul>
+            
+			<div class="right-nav-elements">
+				<div class="social-icon">
+					@if(setting('facebook'))<a href="{{setting('facebook')}}" target="_blank"><i class="fab fa-facebook-f"></i></a>@endif  
+					@if(setting('twitter')) <a href="{{setting('twitter')}}"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a> @endif 
+					@if(setting('linkedin')) <a href="{{setting('linkedin')}}"  target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> @endif 
+					@if(setting('instagram')) <a href="{{setting('instagram')}}"  target="_blank"><i class="fa-brands fa-instagram"></i></a> @endif 
+					@if(setting('tiktok')) <a href="{{setting('tiktok')}}"  target="_blank"><i class="fa-brands fa-tiktok"></i></a> @endif 
+					@if(setting('youtube')) <a href="{{setting('youtube')}}"  target="_blank"><i class="fa-brands fa-youtube"></i></a> @endif 
+					@if(setting('snapchat')) <a href="{{setting('snapchat')}}"  target="_blank"><i class="fa-brands fa-snapchat"></i></a> @endif 
+					@if (setting('telegram')) <a href="{{setting('telegram')}}"  target="_blank"><i class="fa-brands fa-telegram"></i></a> @endif 
+					@if(setting('whatsapp')) <a href="{{setting('whatsapp')}}"  target="_blank"><i class="fa-brands fa-whatsapp"></i></a> @endif
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- ==================== End Navbar ==================== -->
 
-<header class="tp-header-area p-relative tp-int-menu tp-header-sticky-cloned">
-    <div class="tp-header-main-sticky tp-header-main p-relative">
-        <div class="container container-large">
-            <div class="row align-items-center">
-                <div class="col-lg-2 col-md-3 col-6">
-                    <div class="tp-header-logo">
-                        <a href="{{route('home')}}">
-                            <img width="150" src="{{asset(setting('logo'))}}" alt="Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-7 d-none d-lg-block">
-                    <div class="tp-header-main-menu">
-                        <div class="tp-main-menu d-none d-xl-block">
-                            <nav class="tp-main-menu-content">
-                                <ul>
-                                    @include('layouts.theme.menu')
-                                    <li></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-9 col-6">
-                    <div class="tp-header-main-right d-flex align-items-center justify-content-end">
-                        <div class="tp-header-contact d-xl-flex align-items-center">
-                            <div class="tp-header-contact-icon d-none d-xxl-block">
-                                <a href="{{route('switch-language')}}">
-                                    {{ app()->getLocale() == 'ar' ? 'English' : 'العربية' }}
-                                </a>
-                            </div>
-                            {{-- <div class="tp-header-contact-icon search-open-btn d-none d-xxl-block">
-                                <span><i class="fa-sharp fa-regular fa-magnifying-glass"></i></span>
-                            </div>
-                            <div class="tp-header-contact-icon d-none d-xxl-block">
-                                <button class="cartmini-open-btn"><i
-                                        class="fa-sharp fa-light fa-cart-shopping"></i></button>
-                            </div> --}}
-                            {{-- <div class="tp-header-btn d-none d-xl-block">
-                                <a class="tp-btn tp-icon-style d-none d-xl-block" href="contact.html">Get a Quote
-                                    <span>
-                                        <svg class="qodef-svg--custom-arrow qodef-m-arrow"
-                                            xmlns="http://www.w3.org/2000/svg" width="14.2" height="14.2"
-                                            viewBox="0 0 14.2 14.2">
-                                            <g>
-                                                <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                            </g>
-                                            <g>
-                                                <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                                <path d="M13.2 9V1h-8M13.4.8.7 13.5"></path>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div> --}}
-                            <div class="tp-header-hamburger d-xl-none offcanvas-open-btn">
-                                <button class="hamburger-btn">
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<style>
+/* Reduce gap between logo and navbar */
+.navbar-brand {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-collapse {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Adjust logo size */
+.logo img {
+    max-width: 100%;
+    max-height: 45px;
+    width: auto;
+}
+
+/* Ensure proper alignment for RTL/LTR */
+html[dir="rtl"] .navbar-nav {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+html[dir="ltr"] .navbar-nav {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Adjust navbar spacing */
+.navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+/* Center navbar styling */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Change ml-auto to mx-auto to center the navigation */
+.navbar-nav.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Group the social icons and search in a flex container */
+.right-nav-elements {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust logo size */
+.logo img {
+    max-width: 100%;
+    max-height: 45px;
+    width: auto;
+}
+
+/* Responsive handling */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        z-index: 999;
+    }
+    
+    .navbar-nav.mx-auto {
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .right-nav-elements {
+        justify-content: center;
+    }
+}
+
+/* Ensure proper alignment for RTL/LTR */
+html[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+html[dir="ltr"] .navbar-nav {
+    padding-left: 0;
+}
+</style>

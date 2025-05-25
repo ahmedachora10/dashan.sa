@@ -9,5 +9,5 @@ class Subscriber extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['phone'];
+    protected $fillable = ['email'];
 }

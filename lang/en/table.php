@@ -15,7 +15,7 @@ return [
         'password confirmation' => 'Confirme Password',
 
         'phone' => 'Phone',
-
+        'service' => 'Service',
         'start date' => 'Start Date',
         'end date' => 'End Date',
         'administrator name' => 'Administrator Name',
@@ -24,6 +24,7 @@ return [
         'employee' => 'Employee',
         'mission' => 'Mission',
         'type' => 'Type',
+        'location' => 'Location',
 
         'company' => 'Company',
         'policy' => 'Policy',
@@ -37,7 +38,9 @@ return [
         'answer' => 'Answer',
         'job name' => 'Job Name',
         'social media' => 'Social Media Account',
-
+        'comment' => 'Comment',
+        'rate' => 'Rate',
+        'status' => 'Status',
         'age' => 'Age',
         'specialization' => 'Specialization',
         'years of experience' => 'Year Of Experience',
@@ -58,8 +61,14 @@ return [
         'right' => 'Right',
         'bottom' => 'Bottom',
         'left' => 'Left',
-        'backgroud image' => 'Background Image',
+        'background image' => 'Background Image',
         'city' => 'City',
+        'duration' => 'Duration',
+        'logo' => 'Logo',
+        'code' => 'Code',
     ],
-    'empty' => 'No Records'
+    'empty' => 'No Records',
+    'publish' => 'Published',
+    'draft' => 'Drafted',
+    'total' => 'Total',
 ];

@@ -32,6 +32,7 @@ class SettingController extends Controller
                     $fullPath = 'storage/'. $this->uploadFileService->update($val, '', 'images/logo');
                     $val = $fullPath;
                 }
+
                 Setting::add($key, $val, Setting::getDataType($key));
             }
         }

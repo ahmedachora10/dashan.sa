@@ -1,37 +1,35 @@
-<form wire:submit.prevent="save">
-    <div class="row g-4">
-        @if (session('success'))
-            <div class="col-12">
-                <span class="d-block mb-3 alert bg-primary text-white">{{ session('success') }}</span>
-            </div>
-        @endif
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="name" name="name" :placeholder="trans('table.columns.name')" />
-        </div>
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="email" name="email" :placeholder="trans('table.columns.email')" />
-        </div>
+<form wire:submit.prevent="save" id="contact-form">
 
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="phone" name="phone" :placeholder="trans('table.columns.phone')" />
-        </div>
-
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="subject" name="subject" :placeholder="trans('table.columns.subject')" />
-        </div>
-
-        <div class="col-12">
-            <x-theme.form.text-area wire:model.defer="message" :placeholder="trans('table.columns.message')"
-                name="message" cols="10" rows="6">
-                <x-dashboard.error field="message" />
-            </x-theme.form.text-area>
-        </div>
-
-        <div class="col-12">
-            <div class="tp-contact-btn">
-                <button class="tp-btn" type="button" wire:click="save">{{ trans('send') }}</button>
-                <p class="ajax-response"></p>
-            </div>
-        </div>
+  <div class="messages">
+    @if (session('success'))
+    <div class="col-12">
+      <span class="d-block mb-3 alert bg-primary text-white">{{ session('success') }}</span>
     </div>
+  @endif
+  </div>
+
+  <div class="controls">
+
+    <div class="form-group" style="margin-bottom: 8px;">
+      <input id="form_name" class="custom-sub-title" type="text" wire:model.defer="name" name="name"
+        placeholder="{{ trans('table.columns.name') }}" required="required">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 8px;">
+      <input id="form_email" class="custom-sub-title" type="text" wire:model.defer="email" name="email" placeholder="{{ trans('front.email') }}"
+        aria-label="Email" required="required">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 8px;">
+      <input id="form_email" class="custom-sub-title" type="text" wire:model.defer="phone" name="phone" placeholder="{{ trans('front.your phone') }}"
+        aria-label="Email" required="required">
+    </div>
+
+    <div class="form-group" style="margin-bottom: 8px;">
+      <textarea id="form_message" class="custom-sub-title" wire:model.defer="message" name="message"
+        placeholder="{{trans('front.Write Message')}}" rows="4" required="required"></textarea>
+    </div>
+
+    <button wire:click="save" class="btn-curve btn-color"><span class="custom-sub-title">{{trans('common.send')}}</span></button>
+  </div>
 </form>

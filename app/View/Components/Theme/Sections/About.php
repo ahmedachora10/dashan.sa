@@ -6,6 +6,7 @@ use App\Models\About as ModelsAbout;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Statistic;
 
 class About extends Component
 {
@@ -23,7 +24,8 @@ class About extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.about', [
-            'about' => ModelsAbout::with('media')->first()
+            'about' => ModelsAbout::with('media')->first(),
+            'statistics' => Statistic::all()
         ]);
     }
 }

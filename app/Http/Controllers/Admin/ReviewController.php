@@ -21,7 +21,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.reviews.create');
     }
 
     /**
@@ -30,18 +30,24 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|min:3',
-            'comment' => 'required|string',
+            'name_ar' => 'required|string|min:3',
+            'name_en' => 'required|string|min:3',
+            'comment_ar' => 'required|string',
+            'comment_en' => 'required|string',
             'rate' => 'required|numeric',
+            'status' => 'required|int',
         ]);
 
         Review::create([
-            'name' => $request->name,
-            'comment' => $request->comment,
+            'name_ar' => $request->name_ar,
+            'name_en' => $request->name_en,
+            'comment_ar' => $request->comment_ar,
+            'comment_en' => $request->comment_en,
             'rate' => $request->rate,
+            'status' => $request->status,
         ]);
 
-        return redirect()->route('clients.reviews')->with('success', trans('message.create'));
+        return redirect()->route('reviews.index')->with('success', trans('message.create'));
     }
 
     /**
@@ -57,7 +63,7 @@ class ReviewController extends Controller
      */
     public function edit(Review $review)
     {
-        //
+        return view('admin.reviews.edit', compact('review'));
     }
 
     /**
@@ -65,7 +71,18 @@ class ReviewController extends Controller
      */
     public function update(Request $request, Review $review)
     {
-        //
+        $request->validate([
+            'name_ar' => 'required|string|min:3',
+            'name_en' => 'required|string|min:3',
+            'comment_ar' => 'required|string',
+            'comment_en' => 'required|string',
+            'rate' => 'required|numeric',
+            'status' => 'required|int',
+        ]);
+
+        $review->update($request->all());
+
+        return redirect()->route('reviews.index')->with('success', trans('message.update'));
     }
 
     /**

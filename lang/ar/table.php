@@ -47,6 +47,7 @@ return [
         'password' => 'كلمة المرور',
         'password confirmation' => 'تأكيد كلمة المرور',
         'actions' => 'اجراءات',
+        
 
         'employee' => 'الموظف',
         'mission' => 'المهمة',
@@ -128,7 +129,12 @@ return [
         'right' => 'اليمين',
         'bottom' => 'الاسفل',
         'left' => 'اليسار',
-        'background image' => 'الصورة الخلفية'
+        'background image' => 'الصورة الخلفية',
+        'logo' => 'الشعار',
+        'code' => 'الكود',
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
+    'publish' => 'منشور',
+    'draft' => 'مسودة',
+    'total' => 'الاجمالي',
 ];

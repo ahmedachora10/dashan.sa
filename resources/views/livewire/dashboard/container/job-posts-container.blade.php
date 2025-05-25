@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.jobs')" />
 
-    <x-dashboard.tables.table1 :createAction="route('jobs.create')" :columns="['title']">
+    <x-dashboard.tables.table1 :createAction="route('jobs.create')" :columns="['title','code','type','location']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -13,6 +13,9 @@
             <tr wire:loading.class="opacity-50">
                 <td>{{ $item->id }}</td>
                 <td>{{ $item->title }}</td>
+                <td>{{ $item->code }}</td>
+                <td>{{ $item->type }}</td>
+                <td>{{ $item->location }}</td>
 
                 <td>
                     <x-dashboard.actions.container>

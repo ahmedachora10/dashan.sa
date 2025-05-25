@@ -10,9 +10,9 @@
                     <x-size-notice key="our_client" />
                 </div>
 
-                {{-- <div class="col-md-6 col-12 mb-3">
-                    <x-dashboard.input-group type="text" name="company_name" :title="trans('table.columns.company name')" />
-                </div> --}}
+                <div class="col-md-6 col-12 mb-3">
+                    <x-dashboard.input-group type="text" name="name" :title="trans('table.columns.name')" />
+                </div>
 
                 <div class="col-md-6 col-12 mb-3">
                     <x-dashboard.input-group type="text" name="link" :title="trans('table.columns.link')" />

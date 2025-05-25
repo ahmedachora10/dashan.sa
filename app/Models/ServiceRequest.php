@@ -11,7 +11,7 @@ class ServiceRequest extends Model
 {
     use HasFactory, ThumbnailModelAttribute;
 
-    protected $fillable = ['service_id', 'name', 'phone', 'city', 'description'];
+    protected $fillable = ['service_id', 'name', 'phone', 'email', 'description'];
 
     public function service() : BelongsTo {
         return $this->belongsTo(OurService::class, 'service_id');

@@ -9,7 +9,7 @@
             مصمم بـ ♥ بواسطة <a href="https://www.sadnah.sa" class="text-primary fw-bold" target="_blank">شركة
                 سدنة</a>، جميع
             الحقوق محفوظة لشركة
-            دشن التجارية {{ date('Y') }}
+            دشن {{ date('Y') }}
         </div>
     </div>
 </footer>

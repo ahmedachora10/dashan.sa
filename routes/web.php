@@ -2,6 +2,13 @@
 
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesAllController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\OurClientsController;
+use App\Http\Controllers\OurWorksController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\SearchController;
 use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Support;
@@ -9,9 +16,9 @@ use App\Services\InstagramService;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/template', function () {
-    return view('welcome');
-});
+// Route::get('/template', function () {
+//     return view('welcome');
+// });
 
 Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
 Route::get('instagram/feeds', fn() => dd((new InstagramService)->getImages()));
@@ -51,36 +58,26 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
     return back();
 })->name('switch-language');
 
+Route::get('/about', [AboutUsController::class,'index'])->name('about-us');
+
+Route::get('services/all', [ServicesAllController::class,'index'])->name('services.all');
+Route::get('services/details/{id}', [ServicesAllController::class,'show'])->name('services.details');
+Route::get('services/request/{id}', [ServicesAllController::class,'request'])->name('services.request');
+
 Route::get('clients/reviews', function () {
     return view('reviews');
 })->name('clients.reviews');
 
 Route::resource('reviews', ReviewController::class)->only('store');
 
-Route::get('/jobs', function () {
-    return view('job');
-})->name('jobs.request');
+Route::resource('career', JobController::class);
 
-Route::get('contact', function () {
-    $supports = Support::all();
-    return view('contact', compact('supports'));
-})->name('contact');
+Route::get('job/apply/{id}', [JobController::class,'apply'])->name('jobs.apply');
 
-Route::get('works/{work}/details', function (OurWork $work) {
-    return view('work-details', compact('work'));
-})->name('works.show');
+Route::get('contact', [ContactUsController::class, 'index'])->name('contact');
 
-Route::get('services/all', function () {
-    return view('services');
-})->name('services.all');
-
-Route::get('services/{service}/details', function (OurService $service) {
-    return view('service-details', compact('service'));
-})->name('services.details');
-
-Route::get('services/request/{service}', function (OurService $service) {
-    return view('service-request', compact('service'));
-})->name('services.request');
+Route::resource('works', OurWorksController::class);
+Route::get('search', [SearchController::class, 'index'])->name('search');
 
 require __DIR__ . '/auth.php';
 

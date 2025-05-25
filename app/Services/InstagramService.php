@@ -5,14 +5,14 @@ namespace App\Services;
 use Dymantic\InstagramFeed\InstagramFeed;
 
 class InstagramService {
-    const PROFILE_NAME = 'dashan';
+    private const PROFILE_NAME = 'deal';
 
     public static function auth() {
         return \Dymantic\InstagramFeed\Profile::new(self::PROFILE_NAME)->getInstagramAuthUrl();
     }
 
     private function getProfile() {
-        return InstagramFeed::for(self::PROFILE_NAME, 6);
+        return InstagramFeed::for(self::PROFILE_NAME, 4);
     }
 
     public function getImages() : array  {
