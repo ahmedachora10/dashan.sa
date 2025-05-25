@@ -7,11 +7,7 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme">
     <div class="app-brand demo d-flex align-items-center justify-content-center">
-        <a href="@hasPermission('dashboard.show')
-{{ route('dashboard') }}
-
-#!
-@endhasPermission
+        <a href="{{ route('dashboard') }}"
             class="app-brand-link">
             <span class="app-brand-logo demo">
                 {{-- <x-dashboard.logo width="25" /> --}}
@@ -78,7 +74,7 @@
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.about us')" icon="user-pin" :link="route('about-us.index')" />  --}}
         <x-dashboard.sidebar.link :title="trans('sidebar.reviews')" icon="star" :link="route('reviews.index')" />
         <x-dashboard.sidebar.link :title="app()->getLocale() == 'ar' ? 'English' : 'العربية'" icon="cog" :link="route('switch-language')" />
-        
+
 
         <!-- Misc -->
         {{-- <li class="menu-item">
