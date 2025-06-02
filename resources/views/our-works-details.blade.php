@@ -1,4 +1,4 @@
-<x-front-layout>    
+<x-front-layout>
          <!-- ==================== Start Header ==================== -->
 
     <header class="pages-header bg-img valign parallaxie" data-background="{{asset(convertImagePath($work->background ))}}" data-overlay-dark="5">
@@ -80,19 +80,13 @@
     <!-- ==================== Start projdtal ==================== -->
     <section class="projdtal">
         <div class="justified-gallery">
-          @foreach ($images as $img )
-            <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}">
-                <img alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
-            </a>
-          @endforeach
+            @foreach ($images as $img )
+                <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}">
+                    <img alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+                </a>
+            @endforeach
         </div>
     </section>
 
     <!-- ==================== End projdtal ==================== -->
-
-
-
-
-    
-
 </x-front-layout>
