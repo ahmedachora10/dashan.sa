@@ -85,7 +85,7 @@
                     <img x-show="shown" alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
 
                     <div class="placeholder-glow" x-show="!shown">
-                        <span class="placeholder col-12 h-100 d-flex justify-content-center align-items-center">
+                        <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
                             <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
                         </span>
                     </div>
