@@ -301,30 +301,31 @@
                 window.addEventListener("resize", lazyLoad);
                 window.addEventListener("orientationchange", lazyLoad);
             }
-        });
 
-        document.querySelectorAll("img.lazy").forEach(function(img) {
-        // A helper that finds the placeholder in the same parent and removes it
-            function removePlaceholder() {
-                const placeholder = img.parentElement.querySelector(".placeholder-glow");
-                if (placeholder) {
-                    placeholder.remove();
+            lazyImages.forEach(function(img) {
+            // A helper that finds the placeholder in the same parent and removes it
+                function removePlaceholder() {
+                    const placeholder = img.parentElement.querySelector(".placeholder-glow");
+                    if (placeholder) {
+                        placeholder.remove();
+                    }
+                    // Optional: remove the .lazy class so we don't process again
+                    img.classList.remove("lazy");
                 }
-                // Optional: remove the .lazy class so we don't process again
-                img.classList.remove("lazy");
-            }
 
-            // If the image is already loaded (from cache), remove placeholder immediately
-            if (img.complete && img.naturalWidth !== 0) {
-                removePlaceholder();
-            } else {
-                // Wait for the image load event
-                img.addEventListener("load", removePlaceholder);
+                // If the image is already loaded (from cache), remove placeholder immediately
+                if (img.complete && img.naturalWidth !== 0) {
+                    removePlaceholder();
+                } else {
+                    // Wait for the image load event
+                    img.addEventListener("load", removePlaceholder);
 
-                // Also in case of an error, remove or hide the placeholder so UI isn't stuck indefinitely
-                img.addEventListener("error", removePlaceholder);
-            }
+                    // Also in case of an error, remove or hide the placeholder so UI isn't stuck indefinitely
+                    img.addEventListener("error", removePlaceholder);
+                }
+            });
         });
+
 
     </script>
 
