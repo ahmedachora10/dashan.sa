@@ -87,7 +87,7 @@
     <!-- ==================== Start projdtal ==================== -->
     <section class="projdtal">
         <div class="justified-gallery">
-            <livewire:image-gallery :model="$work" :collectionName="'works-thumb'" />
+            <livewire:image-gallery :model="$work" :collectionName="'works'" />
         </div>
     </section>
 
