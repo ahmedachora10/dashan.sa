@@ -25,12 +25,11 @@ class ImageGallery extends Component
 
     public function loadMore()
     {
-        if (!$this->hasMoreImages) {
-            return;
+        if ($this->hasMoreImages) {
+            $this->perPage += 12;
+            $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
         }
 
-        $this->perPage += 12;
-        $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
     }
 
     public function render()
