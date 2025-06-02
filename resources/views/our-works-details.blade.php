@@ -99,7 +99,7 @@
                 </a>
             @endforeach --}}
 
-            {{-- @foreach ($images as $img)
+            @foreach ($images as $img)
                 @php
                     $thumb = asset(getCachedImage($img->getUrl('thumb')));
                 @endphp
@@ -109,28 +109,6 @@
 
                     <div class="placeholder-glow" x-show="!shown">
                         <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
-                            <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
-                        </span>
-                    </div>
-                </a>
-            @endforeach --}}
-
-            @foreach ($images as $img)
-                <a href="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" x-data="{
-                    shown: false,
-                    loaded: false,
-                    imgSrc: '{{ asset(getCachedImage($img->getUrl('thumb'))) }}'
-                }"
-                    x-intersect="shown = true">
-                    <!-- Lazy-loaded image -->
-                    <img x-show="loaded" alt="Lazy-loaded content" :src="shown ? imgSrc : ''" @load="loaded = true"
-                        class="transition-opacity duration-300" :class="loaded ? 'opacity-100' : 'opacity-0'"
-                        style="height: 300px; object-fit: cover;" />
-
-                    <!-- Loading placeholder -->
-                    <div x-show="!loaded" class="placeholder-glow">
-                        <span class="placeholder col-12 d-flex justify-content-center align-items-center"
-                            style="height:300px;">
                             <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
                         </span>
                     </div>
