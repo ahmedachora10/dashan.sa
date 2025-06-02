@@ -105,19 +105,13 @@
                 @endphp
 
                 <a href="{{ $thumb }}" x-data="{ shown: false }" x-intersect.once="shown = true" x-transition>
-                    <template x-if="shown">
-                        <img alt="" x-bind:src="'{{ $thumb }}'" x-bind:srcset="'{{ $thumb }}'"
-                            loading="lazy" />
-                    </template>
+                    <img alt="" x-bind:src="'{{ $thumb }}'" x-bind:srcset="'{{ $thumb }}'" loading="lazy" />
 
-                    <template x-if="!shown">
-                        <div class="placeholder-glow">
-                            <span class="placeholder col-12 d-flex justify-content-center align-items-center"
-                                style="height:300px;">
-                                <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
-                            </span>
-                        </div>
-                    </template>
+                    <div class="placeholder-glow" x-show="!shown">
+                        <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
+                            <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
+                        </span>
+                    </div>
                 </a>
             @endforeach
 
