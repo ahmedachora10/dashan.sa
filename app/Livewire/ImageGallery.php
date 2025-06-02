@@ -14,16 +14,23 @@ class ImageGallery extends Component
     public $collectionName;
     public $perPage = 12;
     public $loaded = false;
+    public $hasMoreImages = true;
 
     public function mount($model, $collectionName = 'works')
     {
         $this->model = $model;
         $this->collectionName = $collectionName;
+        $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
     }
 
     public function loadMore()
     {
+        if (!$this->hasMoreImages) {
+            return;
+        }
+
         $this->perPage += 12;
+        $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
     }
 
     public function render()

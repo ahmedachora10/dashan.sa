@@ -19,20 +19,13 @@
     @if($perPage < $model->getMedia($collectionName)->count())
         <div class="text-center mt-4" 
              x-data="{ shown: false }"
-             x-intersect="shown = true"
+             x-intersect="shown = true; $wire.loadMore()"
              x-intersect:leave="shown = false"
-             x-show="shown"
              wire:loading.remove
              wire:target="loadMore">
-            <button wire:click="loadMore" class="btn btn-primary">
-                {{ trans('front.load more') }}
-            </button>
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">{{ trans('front.loading') }}...</span>
+            </div>
         </div>
     @endif
-
-    <div wire:loading wire:target="loadMore" class="text-center mt-4">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">{{ trans('front.loading') }}...</span>
-        </div>
-    </div>
 </div> 
