@@ -304,7 +304,7 @@
         });
 
         document.querySelectorAll("img.lazy").forEach(function(img) {
-            // A helper that finds the placeholder in the same parent and removes it
+        // A helper that finds the placeholder in the same parent and removes it
             function removePlaceholder() {
                 const placeholder = img.parentElement.querySelector(".placeholder-glow");
                 if (placeholder) {
@@ -325,6 +325,7 @@
                 img.addEventListener("error", removePlaceholder);
             }
         });
+
     </script>
 
 
