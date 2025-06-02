@@ -1,7 +1,7 @@
 import './bootstrap';
 
 import Alpine from 'alpinejs';
-
+import intersect from '@alpinejs/intersect'
 
 
 import Cleave from 'cleave.js';
@@ -10,6 +10,8 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import '../../node_modules/photoswipe/dist/photoswipe.css';
 
 window.Alpine = Alpine;
+
+Alpine.plugin(intersect);
 
 Alpine.start();
 

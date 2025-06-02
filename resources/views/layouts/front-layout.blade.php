@@ -228,7 +228,7 @@
     <script src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             // Initialize Instagram Slider
             var instaSlider = new Swiper('.insta-slider-fullwidth .swiper-container', {
@@ -304,8 +304,10 @@
                 window.addEventListener("orientationchange", lazyLoad);
             }
         });
-    </script>
+    </script> --}}
 
+
+    <script defer src="{{ asset('build/assets/app2.js')}}"></script>
 
 </body>
 

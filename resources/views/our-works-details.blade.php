@@ -81,8 +81,11 @@
     <section class="projdtal">
         <div class="justified-gallery">
             @foreach ($images as $img )
-                <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}">
-                    <img alt="" class="lazy" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+                <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" data-justified-gallery>
+                    <img x-show="shown" alt="" class="lazy" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+                    <span x-show="!shown" class="overlay">
+                        <i class="fas fa-sync-alt fa-spin"></i>
+                    </span>
                 </a>
             @endforeach
         </div>
