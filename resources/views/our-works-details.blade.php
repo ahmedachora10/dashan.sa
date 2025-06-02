@@ -104,10 +104,10 @@
                     $thumb = asset(getCachedImage($img->getUrl('thumb')));
                 @endphp
 
-                <a href="{{ $thumb }}" x-data="{ shown: false }">
-                    <img alt="" x-intersect.once="shown = true" x-transition x-bind:src="'{{ $thumb }}'" x-bind:srcset="'{{ $thumb }}'" loading="lazy" />
+                <a href="{{ $thumb }}">
+                    <img alt="" class="lazy" srcset="{{ $thumb }}" loading="lazy" />
 
-                    <div class="placeholder-glow" x-show="!shown" x-transition>
+                    <div class="placeholder-glow">
                         <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
                             <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
                         </span>

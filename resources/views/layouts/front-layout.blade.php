@@ -228,7 +228,7 @@
     <script defer src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
-    {{-- <script>
+    <script>
         $(document).ready(function() {
             // Initialize Instagram Slider
             var instaSlider = new Swiper('.insta-slider-fullwidth .swiper-container', {
@@ -264,15 +264,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             const lazyImages = document.querySelectorAll("img.lazy");
 
-            console.log(lazyImages);
-
 
             if ("IntersectionObserver" in window) {
                 let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
                     entries.forEach(function(entry) {
                         if (entry.isIntersecting) {
                             let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.src = lazyImage.dataset.srcset || lazyImage.dataset.src;
                             lazyImage.classList.remove("lazy");
                             lazyImageObserver.unobserve(lazyImage);
                         }
@@ -287,7 +285,7 @@
                 let lazyLoad = function() {
                     lazyImages.forEach(function(lazyImage) {
                         if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
-                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.src = lazyImage.dataset.srcset || lazyImage.dataset.src;
                             lazyImage.classList.remove('lazy');
                         }
                     });
@@ -304,10 +302,33 @@
                 window.addEventListener("orientationchange", lazyLoad);
             }
         });
-    </script> --}}
+
+        document.querySelectorAll("img.lazy").forEach(function(img) {
+            // A helper that finds the placeholder in the same parent and removes it
+            function removePlaceholder() {
+                const placeholder = img.parentElement.querySelector(".placeholder-glow");
+                if (placeholder) {
+                    placeholder.remove();
+                }
+                // Optional: remove the .lazy class so we don't process again
+                img.classList.remove("lazy");
+            }
+
+            // If the image is already loaded (from cache), remove placeholder immediately
+            if (img.complete && img.naturalWidth !== 0) {
+                removePlaceholder();
+            } else {
+                // Wait for the image load event
+                img.addEventListener("load", removePlaceholder);
+
+                // Also in case of an error, remove or hide the placeholder so UI isn't stuck indefinitely
+                img.addEventListener("error", removePlaceholder);
+            }
+        });
+    </script>
 
 
-    <script defer src="{{ asset('build/assets/app2.js')}}"></script>
+    <script defer src="{{ asset('build/assets/app2.js') }}"></script>
 
 </body>
 
