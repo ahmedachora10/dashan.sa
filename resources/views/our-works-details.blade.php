@@ -1,14 +1,20 @@
 <x-front-layout>
-         <!-- ==================== Start Header ==================== -->
+    <!-- ==================== Start Header ==================== -->
 
-    <header class="pages-header bg-img valign parallaxie" data-background="{{asset(convertImagePath($work->background ))}}" data-overlay-dark="5">
+    <header class="pages-header bg-img valign parallaxie"
+        data-background="{{ asset(convertImagePath($work->background)) }}" data-overlay-dark="5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="cont text-center">
-                        <h1 class="custom-sub-title">{{$work->client_name}}</h1>
+                        <h1 class="custom-sub-title">{{ $work->client_name }}</h1>
                         <div class="path">
-                            <a href="{{route('home')}}" class="custom-sub-title" style="text-decoration: none;">{{trans('front.home')}}</a><span>/</span><a href="{{route('works.index')}}" class="custom-sub-title" style="text-decoration: none;">{{trans('front.our works')}}</a><span>/</span><a href="#0" class="active custom-sub-title" style="text-decoration: none;">{{$work->client_name}}</a>
+                            <a href="{{ route('home') }}" class="custom-sub-title"
+                                style="text-decoration: none;">{{ trans('front.home') }}</a><span>/</span><a
+                                href="{{ route('works.index') }}" class="custom-sub-title"
+                                style="text-decoration: none;">{{ trans('front.our works') }}</a><span>/</span><a
+                                href="#0" class="active custom-sub-title"
+                                style="text-decoration: none;">{{ $work->client_name }}</a>
                         </div>
                     </div>
                 </div>
@@ -45,31 +51,32 @@
                 <div class="col-lg-2">
                     <div class="item mt-30">
                         <h6 class="custom-sub-title">{{ trans('front.client') }}</h6>
-                        <p class="custom-sub-title">{{$work->client_name}}</p>
+                        <p class="custom-sub-title">{{ $work->client_name }}</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="item mt-30">
                         <h6 class="custom-sub-title">{{ trans('front.duration') }}</h6>
-                        <p class="custom-sub-title">{{$work->duration_of_work}} {{ trans('front.durationDays') }}</p>
+                        <p class="custom-sub-title">{{ $work->duration_of_work }} {{ trans('front.durationDays') }}
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="item mt-30">
                         <h6 class="custom-sub-title">{{ trans('front.category') }}</h6>
-                        <p class="custom-sub-title">{{$work->tag->name}}</p>
+                        <p class="custom-sub-title">{{ $work->tag->name }}</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="item mt-30">
                         <h6 class="custom-sub-title">{{ trans('front.start date') }}</h6>
-                        <p class="custom-sub-title">{{$work->transaction_start_date}}</p>
+                        <p class="custom-sub-title">{{ $work->transaction_start_date }}</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="item mt-30">
                         <h6 class="custom-sub-title">{{ trans('front.end date') }}</h6>
-                        <p class="custom-sub-title">{{$work->transaction_end_date}}</p>
+                        <p class="custom-sub-title">{{ $work->transaction_end_date }}</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +87,7 @@
     <!-- ==================== Start projdtal ==================== -->
     <section class="projdtal">
         <div class="justified-gallery">
-            @foreach ($images as $img )
+            {{-- @foreach ($images as $img)
                 <a href="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" x-transition>
                     <img x-show="shown" alt="" src="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" srcset="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" />
 
@@ -90,7 +97,30 @@
                         </span>
                     </div>
                 </a>
+            @endforeach --}}
+
+            @foreach ($images as $img)
+                @php
+                    $thumb = asset(getCachedImage($img->getUrl('thumb')));
+                @endphp
+
+                <a href="{{ $thumb }}" x-data="{ shown: false }" x-intersect.once="shown = true" x-transition>
+                    <template x-if="shown">
+                        <img alt="" x-bind:src="'{{ $thumb }}'" x-bind:srcset="'{{ $thumb }}'"
+                            loading="lazy" />
+                    </template>
+
+                    <template x-if="!shown">
+                        <div class="placeholder-glow">
+                            <span class="placeholder col-12 d-flex justify-content-center align-items-center"
+                                style="height:300px;">
+                                <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
+                            </span>
+                        </div>
+                    </template>
+                </a>
             @endforeach
+
         </div>
     </section>
 
