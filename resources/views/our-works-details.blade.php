@@ -82,7 +82,7 @@
         <div class="justified-gallery">
             @foreach ($images as $img )
                 <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}">
-                    <img alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+                    <img alt="" class="lazy" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
                 </a>
             @endforeach
         </div>
