@@ -16,12 +16,14 @@ class ImageGallery extends Component
     public $loaded = false;
     public $hasMoreImages = true;
     public $isLoading = false;
+    public $totalImages = 0;
 
     public function mount($model, $collectionName = 'works')
     {
         $this->model = $model;
         $this->collectionName = $collectionName;
-        $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
+        $this->totalImages = $this->model->getMedia($this->collectionName)->count();
+        $this->hasMoreImages = $this->totalImages > $this->perPage;
     }
 
     public function loadMore()
@@ -32,7 +34,7 @@ class ImageGallery extends Component
 
         $this->isLoading = true;
         $this->perPage += 12;
-        $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
+        $this->hasMoreImages = $this->totalImages > $this->perPage;
         $this->isLoading = false;
     }
 
@@ -42,7 +44,8 @@ class ImageGallery extends Component
             ->take($this->perPage);
 
         return view('livewire.image-gallery', [
-            'images' => $images
+            'images' => $images,
+            'totalImages' => $this->totalImages
         ]);
     }
 } 

@@ -25,3 +25,11 @@
         </div>
     </div>
 @endif
+
+@if($isLoading)
+    <div class="text-center mt-4">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">{{ trans('front.loading') }}...</span>
+        </div>
+    </div>
+@endif
