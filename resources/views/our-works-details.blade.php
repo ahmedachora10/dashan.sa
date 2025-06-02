@@ -86,37 +86,7 @@
     <!-- ==================== End Intro ==================== -->
     <!-- ==================== Start projdtal ==================== -->
     <section class="projdtal">
-        <div class="justified-gallery">
-            {{-- @foreach ($images as $img)
-                <a href="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" x-transition>
-                    <img x-show="shown" alt="" src="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" srcset="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" />
-
-                    <div class="placeholder-glow" x-show="!shown">
-                        <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
-                            <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
-                        </span>
-                    </div>
-                </a>
-            @endforeach --}}
-
-            @foreach ($images as $img)
-                @php
-                    $thumb = asset(getCachedImage($img->getUrl('thumb')));
-                @endphp
-
-                <a href="{{ $thumb }}">
-                    <img alt="" class="lazy" src="{{ $thumb }}" srcset="{{ $thumb }}" loading="lazy" />
-
-                    <div class="placeholder-glow">
-                        <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
-                            <i class="fas fa-sync-alt fa-spin fa-2xl"></i>
-                        </span>
-                    </div>
-                </a>
-            @endforeach
-
-
-        </div>
+        <livewire:image-gallery :model="$work" :collectionName="'works'" />
     </section>
 
     <!-- ==================== End projdtal ==================== -->
