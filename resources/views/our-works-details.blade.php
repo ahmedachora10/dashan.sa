@@ -82,10 +82,13 @@
         <div class="justified-gallery">
             @foreach ($images as $img )
                 <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" data-justified-gallery>
-                    <img x-show="shown" alt="" class="lazy" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
-                    <span x-show="!shown" class="overlay">
-                        <i class="fas fa-sync-alt fa-spin"></i>
-                    </span>
+                    <img x-cloak x-show="shown" alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+
+                    <div x-cloak class="placeholder-glow" x-show="!shown">
+                        <span class="placeholder col-12">
+                            <i class="fas fa-sync-alt fa-spin"></i>
+                        </span>
+                    </div>
                 </a>
             @endforeach
         </div>
