@@ -220,15 +220,15 @@
 
     <!-- jQuery -->
     <script src="{{ asset('assets/front-assets/js/jquery-3.0.0.min.js') }}"></script>
-    <script defer src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
     <!-- JS Global Compulsory (Do not remove)-->
     <!-- plugins -->
-    <script defer src="{{ asset('assets/front-assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/plugins.js') }}"></script>
     <!-- custom scripts -->
-    <script defer src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
-    <script defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script>
         $(document).ready(function() {
             // Initialize Instagram Slider
             var instaSlider = new Swiper('.insta-slider-fullwidth .swiper-container', {
