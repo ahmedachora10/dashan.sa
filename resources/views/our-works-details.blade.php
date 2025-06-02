@@ -116,7 +116,7 @@
             @endforeach --}}
 
             @foreach ($images as $img)
-                <a href="{{ asset(getCachedImage($img->getUrl('full'))) }}" x-data="{
+                <a href="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" x-data="{
                     shown: false,
                     loaded: false,
                     imgSrc: '{{ asset(getCachedImage($img->getUrl('thumb'))) }}'
