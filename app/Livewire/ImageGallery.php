@@ -15,6 +15,7 @@ class ImageGallery extends Component
     public $perPage = 12;
     public $loaded = false;
     public $hasMoreImages = true;
+    public $isLoading = false;
 
     public function mount($model, $collectionName = 'works')
     {
@@ -25,12 +26,14 @@ class ImageGallery extends Component
 
     public function loadMore()
     {
-        if (!$this->hasMoreImages) {
+        if (!$this->hasMoreImages || $this->isLoading) {
             return;
         }
+
+        $this->isLoading = true;
         $this->perPage += 12;
         $this->hasMoreImages = $this->model->getMedia($this->collectionName)->count() > $this->perPage;
-
+        $this->isLoading = false;
     }
 
     public function render()
