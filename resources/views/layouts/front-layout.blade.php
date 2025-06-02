@@ -284,6 +284,8 @@
                 // Fallback for browsers without Intersection Observer
                 let lazyLoad = function() {
                     lazyImages.forEach(function(lazyImage) {
+                        console.log('lazyImage.offsetTop', lazyImage.dataset.srcset);
+
                         if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
                             lazyImage.src = lazyImage.dataset.srcset || lazyImage.dataset.src;
                             lazyImage.classList.remove('lazy');
