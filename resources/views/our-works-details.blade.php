@@ -105,7 +105,7 @@
                 @endphp
 
                 <a href="{{ $thumb }}">
-                    <img alt="" class="lazy" srcset="{{ $thumb }}" loading="lazy" />
+                    <img alt="" class="lazy" src="{{ $thumb }}" srcset="{{ $thumb }}" loading="lazy" />
 
                     <div class="placeholder-glow">
                         <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
