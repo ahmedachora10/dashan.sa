@@ -81,8 +81,8 @@
     <section class="projdtal">
         <div class="justified-gallery">
             @foreach ($images as $img )
-                <a href="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" x-transition>
-                    <img x-show="shown" alt="" src="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" srcset="{{ asset(convertImagePath($img->getUrl('thumb'))) }}" />
+                <a href="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" x-data="{shown : false}" x-intersect:once="shown = true" x-transition>
+                    <img x-show="shown" alt="" src="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" srcset="{{ asset(getCachedImage($img->getUrl('thumb'))) }}" />
 
                     <div class="placeholder-glow" x-show="!shown">
                         <span class="placeholder col-12 d-flex justify-content-center align-items-center" style="height:300px;">
