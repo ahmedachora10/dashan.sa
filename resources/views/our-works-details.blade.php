@@ -87,7 +87,17 @@
     <!-- ==================== Start projdtal ==================== -->
     <section class="projdtal">
         <div class="justified-gallery">
-            <livewire:image-gallery :model="$work" :collectionName="'works'" />
+            {{-- <livewire:image-gallery :model="$work" :collectionName="'works'" /> --}}
+            @foreach ($images as $img)
+            @php
+                // $thumb = asset(getCachedImage($img->getUrl('blur')));
+                $thumb = $img;
+            @endphp
+
+            <a href="{{ $img->getUrl() }}" class="gallery-item" wire:key="image-{{ $img->id }}">
+                {{$thumb}}
+            </a>
+        @endforeach
         </div>
     </section>
 

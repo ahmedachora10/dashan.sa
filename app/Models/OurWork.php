@@ -61,13 +61,15 @@ class OurWork extends Model implements HasMedia
             ->width(110)
             ->height(110)
             ->sharpen(10)
+            ->withResponsiveImages()
             ->keepOriginalImageFormat() ;
 
             $this->addMediaConversion('main-thumb')
             ->width(370)
             ->height(438)
             ->sharpen(10)
-            ->keepOriginalImageFormat() ;
+            ->withResponsiveImages()
+            ->keepOriginalImageFormat();
     }
 
     public function getImageDimensions(Media $media)
@@ -83,7 +85,7 @@ class OurWork extends Model implements HasMedia
             'height' => $height,
         ];
     }
-    
+
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('images')
