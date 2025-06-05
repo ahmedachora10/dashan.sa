@@ -12,11 +12,11 @@ class ImageGallery extends Component
 
     public $model;
     public $collectionName;
-    public $perPage = 12;
-    public $loaded = false;
-    public $hasMoreImages = true;
-    public $isLoading = false;
-    public $totalImages = 0;
+    public int $perPage = 12;
+    public bool $loaded = false;
+    public bool $hasMoreImages = true;
+    public bool $isLoading = false;
+    public int $totalImages = 0;
 
     public function mount($model, $collectionName = 'works')
     {

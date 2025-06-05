@@ -1,16 +1,15 @@
-<!-- ==================== Start Navbar ==================== -->
 <nav class="navbar change navbar-expand-lg">
 	<div class="container">
 		<!-- Logo -->
 		<a class="logo navbar-brand" href="{{route('home')}}" style="max-width: 150px;">
 			<img src="{{ asset(setting('logo')) }}" alt="logo" style="max-width: 100%; height: auto;">
 		</a>
-        
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="icon-bar"><i class="fas fa-bars"></i></span>
 		</button>
-        
+
 		<!-- navbar links -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mx-auto">
@@ -19,17 +18,17 @@
 						{{ app()->getLocale() == 'ar' ? 'English' : 'العربية' }} </a>
 				</li>
 			</ul>
-            
+
 			<div class="right-nav-elements">
 				<div class="social-icon">
-					@if(setting('facebook'))<a href="{{setting('facebook')}}" target="_blank"><i class="fab fa-facebook-f"></i></a>@endif  
-					@if(setting('twitter')) <a href="{{setting('twitter')}}"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a> @endif 
-					@if(setting('linkedin')) <a href="{{setting('linkedin')}}"  target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> @endif 
-					@if(setting('instagram')) <a href="{{setting('instagram')}}"  target="_blank"><i class="fa-brands fa-instagram"></i></a> @endif 
-					@if(setting('tiktok')) <a href="{{setting('tiktok')}}"  target="_blank"><i class="fa-brands fa-tiktok"></i></a> @endif 
-					@if(setting('youtube')) <a href="{{setting('youtube')}}"  target="_blank"><i class="fa-brands fa-youtube"></i></a> @endif 
-					@if(setting('snapchat')) <a href="{{setting('snapchat')}}"  target="_blank"><i class="fa-brands fa-snapchat"></i></a> @endif 
-					@if (setting('telegram')) <a href="{{setting('telegram')}}"  target="_blank"><i class="fa-brands fa-telegram"></i></a> @endif 
+					@if(setting('facebook'))<a href="{{setting('facebook')}}" target="_blank"><i class="fab fa-facebook-f"></i></a>@endif
+					@if(setting('twitter')) <a href="{{setting('twitter')}}"  target="_blank"><i class="fa-brands fa-x-twitter"></i></a> @endif
+					@if(setting('linkedin')) <a href="{{setting('linkedin')}}"  target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> @endif
+					@if(setting('instagram')) <a href="{{setting('instagram')}}"  target="_blank"><i class="fa-brands fa-instagram"></i></a> @endif
+					@if(setting('tiktok')) <a href="{{setting('tiktok')}}"  target="_blank"><i class="fa-brands fa-tiktok"></i></a> @endif
+					@if(setting('youtube')) <a href="{{setting('youtube')}}"  target="_blank"><i class="fa-brands fa-youtube"></i></a> @endif
+					@if(setting('snapchat')) <a href="{{setting('snapchat')}}"  target="_blank"><i class="fa-brands fa-snapchat"></i></a> @endif
+					@if (setting('telegram')) <a href="{{setting('telegram')}}"  target="_blank"><i class="fa-brands fa-telegram"></i></a> @endif
 					@if(setting('whatsapp')) <a href="{{setting('whatsapp')}}"  target="_blank"><i class="fa-brands fa-whatsapp"></i></a> @endif
 				</div>
 			</div>
@@ -121,12 +120,12 @@ html[dir="ltr"] .navbar-nav {
         padding: 15px;
         z-index: 999;
     }
-    
+
     .navbar-nav.mx-auto {
         margin: 0 0 15px 0;
         text-align: center;
     }
-    
+
     .right-nav-elements {
         justify-content: center;
     }

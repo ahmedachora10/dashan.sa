@@ -102,7 +102,9 @@ class OurWorkController extends Controller
     public function uploadImages(Request $request, OurWork $work) {
         $request->validate(['image' => 'required|image'], $request->all());
 
-        $work->addMediaFromRequest('image')->toMediaCollection('works');
+        $work->addMediaFromRequest('image')
+        ->withResponsiveImages()
+        ->toMediaCollection('works');
 
         return true;
     }

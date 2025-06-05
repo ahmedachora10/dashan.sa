@@ -32,47 +32,47 @@
 												</a>
 											</div>
 										</div>
-										<div class="awards-image"><img class="img-fluid gsap-img-animation" src="{{asset('assets/front-assets/images/awards/css-design-awards.jpg')}}" alt=""></div>
+										<div class="awards-image"><img class="img-fluid lazy gsap-img-animation" src="{{asset('assets/front-assets/images/awards/css-design-awards.jpg')}}" alt=""></div>
 										<div class="marquee-wrapper marquee-style-2">
 											<div class="marquee-inner">
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 											</div>
@@ -89,47 +89,47 @@
 												</a>
 											</div>
 										</div>
-										<div class="awards-image"><img class="img-fluid gsap-img-animation" src="{{asset('assets/front-assets/images/awards/good-design-award.jpg')}}" alt=""></div>
+										<div class="awards-image"><img class="img-fluid lazy gsap-img-animation" src="{{asset('assets/front-assets/images/awards/good-design-award.jpg')}}" alt=""></div>
 										<div class="marquee-wrapper marquee-style-2">
 											<div class="marquee-inner">
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 											</div>
@@ -146,47 +146,47 @@
 												</a>
 											</div>
 										</div>
-										<div class="awards-image"><img class="img-fluid gsap-img-animation" src="{{asset('assets/front-assets/images/awards/top-design-king.jpg')}}" alt=""></div>
+										<div class="awards-image"><img class="img-fluid lazy gsap-img-animation" src="{{asset('assets/front-assets/images/awards/top-design-king.jpg')}}" alt=""></div>
 										<div class="marquee-wrapper marquee-style-2">
 											<div class="marquee-inner">
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 											</div>
@@ -195,7 +195,7 @@
 									<div class="awards-item">
 										<div class="item-inner">
 											<div class="awards-year">[2023]</div>
-										 
+
 											<h5 class="awards-name">Web Design Dev</h5>
 											<p class="awards-description mb-0">Some people will tell you there are four while others may tell you there are eight thing.</p>
 											<div class="awards-action">
@@ -204,47 +204,47 @@
 												</a>
 											</div>
 										</div>
-										<div class="awards-image"><img class="img-fluid gsap-img-animation" src="{{asset('assets/front-assets/images/awards/web-design-dev.jpg')}}" alt=""></div>
+										<div class="awards-image"><img class="img-fluid lazy gsap-img-animation" src="{{asset('assets/front-assets/images/awards/web-design-dev.jpg')}}" alt=""></div>
 										<div class="marquee-wrapper marquee-style-2">
 											<div class="marquee-inner">
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 											</div>
@@ -261,47 +261,47 @@
 												</a>
 											</div>
 										</div>
-										<div class="awards-image"><img class="img-fluid gsap-img-animation" src="{{asset('assets/front-assets/images/awards/design-awards.jpg')}}" alt=""></div>
+										<div class="awards-image"><img class="img-fluid lazy gsap-img-animation" src="{{asset('assets/front-assets/images/awards/design-awards.jpg')}}" alt=""></div>
 										<div class="marquee-wrapper marquee-style-2">
 											<div class="marquee-inner">
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon1.png')}}" alt=""></span>
 													<span class="title">Web Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon2.png')}}" alt=""></span>
 													<span class="title">UI/UX Design</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon3.png')}}" alt=""></span>
 													<span class="title">Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon4.png')}}" alt=""></span>
 													<span class="title">ISO Developer</span>
 												</div>
 												<div class="marquee-item">
-													<span class="icon"><img class="img-fluid" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
+													<span class="icon"><img class="img-fluid lazy" src="{{asset('assets/front-assets/images/client-logo/brand-icon5.png')}}" alt=""></span>
 													<span class="title">Digital Agency</span>
 												</div>
 											</div>

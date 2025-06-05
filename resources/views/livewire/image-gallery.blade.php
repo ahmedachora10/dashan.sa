@@ -1,4 +1,5 @@
-@foreach ($images as $img)
+<div>
+    @foreach ($images as $img)
     @php
         $thumb = asset(getCachedImage($img->getUrl('thumb')));
     @endphp
@@ -14,7 +15,7 @@
 @endforeach
 
 @if($hasMoreImages)
-    <div class="text-center mt-4" 
+    <div class="text-center mt-4"
          x-data="{ shown: false }"
          x-intersect="shown = true; if(shown && !$wire.isLoading) $wire.loadMore()"
          x-intersect:leave="shown = false"
@@ -33,3 +34,4 @@
         </div>
     </div>
 @endif
+</div>

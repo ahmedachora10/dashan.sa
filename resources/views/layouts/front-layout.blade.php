@@ -220,14 +220,14 @@
 
     <!-- jQuery -->
     <script src="{{ asset('assets/front-assets/js/jquery-3.0.0.min.js') }}"></script>
-    <script defer src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
     <!-- JS Global Compulsory (Do not remove)-->
     <!-- plugins -->
-    <script defer src="{{ asset('assets/front-assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/plugins.js') }}"></script>
     <!-- custom scripts -->
-    <script defer src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script>
         $(document).ready(function() {
             // Initialize Instagram Slider
@@ -261,44 +261,77 @@
             });
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const lazyImages = document.querySelectorAll("img.lazy");
 
+        document.addEventListener("DOMContentLoaded", function() {
+            const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
 
             if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
+                const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.srcset || lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazy");
-                            lazyImageObserver.unobserve(lazyImage);
+                            const lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+
+                            // Handle image load completion
+                            lazyImage.onload = () => {
+                                lazyImage.classList.remove("lazy");
+                                lazyImage.classList.add("loaded");
+                            };
+
+                            // Handle image load errors
+                            lazyImage.onerror = () => {
+                                console.error("Error loading image:", lazyImage.dataset.src);
+                                lazyImage.classList.add("error");
+                            };
+
+                            observer.unobserve(lazyImage);
                         }
                     });
+                }, {
+                    rootMargin: "100px 0px", // Load images 100px before they enter viewport
+                    threshold: 0.01
                 });
 
-                lazyImages.forEach(function(lazyImage) {
+                lazyImages.forEach(lazyImage => {
                     lazyImageObserver.observe(lazyImage);
                 });
             } else {
-                // Fallback for browsers without Intersection Observer
-                let lazyLoad = function() {
-                    lazyImages.forEach(function(lazyImage) {
-                        console.log('lazyImage.offsetTop', lazyImage.dataset.srcset);
+                // Fallback for older browsers
+                let active = false;
 
-                        if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
-                            lazyImage.src = lazyImage.dataset.srcset || lazyImage.dataset.src;
-                            lazyImage.classList.remove('lazy');
+                const lazyLoad = () => {
+                    if (active) return;
+                    active = true;
+
+                    setTimeout(() => {
+                        lazyImages.forEach((lazyImage, index) => {
+                            if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
+                                lazyImage.src = lazyImage.dataset.src;
+
+                                lazyImage.onload = () => {
+                                    lazyImage.classList.remove("lazy");
+                                    lazyImage.classList.add("loaded");
+                                };
+
+                                // Remove loaded image from array
+                                lazyImages.splice(index, 1);
+                            }
+                        });
+
+                        active = false;
+
+                        if (!lazyImages.length) {
+                            document.removeEventListener("scroll", lazyLoad);
+                            window.removeEventListener("resize", lazyLoad);
+                            window.removeEventListener("orientationchange", lazyLoad);
                         }
-                    });
-                    if (lazyImages.length == 0) {
-                        document.removeEventListener("scroll",
-                            lazyLoad);
-                        window.removeEventListener("resize", lazyLoad);
-                        window.removeEventListener("orientationchange",
-                            lazyLoad);
-                    }
+                    }, 200);
                 };
+
+                // Initial check
+                lazyLoad();
+
+                // Event listeners
                 document.addEventListener("scroll", lazyLoad);
                 window.addEventListener("resize", lazyLoad);
                 window.addEventListener("orientationchange", lazyLoad);
@@ -307,7 +340,7 @@
     </script>
 
 
-    <script defer src="{{ asset('build/assets/app2.js')}}"></script>
+    <script defer src="{{ asset('build/assets/app2.js') }}"></script>
 
 </body>
 

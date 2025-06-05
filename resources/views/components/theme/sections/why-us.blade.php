@@ -8,7 +8,7 @@
                   <div class="about-img">
                   @foreach ($sliders as $slider )
 					@if ($slider->title == 'about-us-section-4')
-                    	<img class="img-fluid radius-20 wow pgsLeftToRight" src="{{asset($slider->thumbnail)}}" alt="#">
+                    	<img class="img-fluid lazy radius-20 wow pgsLeftToRight" src="{{asset($slider->thumbnail)}}" alt="#">
                   	@endif
                   @endforeach
                   </div>
@@ -24,7 +24,7 @@
                         <div class="icon">
                         @foreach ($sliders as $slider )
 					        @if ($slider->title == 'about-us-vision')
-                                <img class="img-fluid" src="{{asset($slider->thumbnail)}}" alt="#">
+                                <img class="img-fluid lazy" src="{{asset($slider->thumbnail)}}" alt="#">
                             @endif
                         @endforeach
                         </div>
@@ -37,7 +37,7 @@
                         <div class="icon">
                         @foreach ($sliders as $slider )
 					        @if ($slider->title == 'about-us-mission')
-                                <img class="img-fluid" src="{{asset($slider->thumbnail)}}" alt="#">
+                                <img class="img-fluid lazy" src="{{asset($slider->thumbnail)}}" alt="#">
                             @endif
                         @endforeach
                         </div>
@@ -50,7 +50,7 @@
                         <div class="icon">
                         @foreach ($sliders as $slider )
 					        @if ($slider->title == 'about-us-value')
-                                <img class="img-fluid" src="{{asset($slider->thumbnail)}}" alt="#">
+                                <img class="img-fluid lazy" src="{{asset($slider->thumbnail)}}" alt="#">
                             @endif
                         @endforeach
                         </div>
