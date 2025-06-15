@@ -30,7 +30,7 @@ class HomeController extends Controller
         });
 
         $whyUsIcons = Cache::remember('why-us-icons', now()->addMonth(), function () {
-            return Slider::where('title_en', 'like', 'why-us-%')->orWhere('title_ar', 'like', 'why-us-%')->get();
+            return Slider::where('title_en', 'like', 'why-us-%')->get();
         });
 
         // $OurClients = Cache::remember('our-clients', now()->addMonth(), function () {
