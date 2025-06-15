@@ -29,7 +29,9 @@ class HomeController extends Controller
             return OurService::limit(4)->get();
         });
 
-        $whyUsIcons = Slider::where('title_en', 'like', 'why-us-%')->get();
+        $whyUsIcons = Cache::remember('why-us-icons', now()->addMonth(), function () {
+            return Slider::where('title_en', 'like', 'why-us-%')->get();
+        });
 
         // $OurClients = Cache::remember('our-clients', now()->addMonth(), function () {
         //     return OurClient::all();

@@ -6,7 +6,7 @@
     <x-theme.sections.process :processSliders="$processSliders" />
     <x-theme.sections.services :services="$ourServices" :sliders="$sliders" />
     <x-theme.sections.works :whyUsIcons="$whyUsIcons" />
-    <x-theme.sections.our-team  />
+    <x-theme.sections.our-team />
     {{-- @if (count($reviews) > 0)
         <x-theme.sections.testimonials :reviews="$reviews" />
     @endif --}}
