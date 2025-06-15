@@ -228,7 +228,7 @@
     <script defer src="{{ asset('assets/front-assets/js/scripts.js') }}"></script>
 
     {{-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script> --}}
-    <script defer >
+    <script>
         $(document).ready(function() {
             // Initialize Instagram Slider
             var instaSlider = new Swiper('.insta-slider-fullwidth .swiper-container', {
