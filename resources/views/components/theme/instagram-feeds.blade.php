@@ -92,72 +92,11 @@
                     <div class="swiper-slide">
                         <div class="insta-item">
                             <a href="{{ $item['permalink'] }}" target="_blank">
-                                <img src="{{ $item['image'] }}" alt="Instagram Post">
+                                <img src="{{ $item['image'] }}" srcset="{{ $item['image'] }}" class="lazy" alt="Instagram Post">
                             </a>
                         </div>
                     </div>
                 @endforeach
-
-                <!-- Instagram Image 2 -->
-                {{-- <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Instagram Image 3 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Instagram Image 4 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Instagram Image 4 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-                <!-- Instagram Image 4 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-                <!-- Instagram Image 4 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div>
-                <!-- Instagram Image 4 -->
-                <div class="swiper-slide">
-                    <div class="insta-item">
-                        <a href="{{ setting('instagram') }}" target="_blank">
-                            <img src="{{ asset('assets/front-assets/img/01.jpg') }}" alt="Instagram Post">
-                        </a>
-                    </div>
-                </div> --}}
-                <!-- Add more slides as needed -->
             </div>
         </div>
     </div>
