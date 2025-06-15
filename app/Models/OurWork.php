@@ -39,18 +39,23 @@ class OurWork extends Model implements HasMedia
         });
 
         static::updated(function (OurWork $model) {
-            static::clearCache();
+            static::clearCache($model);
         });
 
         static::deleted(function (OurWork $model) {
-            static::clearCache();
+            static::clearCache($model);
         });
     }
 
-    private static function clearCache() {
+    private static function clearCache(?OurWork $model = null) {
         Cache::forget('works');
         Cache::forget('works-home');
         Cache::forget('works-tags');
+
+        if ($model) {
+            Cache::forget("work-{$model->id}");
+            Cache::forget("work-images-{$model->id}");
+        }
     }
 
     public function getThumbnailAttribute() {
