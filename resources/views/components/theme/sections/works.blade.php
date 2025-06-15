@@ -121,7 +121,7 @@
                                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                                     <div class="feature-item">
                                         <div class="icon">
-                                            <i class="fas"> <img src="{{ asset($whyUsIcon->thumbnail) }}" class="lazy" alt="{{ $whyUsIcon->thumbnail }}"></i>
+                                            <i class="fas"> <img src="{{ asset($whyUsIcon->thumbnail) }}" class="lazy"></i>
                                         </div>
                                         <div class="cont">
                                             <h5 style="margin: bottom 10px;" class="custom-sub-title">{{ headline($whyUsIcon->title_en)->title }}</h5>
