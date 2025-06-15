@@ -270,7 +270,7 @@
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             const lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.src = lazyImage.dataset.src || lazyImage.dataset.srcset;
 
                             // Handle image load completion
                             lazyImage.onload = () => {
@@ -306,7 +306,7 @@
                     setTimeout(() => {
                         lazyImages.forEach((lazyImage, index) => {
                             if (lazyImage.offsetTop < window.innerHeight + window.pageYOffset) {
-                                lazyImage.src = lazyImage.dataset.src;
+                                lazyImage.src = lazyImage.dataset.src || lazyImage.dataset.srcset;
 
                                 lazyImage.onload = () => {
                                     lazyImage.classList.remove("lazy");
