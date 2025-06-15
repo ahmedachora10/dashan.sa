@@ -12,6 +12,7 @@ use App\Http\Controllers\SearchController;
 use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Support;
+use App\Models\User;
 use App\Services\InstagramService;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/template', function () {
 //     return view('welcome');
 // });
+
+// dd(User::first());
 
 Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
 Route::get('instagram/feeds', fn() => dd((new InstagramService)->getImages()));

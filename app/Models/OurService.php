@@ -6,6 +6,7 @@ use App\Traits\HasTranslation;
 use App\Traits\ThumbnailModelAttribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class OurService extends Model
 {
@@ -29,7 +30,20 @@ class OurService extends Model
 
         static::created(function (OurService $model) {
             $model->update(['sort' => $model->id]);
+            Cache::forget('our_services');
+            Cache::forget('our-services-home');
         });
+
+        static::updated(function (OurService $model) {
+            Cache::forget('our_services');
+            Cache::forget('our-services-home');
+        });
+
+        static::deleted(function (OurService $model) {
+            Cache::forget('our_services');
+            Cache::forget('our-services-home');
+        });
+
         static::retrieved(fn(OurService $service) => self::translation($service));
     }
 }

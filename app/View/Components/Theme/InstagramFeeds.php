@@ -12,7 +12,7 @@ class InstagramFeeds extends Component
     public array $feeds = [];
     public function __construct()
     {
-        $this->feeds = (new InstagramService)->getImages();
+        $this->feeds = app(InstagramService::class)->getImages();
     }
 
     /**

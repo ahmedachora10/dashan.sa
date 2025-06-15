@@ -27,6 +27,10 @@
                         <a href="{{ route('services.details',$service->id) }}" class="more custom-font mt-30 text-end custom-sub-title" style="text-decoration: none;">{{ trans('front.learn more') }}</a>
                     </div>
                 @endforeach
+                @if(count($services) % 4 != 0)
+                    {{-- Fill the remaining space with empty boxes to maintain the grid layout --}}
+                    <div class="col-lg-3 col-md-6 item-bx"></div>
+                @endif
             </div>
             @if(request()->routeIs('home'))
                 <div class="text-center">
@@ -46,17 +50,17 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         /* Allow the paragraph to grow and fill space */
         .services .bord-box .item-bx p {
             flex-grow: 1;
         }
-        
+
         /* Push the "learn more" link to the bottom */
         .services .bord-box .item-bx .more {
             margin-top: auto;
         }
-        
+
         /* Ensure content is properly spaced */
         .services .bord-box .item-bx h2.numb,
         .services .bord-box .item-bx h6 {
@@ -64,4 +68,3 @@
         }
     </style>
 
-    

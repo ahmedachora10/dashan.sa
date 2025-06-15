@@ -11,9 +11,9 @@ class ContactUsController extends Controller
 {
     public function index() {
         view()->share('title','Contact Us');
-        $supports = Support::all();
-        $OurClients = OurClient::all();
+        // $supports = Support::all();
+        // $OurClients = OurClient::all();
         $slider = Slider::where('title_en','contact-us')->first();
-        return view('contact', compact('supports','OurClients','slider'));
+        return view('contact', compact('slider'));
     }
 }

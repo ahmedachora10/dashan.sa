@@ -6,6 +6,7 @@ use App\Traits\HasTranslation;
 use App\Traits\ThumbnailModelAttribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Statistic extends Model
 {
@@ -17,5 +18,17 @@ class Statistic extends Model
         parent::boot();
 
         static::retrieved(fn(Statistic $statistic) => static::translation($statistic));
+
+        static::created(function (Statistic $model) {
+            Cache::forget('statistics');
+        });
+
+        static::updated(function (Statistic $model) {
+            Cache::forget('statistics');
+        });
+
+        static::deleted(function (Statistic $model) {
+            Cache::forget('statistics');
+        });
     }
 }

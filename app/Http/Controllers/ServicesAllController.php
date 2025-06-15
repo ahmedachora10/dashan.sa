@@ -7,6 +7,7 @@ use App\Models\OurService;
 use App\Models\Slider;
 use App\Models\Review;
 use App\Models\OurWork;
+use Illuminate\Support\Facades\Cache;
 
 class ServicesAllController extends Controller
 {
@@ -14,18 +15,24 @@ class ServicesAllController extends Controller
 
         view()->share('title','');
 
-        $ourServices = OurService::all();
+        $ourServices = Cache::remember('our_services', now()->addMonth(), function () {
+            return OurService::all();
+        });
         $headerSlider = Slider::where('title_en','services-header')->first();
         $servicesSlider = Slider::where('title_en','home-services')->first();
-        $reviews = Review::all();
-        $works = OurWork::with('media')->get()->take(4);
+        // $reviews = Cache::remember('reviews', now()->addMonth(), function () {
+        //     return Review::all();
+        // });
+        // $works = Cache::remember('works-4', now()->addMonth(), function () {
+        //     return OurWork::with('media')->limit(4)->get();
+        // });
 
-        return view('services', compact( 'ourServices','headerSlider','servicesSlider','reviews','works'));
+        return view('services', compact( 'ourServices','headerSlider', 'servicesSlider'));
     }
 
     public function show($id)
     {
-        
+
         $service = OurService::find($id);
         view()->share('title',$service->name);
         $ourServices = OurService::all();

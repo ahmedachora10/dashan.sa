@@ -38,5 +38,6 @@ return [
     'video' => 'Video About Us',
     'location' => 'Location',
     'address_ar' => 'Address',
-    'address_en' => 'Address(EN)'
+    'address_en' => 'Address(EN)',
+    'instagram token' => 'Instagram Token',
 ];

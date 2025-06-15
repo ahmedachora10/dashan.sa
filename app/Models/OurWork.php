@@ -6,6 +6,7 @@ use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Cache;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -32,10 +33,27 @@ class OurWork extends Model implements HasMedia
         parent::boot();
 
         static::retrieved(fn(OurWork $ourWork) => static::translation($ourWork));
+
+        static::created(function (OurWork $model) {
+            static::clearCache();
+        });
+
+        static::updated(function (OurWork $model) {
+            static::clearCache();
+        });
+
+        static::deleted(function (OurWork $model) {
+            static::clearCache();
+        });
+    }
+
+    private static function clearCache() {
+        Cache::forget('works');
+        Cache::forget('works-home');
+        Cache::forget('works-tags');
     }
 
     public function getThumbnailAttribute() {
-        // $media = $this->getFirstMedia('works')?->getUrl();
         $media = $this->getFirstMedia('works-thumb')?->getUrl('main-thumb');
         return $media ?? asset(setting('logo'));
     }

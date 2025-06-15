@@ -36,5 +36,6 @@ return [
     'video' => 'فيديو عنا',
     'location' => 'الموقع',
     'address_ar' => 'العنوان',
-    'address_en' => 'العنوان(انجليزي)'
+    'address_en' => 'العنوان(انجليزي)',
+    'instagram token' => 'انستقرام توكن',
 ];

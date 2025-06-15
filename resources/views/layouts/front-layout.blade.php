@@ -219,7 +219,7 @@
 
 
     <!-- jQuery -->
-    <script defer src="{{ asset('assets/front-assets/js/jquery-3.0.0.min.js') }}"></script>
+    <script src="{{ asset('assets/front-assets/js/jquery-3.0.0.min.js') }}"></script>
     <script defer src="{{ asset('assets/front-assets/js/jquery-migrate-3.0.0.min.js') }}"></script>
     <!-- JS Global Compulsory (Do not remove)-->
     <!-- plugins -->

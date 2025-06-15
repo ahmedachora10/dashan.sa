@@ -19,19 +19,19 @@
     <!-- ==================== End Header ==================== -->
 
     <!-- ==================== Start Contact Info ==================== -->
-    
+
     <!-- ==================== End Contact Info ==================== -->
 
     <!-- ==================== Start Contact Form & Map ==================== -->
     <section class="contact">
         <div class="info bg-gray pt-80 pb-80">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                 <div class="col-lg-3">
                         <div class="item wow fadeInUp" data-wow-delay="0.2s">
                             <span class="icon pe-7s-phone"></span>
                             <div class="cont">
-                                <h6 class="custom-font text-center custom-sub-title"  style="font-weight: bold;">{{trans('front.your phone')}}</h6>
+                                <h6 class="custom-font text-centerright-sub-title"  style="font-weight: bold;">{{trans('front.your phone')}}</h6>
                                 <p><a class="custom-sub-title" href="tel:{{ setting('phone') }}" style="text-decoration: none;">&#x200E;+{{ setting('phone') }}</a></p>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="item wow fadeInUp" data-wow-delay="0.4s">
                             <span class="icon pe-7s-mail-open"></span>
                             <div class="cont">
-                                <h6 class="custom-font text-center custom-sub-title"  style="font-weight: bold;">{{trans('front.email')}}</h6>
+                                <h6 class="custom-font text-right custom-sub-title"  style="font-weight: bold;">{{trans('front.email')}}</h6>
                                 <p><a class="custom-sub-title" href="mailto:{{ setting('email') }}" style="text-decoration: none;">{{ setting('email') }}</a></p>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                         <div class="item wow fadeInUp" data-wow-delay="0.6s">
                             <span class="icon pe-7s-map"></span>
                             <div class="cont">
-                                <h6 class="custom-font text-center custom-sub-title"  style="font-weight: bold;">{{trans('footer.office')}}</h6>
+                                <h6 class="custom-font text-right custom-sub-title"  style="font-weight: bold;">{{trans('footer.office')}}</h6>
                                 <p class="custom-sub-title">{{trans('footer.address')}}</p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                         <div class="item wow fadeInUp" data-wow-delay="0.8s">
                             <span class="icon pe-7s-clock"></span>
                             <div class="cont">
-                                <h6 class="custom-font text-center custom-sub-title" style="font-weight: bold;">{{ trans('front.Office Time') }}</h6>
+                                <h6 class="custom-font text-right custom-sub-title" style="font-weight: bold;">{{ trans('front.Office Time') }}</h6>
                                 <p class="custom-sub-title">{{ trans('front.days') }}</p>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 map-box">
                     <div class="map">

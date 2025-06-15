@@ -6,6 +6,7 @@ use App\Models\Team;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
 
 class OurTeam extends Component
@@ -16,7 +17,9 @@ class OurTeam extends Component
     public function render(): View|Closure|string
     {
         return view('components.theme.sections.our-team', [
-            'members' => Team::all()
+            'members' => Cache::remember('team-members', now()->addMonth(), function () {
+                return Team::all();
+            }),
         ]);
     }
 }

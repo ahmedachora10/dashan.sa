@@ -7,8 +7,8 @@
     <x-theme.sections.services :services="$ourServices" :sliders="$sliders" />
     <x-theme.sections.works :whyUsIcons="$whyUsIcons" />
     <x-theme.sections.our-team  />
-    @if ($reviews->count() > 0)
+    {{-- @if (count($reviews) > 0)
         <x-theme.sections.testimonials :reviews="$reviews" />
-    @endif
+    @endif --}}
     <x-theme.instagram-feeds />
 </x-front-layout>
